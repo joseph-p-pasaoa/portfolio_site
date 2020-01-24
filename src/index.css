@@ -1,6 +1,38 @@
+/*
+Joseph P. Pasaoa
+INDEX CSS STYLING | Portfolio Site
+*/
+
+
+/* FONT INITS 
+font-family: 'Lato', sans-serif;
+font-family: 'AlegreyaSans-Black', sans-serif;
+*/
+@font-face {
+  font-family: 'Lato';
+  src: url('./assets/fonts/Lato/Lato-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+} 
+/* @font-face {
+  font-family: 'AlegreyaSans-Black';
+  src: url('./assets/fonts/Alegreya_Sans/AlegreyaSans-Black.ttf') format('truetype');
+  font-weight: black;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Mukta';
+  src: url('./assets/fonts/Mukta/Mukta-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+
+
+/* INDEX STYLING */
 body {
   font-family: "Lato", sans-serif;
-  
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
