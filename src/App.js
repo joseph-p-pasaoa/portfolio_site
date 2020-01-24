@@ -12,8 +12,9 @@ APP MAIN Component | Portfolio Site
     import './App.css';
 
 
+/* COMPONENT & EXPORT */
 export default function App() {
-  
+
   return (
     <div className="App">
       Hello world, Joseph here.

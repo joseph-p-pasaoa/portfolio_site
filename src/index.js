@@ -16,6 +16,7 @@ INDEX Component | Portfolio Site
     import App from './App';
 
 
+/* RENDER */
 ReactDOM.render(
   <BrowserRouter>
     <App />
