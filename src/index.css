@@ -6,14 +6,22 @@ INDEX CSS STYLING | Portfolio Site
 
 /* FONT INITS 
 font-family: 'Lato', sans-serif;
-font-family: 'AlegreyaSans-Black', sans-serif;
+
+font-family: 'Yatra One', cursive;
+font-family: 'Della Respira', serif;
+font-family: 'Tajawal', sans-serif;
+font-family: 'Changa', sans-serif;
+font-family: 'Saira Condensed', sans-serif;
+font-family: 'Quantico', sans-serif;
+font-family: 'Encode Sans', sans-serif;
+font-family: 'Reem Kufi', sans-serif;
 */
-@font-face {
+/* @font-face {
   font-family: 'Lato';
   src: url('./assets/fonts/Lato/Lato-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-} 
+}  */
 /* @font-face {
   font-family: 'AlegreyaSans-Black';
   src: url('./assets/fonts/Alegreya_Sans/AlegreyaSans-Black.ttf') format('truetype');
@@ -25,8 +33,6 @@ font-family: 'AlegreyaSans-Black', sans-serif;
 
 /* INDEX STYLING */
 body {
-  font-family: "Lato", sans-serif;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

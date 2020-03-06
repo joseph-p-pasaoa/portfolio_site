@@ -1,25 +1,26 @@
 /*
 JOSEPH P. PASAOA
-INDEX Component | Portfolio Site
+INDEX MAIN | Portfolio Site
 */
 
 
 /* IMPORTS */
-    // external
-    import React from 'react';
-    import ReactDOM from 'react-dom';
-    import { BrowserRouter } from 'react-router-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 
-    // local
-    import './reset.css';
-    import './index.css';
-    import App from './App';
+import store from './redux/store';
+import './reset.css';
+import './index.css';
+import App from './App';
 
 
 /* RENDER */
-ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>, 
-  document.getElementById('root')
+ReactDOM.render (
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>, document.getElementById('root')
 );

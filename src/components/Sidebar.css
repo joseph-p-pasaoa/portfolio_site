@@ -1,0 +1,13 @@
+/*
+JOSEPH P. PASAOA
+Sidebar CSS | Portfolio Site
+*/
+
+
+#sidebar {
+    height: 100%;
+    background-image: linear-gradient(to bottom, #4bc5ffb0, #0d2c5a), url(/static/media/contemp-comp.c92948e4.jpg);
+    background-size: cover;
+    background-position: 27% center;
+    clip-path: polygon(0 3%, 100% 0, 100% 100%, 0 100%);
+}

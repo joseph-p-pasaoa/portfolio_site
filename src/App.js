@@ -3,21 +3,40 @@ JOSEPH P. PASAOA
 APP MAIN Component | Portfolio Site
 */
 
+// blog
+// projects
+  // technologies used
+  // my role
+  // solution
+  // notable features
+// contact
+// links to github, linkedin
+// resume
+// about
+// mobile friendly
 
 /* IMPORTS */
-    // external
     import React from 'react';
 
-    // local
+    import Sidebar from './components/Sidebar';
     import './App.css';
 
 
 /* COMPONENT & EXPORT */
-export default function App() {
+const App = () => {
 
   return (
     <div className="App">
-      Hello world, Joseph here.
+
+      <div id="grid-base">
+        <Sidebar />
+        <div className="stage"></div>
+        {/* <p>Here begins my portfolio site.</p> */}
+      </div>
+
     </div>
   );
 }
+
+
+export default App;
