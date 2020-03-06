@@ -1,0 +1,14 @@
+/*
+JOSEPH P. PASAOA
+NetworkIcons Component CSS | Portfolio Site
+*/
+
+
+.network-icons {
+    margin-left: 2vw;
+}
+
+.network-icons img {
+    height: 24px;
+    margin-bottom: 6px;
+}
