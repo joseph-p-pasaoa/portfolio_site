@@ -31,7 +31,6 @@ const App = () => {
       <div id="grid-base">
         <Sidebar />
         <div className="stage"></div>
-        {/* <p>Here begins my portfolio site.</p> */}
       </div>
 
     </div>

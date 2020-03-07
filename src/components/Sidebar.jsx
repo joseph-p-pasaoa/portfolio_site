@@ -7,7 +7,7 @@ Sidebar Component | Portfolio Site
 /* IMPORTS */
 import React from 'react';
 
-import NameLogo from './NameLogo';
+import NameBox from './NameBox';
 import IconsBar from  './IconsBar';
 import './Sidebar.css';
 
@@ -17,7 +17,7 @@ const Sidebar = () => {
 
   return (
     <div id="sidebar" className="flex-column">
-      <NameLogo />
+      <NameBox />
       <IconsBar />
       <ul className="navlist flex-column">
         <li>About</li>
