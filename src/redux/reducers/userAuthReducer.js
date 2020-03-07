@@ -10,7 +10,7 @@ UserSimAuth Reducer | Portfolio Site
 
 /* MAIN */
 const INITIAL_STATE = {
-
+  cId: 6
 }
 
 const userAuthReducer = (state = INITIAL_STATE, action) => {
