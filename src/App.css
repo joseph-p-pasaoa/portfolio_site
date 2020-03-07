@@ -4,7 +4,6 @@ APP MAIN CSS | Portfolio Site
 */
 
 
-
 * {
   margin: 0;
   padding: 0;
@@ -23,11 +22,6 @@ html {
 body {
   font-family: 'Cabin', sans-serif;
   font-size: 1.1em;
-
-  /* background-image: url("./assets/images/bg_code.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center; */
 }
 
 .flex-column {
@@ -48,23 +42,13 @@ body {
 
 #grid-base {
   display: grid;
-  grid-template-columns: 25% auto;
+  grid-template-columns: 265px auto;
   grid-template-rows: 1fr;
-  /* grid-template-rows: 130px auto; */
 }
 
 header {
   grid-column: span 3;
 }
-
-/* h1 {
-  margin: 7vh 1vw 0.5vh 2vw;
-
-  font-family: 'Encode Sans', sans-serif;
-  font-size: 2.2em;
-
-  color: #fff;
-} */
 
 .navlist {
   margin: 2px 6px 6px 2vw;
