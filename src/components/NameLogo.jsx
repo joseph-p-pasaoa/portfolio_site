@@ -107,7 +107,8 @@ const NameLogo = () => {
       }
       </Safe.script> */}
 
-      <h2>Software Engineer / Developer</h2>
+      <h2>Software Engineer /</h2>
+      <h2>Full-stack Developer</h2>
     </div>
   );
 }
