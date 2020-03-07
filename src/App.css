@@ -4,15 +4,20 @@ APP MAIN CSS | Portfolio Site
 */
 
 
-html, body, .root, .App, #grid-base {
-  height: 100%;
-  width: 100%;
-}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html, body, .root, .App, #grid-base {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-size: 10px;
 }
 
 body {
@@ -69,7 +74,7 @@ header {
   margin-bottom: 11px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  font-size: 0.8em;
+  font-size: 1.5rem;
   font-family: 'Raleway', sans-serif;
 
   color: #111;
