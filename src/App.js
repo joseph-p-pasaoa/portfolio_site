@@ -17,9 +17,14 @@ APP MAIN Component | Portfolio Site
 
 /* IMPORTS */
     import React from 'react';
+    import { library } from '@fortawesome/fontawesome-svg-core';
+    import { faPaperPlane, faList, faFilePdf, faPenSquare } from '@fortawesome/free-solid-svg-icons';
+    import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
     import Sidebar from './components/Sidebar';
     import './App.css';
+
+    library.add(faPaperPlane, faList, faFilePdf, faPenSquare, faGithubSquare, faLinkedin);
 
 
 /* COMPONENT & EXPORT */
