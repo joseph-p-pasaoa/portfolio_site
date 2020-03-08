@@ -20,8 +20,9 @@ html {
 }
 
 body {
-  font-family: 'Cabin', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 1.1em;
+  color: #cdcdcd;
 }
 
 .flex-column {
@@ -46,8 +47,15 @@ body {
   grid-template-rows: 1fr;
 }
 
-header {
-  grid-column: span 3;
+.text--copy {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.6em;
+  color: #fff;
+}
+
+.text--highlight {
+  font-family: 'Raleway', sans-serif;
+  font-size: 4em;
 }
 
 a.faicon:link, a.faicon:visited {
@@ -82,7 +90,7 @@ a.faicon:hover, a.faicon:active {
 }
 
 .navlist {
-  align-items: flex-end;
+  align-items: flex-start;
   padding: 42px 3vw 3px 2vw;
   width: 100%;
 }
@@ -93,18 +101,34 @@ a.faicon:hover, a.faicon:active {
   text-transform: uppercase;
   font-size: 1.5rem;
   font-family: 'Raleway', sans-serif;
+}
+
+a.navlist__link:link, a.navlist__link:visited {
+  font-weight: bold;
+  text-decoration: none;
 
   color: #fff;
 }
 
-/* .navlist li:hover {
-  box-shadow: 0px 2px 2px #000;
-  opacity: 1;
-} */
+a.navlist__link:hover, a.navlist__link:active {
+  color: rgb(1, 255, 234);
+}
 
 .stage {
-  background-color: #fff;
-  margin-right: 190px;
-  margin-bottom: 90px;
-  opacity: 0.7;
+  background-image: linear-gradient(180deg, rgba(53, 27, 27, 0.58) 56%, #1d100ad1 100%);
+  /* background-image: linear-gradient(180deg, rgba(255,255,255,0.500437675070028) 56%, rgba(146,163,171,0.5032387955182073) 100%); */
+}
+
+.page {
+  padding: 143px 43px 43px 22px;
+}
+
+h3.page__name {
+  position: relative;
+  z-index: 10;
+
+  color: rgb(226, 200, 156);
+  font-size: 4rem;
+  font-weight: normal;
+  font-family: 'Indie Flower', cursive;
 }

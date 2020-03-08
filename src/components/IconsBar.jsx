@@ -10,7 +10,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import './IconsBar.css';
-import josephsResume from '../assets/downloads/_Resume_ Joseph P. Pasaoa _Developer.pdf';
+import { joeysResume } from '../helpers/importsRef.js';
 
 
 /* MAIN */
@@ -40,7 +40,7 @@ const IconsBar = () => {
           <FontAwesomeIcon icon={["fas", "pen-square"]} className="faicon__svg faicon__svg--contact" />
           {/* <FontAwesomeIcon icon={["fas", "paper-plane"]} className="faicon__svg faicon__svg--contact" /> */}
         </a>
-        <a href={josephsResume} target="_blank" rel="noopener noreferrer" onMouseOver={() => setActiveIcon("resume")} onMouseOut={() => setActiveIcon("none")} className="faicon faicon__a--resume">
+        <a href={joeysResume} target="_blank" rel="noopener noreferrer" onMouseOver={() => setActiveIcon("resume")} onMouseOut={() => setActiveIcon("none")} className="faicon faicon__a--resume">
           <FontAwesomeIcon icon={["fas", "file-pdf"]} className="faicon__svg" />
           {/* <FontAwesomeIcon icon={["fas", "list"]} className="faicon__svg faicon__svg--resume" /> */}
         </a>

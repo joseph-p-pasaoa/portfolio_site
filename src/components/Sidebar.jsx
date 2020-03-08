@@ -9,6 +9,7 @@ import React from 'react';
 
 import NameBox from './NameBox';
 import IconsBar from  './IconsBar';
+import NavList from './NavList';
 import './Sidebar.css';
 
 
@@ -16,16 +17,10 @@ import './Sidebar.css';
 const Sidebar = () => {
 
   return (
-    <div id="sidebar" className="flex-column">
+    <div className="sidebar flex-column">
       <NameBox />
       <IconsBar />
-      <ul className="navlist flex-column">
-        <li>About</li>
-        <li>Projects</li>
-        <li>Resume</li>
-        <li>Contact</li>
-        <li>Blog</li>
-      </ul>
+      <NavList />
     </div>
   );
 }

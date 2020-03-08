@@ -4,9 +4,22 @@ Sidebar CSS | Portfolio Site
 */
 
 
-#sidebar {
+.App {
+    background-image: url(../assets/images/bgs/contemp-comp-dered.jpg);
+    background-size: cover;
+    background-color: #fff;
+    background-position: left center;
+    /* background-blend-mode: lighten; */
+}
+
+.sidebar {
     height: 100%;
-    background-image: linear-gradient(to bottom, #4bc5ffb0, #0d2c5a), url(../assets/images/bgs/contemp-comp.jpg);
+    background-image: linear-gradient(to bottom, #4bc5ffb0, #011d46);
+    /* background-image: linear-gradient(to bottom, #4bc5ffb0, #011d46), url(../assets/images/bgs/contemp-comp.jpg); */
+    /* background-image: linear-gradient(to bottom, #A38383b0, #5C3828), url(../assets/images/bgs/contemp-comp.jpg); */
+    /* background-image: linear-gradient(to bottom, #4bc5ffb0, #0d2c5a), url(../assets/images/bgs/contemp-comp.jpg); */
     background-size: cover;
     background-position: 27% center;
+
+    border-right: solid 1px #4b78a7;
 }
