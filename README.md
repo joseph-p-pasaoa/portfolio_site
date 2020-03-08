@@ -1,17 +1,30 @@
 # Joseph P. Pasaoa's Portfolio (front)
 
 ## I. Main Parts
++ Contact links
+  - ~~Resume~~ ✘
+  - ~~LinkedIn~~ ✘
+  - ~~Github~~ ✘
+  - ~~Form~~ ✘
+  - Email?
 + Nav Bar
-+ Landing/Home Page
-+ About/Intro
-+ Projects
+  - Home/About
+  - Projects
+  - Resume
+  - Contact [Form]
+  - Skills
+  - Blog
+  - Photography
++ Landing/Home Page/About/Intro Page
++ Projects Page
   - Live
     + Login
     + Signup
     + Demo User
   - Code Highlight
   - Repo
-+ Skills and/or Technologies
++ Contact Form Page
++ Skills and/or Technologies (Grouped?) Page
   - Figma
   - Javascript
   - PostgreSQL
@@ -19,18 +32,13 @@
   - Node
   - React
   - Redux
-  - Router
+  - React Router
   - HTML(5)
   - CSS(3)
   - Adobe CS (Photoshop, Lightroom, Bridge, Ilustrator(?), InDesign)
   - Git
-+ Contact links
-  - Resume
-  - LinkedIn
-  - Github
-  - Form
-+ Photography
-+ Blog
++ Blog Page
++ Photography Page
 
 ## II. To Do
 + Wireframing
