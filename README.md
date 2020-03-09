@@ -56,3 +56,10 @@
     + Interface
     + User Auth
 + Connect domain
+
+## III. Color Palette
++ #f5f7f8 - Porcelain
++ #c7b18a - Sorrell Brown
++ #b0752e - Copper
++ #7d5f53 - Roman Coffee / #04087d - Navy Blue
++ #342626 - Cocoa Brown

@@ -5,30 +5,27 @@ INDEX CSS STYLING | Portfolio Site
 
 
 /* FONT INITS 
-font-family: 'Lato', sans-serif;
-
-font-family: 'Yatra One', cursive;
-font-family: 'Della Respira', serif;
-font-family: 'Tajawal', sans-serif;
-font-family: 'Changa', sans-serif;
-font-family: 'Saira Condensed', sans-serif;
-font-family: 'Quantico', sans-serif;
-font-family: 'Encode Sans', sans-serif;
-font-family: 'Reem Kufi', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Indie Flower', sans-serif;
 */
-/* @font-face {
-  font-family: 'Lato';
-  src: url('./assets/fonts/Lato/Lato-Regular.ttf') format('truetype');
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway/Raleway-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-}  */
-/* @font-face {
-  font-family: 'AlegreyaSans-Black';
-  src: url('./assets/fonts/Alegreya_Sans/AlegreyaSans-Black.ttf') format('truetype');
-  font-weight: black;
+} 
+@font-face {
+  font-family: 'Indie Flower';
+  src: url('./assets/fonts/Indie_Flower/IndieFlower-Regular.ttf') format('truetype');
+  font-weight: normal;
   font-style: normal;
-} */
-
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url('./assets/fonts/Roboto_Mono/RobotoMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 /* INDEX STYLING */
@@ -38,6 +35,6 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: 'Roboto Mono', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
