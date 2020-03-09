@@ -14,12 +14,14 @@ Sidebar CSS | Portfolio Site
 
 .sidebar {
     height: 100%;
-    background-image: linear-gradient(to bottom, #4bc5ffb0, #011d46);
+    background-image: linear-gradient(to bottom, #e69129b3, #5a070785);
+    /* background-image: linear-gradient(to bottom, #4bc5ffb0, #011d46); */
+    /* background-image: linear-gradient(to bottom, #b99556b0, #271a0287); */
     /* background-image: linear-gradient(to bottom, #4bc5ffb0, #011d46), url(../assets/images/bgs/contemp-comp.jpg); */
     /* background-image: linear-gradient(to bottom, #A38383b0, #5C3828), url(../assets/images/bgs/contemp-comp.jpg); */
     /* background-image: linear-gradient(to bottom, #4bc5ffb0, #0d2c5a), url(../assets/images/bgs/contemp-comp.jpg); */
     background-size: cover;
     background-position: 27% center;
 
-    border-right: solid 1px #4b78a7;
+    border-right: solid 1px #8e6666;
 }

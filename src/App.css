@@ -49,28 +49,39 @@ body {
 
 .text--copy {
   font-family: 'Raleway', sans-serif;
-  font-size: 1.6em;
+  font-size: 1.6rem;
   color: #fff;
 }
 
 .text--highlight {
   font-family: 'Raleway', sans-serif;
-  font-size: 4em;
+  font-size: 4rem;
+}
+
+.network-icons {
+  width: 100%;
+  padding: 3px 1vw 3px 1.5vw;
+}
+
+.network-icons img {
+  height: 24px;
 }
 
 a.faicon:link, a.faicon:visited {
-  margin: 29px 11px 3px 0px;
+  margin: 3px 11px 3px 0px;
 
-  color: #111;
-  transition: color .5s ease-in-out;
+  color: #ceb180;
+  opacity: .7;
+  transition: color .4s ease-out, opacity .2s ease-out;
 }
 
 a.faicon__a--resume:link, a.faicon__a--resume:visited {
-  margin-left: 47px;
+  margin-left: auto;
 }
 
 a.faicon:hover, a.faicon:active {
   color: #fff;
+  opacity: 1;
 }
 
 .faicon__svg {
@@ -79,39 +90,55 @@ a.faicon:hover, a.faicon:active {
 
 .faicon__description {
   position: relative;
-  transition: color .8s ease-in;
-  height: 1.5rem;
 
-  color: transparent;
-  font-size: 1.5rem;
-  font-style: italic;
-  text-transform: lowercase;
+  height: 2rem;
+  width: 100%;
+  margin-top: 36px;
+  margin-bottom: 3px;
+  padding-right: 5vw; /* artistic choice to nudge left */
+  padding-left: 1.5vw;
+
+  text-align: left;
+  font-family: 'Indie Flower', cursive;
+  font-size: 2rem;
   font-weight: bold;
+}
+
+.faicon__description p {
+  position: absolute;
+
+  color: #07154F;
+
+  opacity: 0;
+  transition: opacity .2s ease-in;
 }
 
 .navlist {
   align-items: flex-start;
-  padding: 42px 3vw 3px 2vw;
+  padding: 42px 1vw 3px 1.5vw;
   width: 100%;
 }
 
 .navlist li {
   margin-bottom: 11px;
   letter-spacing: 1px;
-  text-transform: uppercase;
   font-size: 1.5rem;
   font-family: 'Raleway', sans-serif;
 }
 
 a.navlist__link:link, a.navlist__link:visited {
+  text-transform: lowercase;
+  text-shadow: 0px 2px 2px #000;
   font-weight: bold;
   text-decoration: none;
 
   color: #fff;
+
+  transition: color .1s ease-in;
 }
 
 a.navlist__link:hover, a.navlist__link:active {
-  color: rgb(1, 255, 234);
+  color: #04087d;
 }
 
 .stage {
@@ -123,12 +150,21 @@ a.navlist__link:hover, a.navlist__link:active {
   padding: 143px 43px 43px 22px;
 }
 
+h4.greet {
+  font-size: 3rem;
+  font-weight: normal;
+  font-family: 'Roboto Mono', monospace;
+
+  color: #3f5ed0;
+}
+
 h3.page__name {
   position: relative;
   z-index: 10;
 
-  color: rgb(226, 200, 156);
-  font-size: 4rem;
+  font-size: 6rem;
   font-weight: normal;
   font-family: 'Indie Flower', cursive;
+
+  color: rgb(226, 200, 156);
 }

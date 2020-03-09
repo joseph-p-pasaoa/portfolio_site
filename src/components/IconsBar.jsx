@@ -9,7 +9,7 @@ import React, { useState } from 'react';
 // import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import './IconsBar.css';
+// import './IconsBar.css';
 import { joeysResume } from '../helpers/importsRef.js';
 
 
@@ -17,37 +17,46 @@ import { joeysResume } from '../helpers/importsRef.js';
 const IconsBar = () => {
   const [ activeIcon, setActiveIcon ] = useState("none");
 
-  const descriptor = {
-    none: { text: "", offset: "14px", color: "transparent" },
-    github: { text: "Github", offset: "14px", color: "chartreuse" },
-    linkedin: { text: "LinkedIn", offset: "42px", color: "chartreuse" },
-    contact: { text: "Contact Me", offset: "72px", color: "chartreuse" },
-    resume: { text: "Resume", offset: "170px", color: "chartreuse" }
+  const opacitySwitch = {
+    none: [0, 0, 0, 0],
+    github: [1, 0, 0, 0],
+    linkedin: [0, 1, 0, 0],
+    contact: [0, 0, 1, 0],
+    resume: [0, 0, 0, 1]
   };
-  // separate p's needed for better ux
 
 
   return (
     <>
+      <div className="faicon__description">
+        <p style={{opacity: opacitySwitch[activeIcon][0]}}>Github</p>
+        <p style={{opacity: opacitySwitch[activeIcon][1]}}>LinkedIn</p>
+        <p style={{opacity: opacitySwitch[activeIcon][2]}}>Contact Me</p>
+        <p style={{opacity: opacitySwitch[activeIcon][3]}}>Resume</p>
+      </div>
       <div className="network-icons flex-row">
-        <a href="https://github.com/joseph-p-pasaoa" target="_blank" rel="noopener noreferrer" onMouseOver={() => setActiveIcon("github")} onMouseOut={() => setActiveIcon("none")} className="faicon">
+        <a
+          href="https://github.com/joseph-p-pasaoa"
+          className="faicon"
+          onMouseOver={() => setActiveIcon("github")}
+          onMouseLeave={() => setActiveIcon("none")}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FontAwesomeIcon icon={["fab", "github-square"]} className="faicon__svg" />
         </a>
-        <a href="https://www.linkedin.com/in/josephpasaoa/" target="_blank" rel="noopener noreferrer" onMouseOver={() => setActiveIcon("linkedin")} onMouseOut={() => setActiveIcon("none")} className="faicon">
+        <a href="https://www.linkedin.com/in/josephpasaoa/" target="_blank" rel="noopener noreferrer" onMouseOver={() => setActiveIcon("linkedin")} onMouseLeave={() => setActiveIcon("none")} className="faicon">
           <FontAwesomeIcon icon={["fab", "linkedin"]} className="faicon__svg" />
         </a>
-        <a href="https://www.linkedin.com/in/josephpasaoa/" target="_blank" rel="noopener noreferrer" onMouseOver={() => setActiveIcon("contact")} onMouseOut={() => setActiveIcon("none")} className="faicon">
+        <a href="https://www.linkedin.com/in/josephpasaoa/" target="_blank" rel="noopener noreferrer" onMouseOver={() => setActiveIcon("contact")} onMouseLeave={() => setActiveIcon("none")} className="faicon">
           <FontAwesomeIcon icon={["fas", "pen-square"]} className="faicon__svg faicon__svg--contact" />
           {/* <FontAwesomeIcon icon={["fas", "paper-plane"]} className="faicon__svg faicon__svg--contact" /> */}
         </a>
-        <a href={joeysResume} target="_blank" rel="noopener noreferrer" onMouseOver={() => setActiveIcon("resume")} onMouseOut={() => setActiveIcon("none")} className="faicon faicon__a--resume">
+        <a href={joeysResume} target="_blank" rel="noopener noreferrer" onMouseOver={() => setActiveIcon("resume")} onMouseLeave={() => setActiveIcon("none")} className="faicon faicon__a--resume">
           <FontAwesomeIcon icon={["fas", "file-pdf"]} className="faicon__svg" />
           {/* <FontAwesomeIcon icon={["fas", "list"]} className="faicon__svg faicon__svg--resume" /> */}
         </a>
       </div>
-      <p className="faicon__description" style={{left: descriptor[activeIcon].offset, color: descriptor[activeIcon].color}}>
-        {descriptor[activeIcon].text}
-      </p>
     </>
   );
 }
