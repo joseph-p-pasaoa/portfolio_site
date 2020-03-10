@@ -30,6 +30,7 @@ APP MAIN Component | Portfolio Site
     import SkillsPage from './pages/SkillsPage';
     import BlogPage from './pages/BlogPage';
     import PhotographyPage from './pages/PhotographyPage';
+    import SiteInfoPage from './pages/SiteInfoPage';
 
     // instantiate Fontawesome sitewide icon library
     library.add(faPaperPlane, faList, faFilePdf, faPenSquare, faGithubSquare, faLinkedin);
@@ -50,6 +51,7 @@ const App = () => {
             <Route path={`/skills`} component={SkillsPage} />
             <Route path={`/blog`} component={BlogPage} />
             <Route path={`/photography`} component={PhotographyPage} />
+            <Route path={`/siteinfo`} component={SiteInfoPage} />
             <Route path={`/`} component={HomeAboutPage} />
           </Switch>
         </div>
