@@ -51,7 +51,7 @@ body {
   width: 550px;
   margin-top: 0px;
   margin-right: 21px;
-  padding-right: 11px;
+  padding-right: 52px;
   border-right: solid 6px #cd8a3ddb;
   border-radius: 21px;
 }
@@ -129,7 +129,9 @@ a.faicon:hover, a.faicon:active {
 .faicon__description p {
   position: absolute;
 
-  color: #07154F;
+  /* text-shadow: 0px 2px 1px #000; */
+
+  color: #00425c;
 
   opacity: 0;
   transition: opacity .2s ease-in;
@@ -185,6 +187,10 @@ a.navlist__link.active {
   width: auto;
 }
 
+.page--projects {
+  padding: 0px;
+}
+
 h4.greet {
   font-size: 3rem;
   font-weight: normal;
@@ -202,4 +208,70 @@ h3.page__name {
   font-family: 'Indie Flower', cursive;
 
   color: rgb(226, 200, 156);
+}
+
+.page--projects h3.page__name {
+  display: none;
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  background-image: linear-gradient(to bottom, #e69129b3, #5a070785);
+}
+
+.project__card {
+  width: 100%;
+  height: 300px;
+  /* font-size: 4rem; */
+  background-image: linear-gradient(to bottom, #07819421, #03293169);
+  border-top: solid 1px #00000075;
+  border-bottom: solid 1px #00000075;
+  padding-top: 11px;
+}
+
+.project__card__leftcol {
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.project__card__rightcol {
+  padding: 0px 1vw 3px 1.7vw;
+}
+
+.project__name {
+  padding: 6px 1vw 6px 2.5vw;
+
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.2rem;
+}
+
+.project__screencap {
+  width: 330px;
+  height: 220px;
+  border-radius: 11px;
+  border: solid 1px #fff;
+  box-shadow: 0px 6px 11px #000;
+  margin: 3px 3px 3px 2vw;
+}
+
+h4.project__subheadline {
+  font-family: 'Raleway';
+  font-size: 1.3rem;
+  text-transform: lowercase;
+  color: #9a580fbf;
+  font-weight: bold;
+  margin-top: 16px;
+  margin-bottom: 2px;
+}
+
+h4.project__subheadline:first-child {
+  margin-top: 2px;
+}
+
+.text--projectinfo {
+  display: block;
+  padding-left: 26px; 
+  font-family: 'Indie Flower';
+  font-size: 2rem;
 }

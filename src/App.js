@@ -10,9 +10,6 @@ APP MAIN Component | Portfolio Site
   // solution
   // notable features
 // contact
-// links to github, linkedin
-// resume
-// about
 // mobile friendly
 
 /* IMPORTS */

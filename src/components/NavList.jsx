@@ -19,22 +19,12 @@ const NavList = () => {
     <ul className="navlist flex-column">
       <li className="navlist__item">
         <NavLink exact to={`/`} className="navlist__link">
-          Home / About
+          Home ● About Me
         </NavLink>
       </li>
       <li className="navlist__item">
         <NavLink to={`/projects`} className="navlist__link">
           Projects
-        </NavLink>
-      </li>
-      <li className="navlist__item">
-        <a href={joeysResume} target="_blank" rel="noopener noreferrer" className="navlist__link">
-          Resume
-        </a>
-      </li>
-      <li className="navlist__item">
-        <NavLink to={`/contactme`} className="navlist__link">
-          Contact Me
         </NavLink>
       </li>
       <li className="navlist__item">
@@ -45,6 +35,16 @@ const NavList = () => {
       <li className="navlist__item">
         <NavLink to={`/blog`} className="navlist__link">
           Blog
+        </NavLink>
+      </li>
+      <li className="navlist__item">
+        <a href={joeysResume} target="_blank" rel="noopener noreferrer" className="navlist__link">
+          Resume
+        </a>
+      </li>
+      <li className="navlist__item">
+        <NavLink to={`/contactme`} className="navlist__link">
+          Contact Me
         </NavLink>
       </li>
       <li className="navlist__item">

@@ -9,7 +9,7 @@ import React from 'react';
 
 import ProjectCard from '../components/ProjectCard';
 
-const projects = require('../data/projectsData.json');
+import projectsData from '../data/projectsData';
 
 
 /* MAIN */
@@ -17,14 +17,18 @@ const ProjectsPage = () => {
 
   // PRE-RETURN
   let listProjects = null;
-  if (projects.length > 0) {
-    listProjects = projects.map((project, index) => {
+  if (projectsData.length > 0) {
+    listProjects = projectsData.map((project, index) => {
         return (
           <ProjectCard
             key={index}
             name={project.name}
-            urlLive={project["url-live"]}
-            urlRepo={project["url-repo"]}
+            urlLive={project.urlLive}
+            urlRepo={project.urlRepo}
+            copyTech={project.copyTech}
+            copyRole={project.copyRole}
+            copySolution={project.copySolution}
+            copyFeats={project.copyFeats}
           />
         );
     })
@@ -32,6 +36,7 @@ const ProjectsPage = () => {
 
   return (
     <div className="page page--projects flex-column">
+      <h3 className="page__name">Joseph's Projects</h3>
       {listProjects}
     </div>
   );
