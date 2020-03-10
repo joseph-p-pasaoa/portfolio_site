@@ -20,12 +20,12 @@ font-family: 'Indie Flower', sans-serif;
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
+/* @font-face {
   font-family: 'Roboto Mono';
   src: url('./assets/fonts/Roboto_Mono/RobotoMono-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-}
+} */
 
 
 /* INDEX STYLING */
@@ -35,6 +35,8 @@ body {
 }
 
 code {
-  font-family: 'Roboto Mono', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  /* font-family: 'Roboto Mono', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace; */
 }

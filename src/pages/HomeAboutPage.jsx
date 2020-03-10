@@ -7,17 +7,26 @@ HomeAboutPage Component | Portfolio Site
 /* IMPORTS */
 import React from 'react';
 
+import { aboutMeCopy } from '../data/copyData';
+
 
 /* MAIN */
 const HomeAboutPage = () => {
 
   return (
     <div className="page page--homeabout flex-column">
-      <h4 className="greet">Hello!</h4>
-      <h3 className="page__name">I am a Software Engineer and a Full-Stack Developer</h3>
-      <p className="text--copy">
-        Hello, I am Joseph and this is a story all about how my life got flip-turned upside-down and I'd like to take a minute, just sit right there, I'll tell you how I became the prince of a town called Bel-Air.
-      </p>
+
+      <div className="page__textbock">
+        <h4 className="greet">Hello!</h4>
+        <h3 className="page__name">I am a Software Engineer & Full-Stack Developer</h3>
+
+        <div className="text--copy text__card text__card--home">
+          {aboutMeCopy.map((paragraph, index) => {
+                return <p key={index} className="text--copy__paragraph">{paragraph}</p>
+          })}
+        </div>
+      </div>
+
     </div>
   );
 }

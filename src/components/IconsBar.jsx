@@ -32,7 +32,7 @@ const IconsBar = () => {
         <p style={{opacity: opacitySwitch[activeIcon][0]}}>Github</p>
         <p style={{opacity: opacitySwitch[activeIcon][1]}}>LinkedIn</p>
         <p style={{opacity: opacitySwitch[activeIcon][2]}}>Contact Me</p>
-        <p style={{opacity: opacitySwitch[activeIcon][3]}}>Resume</p>
+        <p style={{opacity: opacitySwitch[activeIcon][3]}}>My Resume</p>
       </div>
       <div className="network-icons flex-row">
         <a
