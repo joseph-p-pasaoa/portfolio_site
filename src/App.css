@@ -179,6 +179,7 @@ a.navlist__link.active {
 }
 
 .page {
+  position: relative;
   padding: 113px 43px 43px 3px;
 }
 
@@ -192,16 +193,22 @@ a.navlist__link.active {
 }
 
 h4.greet {
+  position: absolute;
+  width: fit-content;
+
   font-size: 3rem;
   font-weight: normal;
   font-family: 'Indie Flower', cursive;
 
   color: #1ea0d2;
+
+  transform: translateY(-19px) translateX(-24px) rotate(-14deg);
 }
 
 h3.page__name {
   position: relative;
   z-index: 10;
+  max-width: 63vw;
 
   font-size: 6rem;
   font-weight: normal;
@@ -219,13 +226,35 @@ h3.page__name {
 }
 
 .project__card {
+  position: relative;
   width: 100%;
   height: 300px;
-  /* font-size: 4rem; */
-  background-image: linear-gradient(to bottom, #07819421, #03293169);
-  border-top: solid 1px #00000075;
-  border-bottom: solid 1px #00000075;
   padding-top: 11px;
+
+  /* border-top: solid 1px #00000075; */
+  border-bottom: solid 2px #00000075;
+
+  background-image: linear-gradient(to bottom, #07819421, #03293169);
+}
+
+.project__card__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  cursor: pointer;
+
+  background-image: linear-gradient(to bottom, #0b97ad47, #00414e54);
+
+  opacity: 0;
+
+  transition: opacity .1s ease-in;
+}
+
+.project__card__overlay:hover {
+  opacity: 1;
 }
 
 .project__card__leftcol {
@@ -267,6 +296,13 @@ h4.project__subheadline {
 
 h4.project__subheadline:first-child {
   margin-top: 2px;
+}
+
+.project__description {
+  margin-top: 22px;
+  padding: 0px 1vw;
+
+  color: #666;
 }
 
 .text--projectinfo {

@@ -5,7 +5,7 @@ ProjectsPage Component | Portfolio Site
 
 
 /* IMPORTS */
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import ProjectCard from '../components/ProjectCard';
 
@@ -13,7 +13,19 @@ import projectsData from '../data/projectsData';
 
 
 /* MAIN */
-const ProjectsPage = () => {
+const ProjectsPage = ({ history, location }) => {
+  useEffect(() => {
+    const autoscroll = () => {
+      if (location.state) {
+        const target = document.querySelector(`#project${location.state}`);
+        target.scrollIntoView();
+      } else {
+        document.querySelector('#project0').scrollIntoView();
+      }
+    }
+    autoscroll();
+  }, [location.state])
+
 
   // PRE-RETURN
   let listProjects = null;
@@ -22,13 +34,18 @@ const ProjectsPage = () => {
         return (
           <ProjectCard
             key={index}
+            id={index}
             name={project.name}
-            urlLive={project.urlLive}
-            urlRepo={project.urlRepo}
-            copyTech={project.copyTech}
-            copyRole={project.copyRole}
-            copySolution={project.copySolution}
-            copyFeats={project.copyFeats}
+            description={project.description}
+            // urlLive={project.urlLive}
+            // urlRepo={project.urlRepo}
+            techs={project.techs}
+            myRole={project.myRole}
+            // difficulties={project.difficulties}
+            // solutions={project.solutions}
+            features={project.features}
+            handleClick={() => history.push(`/projects/${index}`)}
+            // onClick={() => history.push(`/projects/${index}`)}
           />
         );
     })

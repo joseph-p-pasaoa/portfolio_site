@@ -18,13 +18,13 @@ const HomeAboutPage = () => {
 
       <div className="page__textbock">
         <h4 className="greet">Hello!</h4>
-        <h3 className="page__name">I am a Software Engineer & Full-Stack Developer</h3>
+        <h3 className="page__name">
+          I am a Software Engineer &<br />
+          Full-Stack Developer
+        </h3>
 
         <div className="text--copy text__card text__card--home">
           {aboutMeCopy}
-          {/* {aboutMeCopy.map((paragraph, index) => {
-                return <p key={index} className="text--copy__paragraph">{paragraph}</p>
-          })} */}
         </div>
       </div>
 

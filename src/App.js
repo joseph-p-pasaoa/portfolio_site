@@ -23,6 +23,7 @@ APP MAIN Component | Portfolio Site
     import Sidebar from './components/Sidebar';
     import HomeAboutPage from './pages/HomeAboutPage';
     import ProjectsPage from './pages/ProjectsPage';
+    import ProjectSpotPage from './pages/ProjectSpotPage';
     import ContactMePage from './pages/ContactMePage';
     import SkillsPage from './pages/SkillsPage';
     import BlogPage from './pages/BlogPage';
@@ -43,6 +44,7 @@ const App = () => {
         <Sidebar />
         <div className="stage">
           <Switch>
+            <Route path={`/projects/:index`} component={ProjectSpotPage} />
             <Route path={`/projects`} component={ProjectsPage} />
             <Route path={`/contactme`} component={ContactMePage} />
             <Route path={`/skills`} component={SkillsPage} />
