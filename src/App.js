@@ -14,7 +14,7 @@ APP MAIN Component | Portfolio Site
 
 /* IMPORTS */
     import React from 'react';
-    import { Switch, Route } from 'react-router-dom';
+    import { Switch, Route, useRouteMatch } from 'react-router-dom';
     import { library } from '@fortawesome/fontawesome-svg-core';
     import { faPaperPlane, faList, faFilePdf, faPenSquare } from '@fortawesome/free-solid-svg-icons';
     import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -36,13 +36,15 @@ APP MAIN Component | Portfolio Site
 
 /* COMPONENT & EXPORT */
 const App = () => {
+  const atProjectsPage = useRouteMatch('/projects');
+
 
   return (
     <div className="App">
 
       <div id="grid-base">
         <Sidebar />
-        <div className="stage">
+        <div className={ atProjectsPage.isExact ? "stage stage--projects" : "stage"}>
           <Switch>
             <Route path={`/projects/:index`} component={ProjectSpotPage} />
             <Route path={`/projects`} component={ProjectsPage} />

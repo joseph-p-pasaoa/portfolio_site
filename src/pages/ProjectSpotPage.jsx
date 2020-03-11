@@ -23,6 +23,7 @@ const ProjectSpotPage = (props) => {
 
   return (
     <div className="page page--projectspot">
+      <Link to={{ pathname: '/projects', state: props.match.params.index }} className="projectspot__back">Back</Link>
       <div className="flex-columm projectspot__leftcol">
         <img
           src={process.env.PUBLIC_URL + "/images/projects/" + screencapUrl}
@@ -30,7 +31,6 @@ const ProjectSpotPage = (props) => {
           className="project__screencap"
         />
         <h3 className="project__name">{name}</h3>
-        <Link to={{ pathname: '/projects', state: props.match.params.index }}>Back</Link>
       </div>
       <div className="flex-columm projectspot__rightcol">
         ProjectSpotPage
