@@ -36,16 +36,12 @@ const ProjectsPage = ({ history, location }) => {
             key={index}
             id={index}
             name={project.name}
-            description={project.description}
-            // urlLive={project.urlLive}
-            // urlRepo={project.urlRepo}
-            techs={project.techs}
+            shortDesc={project.shortDesc}
+            screencapUrl={project.screencapUrl}
+            shortTechs={project.shortTechs}
             myRole={project.myRole}
-            // difficulties={project.difficulties}
-            // solutions={project.solutions}
             features={project.features}
             handleClick={() => history.push(`/projects/${index}`)}
-            // onClick={() => history.push(`/projects/${index}`)}
           />
         );
     })

@@ -254,7 +254,7 @@ h3.page__name {
 }
 
 .project__card__overlay:hover {
-  opacity: 1;
+  opacity: .4;
 }
 
 .project__card__leftcol {
@@ -281,6 +281,10 @@ h3.page__name {
   border-radius: 11px;
   border: solid 1px #fff;
   box-shadow: 0px 6px 11px #000;
+  object-fit: cover;
+}
+
+.page--projects .project__screencap {
   margin: 3px 3px 3px 2vw;
 }
 
@@ -290,8 +294,9 @@ h4.project__subheadline {
   text-transform: lowercase;
   color: #9a580fbf;
   font-weight: bold;
-  margin-top: 16px;
-  margin-bottom: 2px;
+  margin-top: 8px;
+  margin-bottom: 3px;
+  float: left;
 }
 
 h4.project__subheadline:first-child {
@@ -300,14 +305,32 @@ h4.project__subheadline:first-child {
 
 .project__description {
   margin-top: 22px;
-  padding: 0px 1vw;
+  padding: 0px;
+
+  font-size: 1.6rem;
+  line-height: 1.8rem;
 
   color: #666;
 }
 
 .text--projectinfo {
   display: block;
-  padding-left: 26px; 
+  padding-left: 0px; 
   font-family: 'Indie Flower';
-  font-size: 2rem;
+  font-size: 1.7rem;
+}
+
+/* PROJECT SPOT PAGE */
+
+.page--projectspot {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 400px 1fr;
+
+  height: 100%;
+  padding: 3px;
+}
+
+.page--projectspot .project__screencap {
+  margin: 4vh 3px 3px 4vw;
 }
