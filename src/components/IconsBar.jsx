@@ -43,18 +43,16 @@ const IconsBar = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={["fab", "github-square"]} className="faicon__svg" />
+          <FontAwesomeIcon icon={["fab", "github-square"]} className="faicon--iconbar" />
         </a>
         <a href="https://www.linkedin.com/in/josephpasaoa/" target="_blank" rel="noopener noreferrer" onMouseOver={() => setActiveIcon("linkedin")} onMouseLeave={() => setActiveIcon("none")} className="faicon">
-          <FontAwesomeIcon icon={["fab", "linkedin"]} className="faicon__svg" />
+          <FontAwesomeIcon icon={["fab", "linkedin"]} className="faicon--iconbar" />
         </a>
         <a href="https://www.linkedin.com/in/josephpasaoa/" target="_blank" rel="noopener noreferrer" onMouseOver={() => setActiveIcon("contact")} onMouseLeave={() => setActiveIcon("none")} className="faicon">
-          <FontAwesomeIcon icon={["fas", "pen-square"]} className="faicon__svg faicon__svg--contact" />
-          {/* <FontAwesomeIcon icon={["fas", "paper-plane"]} className="faicon__svg faicon__svg--contact" /> */}
+          <FontAwesomeIcon icon={["fas", "pen-square"]} className="faicon--iconbar faicon--iconbar--contact" />
         </a>
         <a href={joeysResume} target="_blank" rel="noopener noreferrer" onMouseOver={() => setActiveIcon("resume")} onMouseLeave={() => setActiveIcon("none")} className="faicon faicon__a--resume">
-          <FontAwesomeIcon icon={["fas", "file-pdf"]} className="faicon__svg" />
-          {/* <FontAwesomeIcon icon={["fas", "list"]} className="faicon__svg faicon__svg--resume" /> */}
+          <FontAwesomeIcon icon={["fas", "file-pdf"]} className="faicon--iconbar" />
         </a>
       </div>
     </>

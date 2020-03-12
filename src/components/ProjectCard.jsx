@@ -7,13 +7,16 @@ ProjectCard Component | Portfolio Site
 /* IMPORTS */
 import React from 'react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 /* MAIN */
 const ProjectCard = ({ handleClick, id, name, screencapUrl, shortDesc, shortTechs, myRole, features }) => {
 
   return (
-    <div className="project__card flex-row" id={`project${id}`} onClick={handleClick}>
+    <div className="flex-row project__reactivebox project__card" id={`project${id}`} onClick={handleClick}>
       <div className="flex-column project__card__leftcol">
+        <div className="project__card__expandmsg">click to expand<br />
+        <FontAwesomeIcon icon={["fas", "angle-down"]} className="faicon--projectnav" /></div>
         <h3 className="project__name">{name}</h3>
         <img
           src={process.env.PUBLIC_URL + "/images/projects/" + screencapUrl}
@@ -49,7 +52,6 @@ const ProjectCard = ({ handleClick, id, name, screencapUrl, shortDesc, shortTech
         </p>
 
       </div>
-      <div className="project__card__overlay"></div>
     </div>
   );
 }

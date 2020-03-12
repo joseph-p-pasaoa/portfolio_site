@@ -7,6 +7,7 @@ ProjectSpotPage Component | Portfolio Site
 /* IMPORTS */
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import projectsData from '../data/projectsData';
 
@@ -23,7 +24,13 @@ const ProjectSpotPage = (props) => {
 
   return (
     <div className="page page--projectspot">
-      <Link to={{ pathname: '/projects', state: props.match.params.index }} className="projectspot__back">Back</Link>
+      <Link
+        to={{ pathname: '/projects', state: props.match.params.index }}
+        className="project__reactivebox projectspot__backbtn"
+      >
+        <FontAwesomeIcon icon={["fas", "angle-up"]} className="faicon--projectnav" /><br />
+        back
+      </Link>
       <div className="flex-columm projectspot__leftcol">
         <img
           src={process.env.PUBLIC_URL + "/images/projects/" + screencapUrl}

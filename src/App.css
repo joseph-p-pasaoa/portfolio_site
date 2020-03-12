@@ -106,7 +106,7 @@ a.faicon:hover, a.faicon:active {
   opacity: 1;
 }
 
-.faicon__svg {
+.faicon--iconbar {
   font-size: 3.3rem;
 }
 
@@ -167,7 +167,7 @@ a.navlist__link:hover, a.navlist__link:active {
 }
 
 a.navlist__link.active {
-  color: #e66e18;
+  color: #ffac10;
   text-shadow: 0px 1px 1px #000;
 }
 
@@ -259,32 +259,21 @@ h3.page__name {
   width: 100%;
   height: 300px;
   padding-top: 11px;
+  cursor: pointer;
+  color: #eee;
 
-  /* border-top: solid 1px #00000075; */
+  border: solid 1px transparent;
   border-bottom: solid 2px #00000075;
 
   background-image: linear-gradient(to bottom, #07819421, #03293169);
+
+  transition: border .05s ease-out;
 }
 
-.project__card__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 10;
-  cursor: pointer;
-
-  background-image: linear-gradient(to bottom, #0b97ad47, #00414e54);
-
-  opacity: 0;
-
-  transition: opacity .1s ease-in;
-}
-
-.project__card__overlay:hover {
-  opacity: .4;
-}
+/* .project__card:hover {
+  /* background-image: linear-gradient(to bottom, #00ddff3b, #28bcd85e);
+  background-image: linear-gradient(to bottom, #0b97ad47, #00414e96);
+} */
 
 .project__card__leftcol {
   flex-direction: column-reverse;
@@ -305,8 +294,6 @@ h3.page__name {
 }
 
 .project__screencap {
-  width: 330px;
-  height: 220px;
   border-radius: 11px;
   border: solid 1px #fff;
   box-shadow: 0px 6px 11px #000;
@@ -314,7 +301,30 @@ h3.page__name {
 }
 
 .page--projects .project__screencap {
+  width: 255px;
+  height: 162px;
   margin: 3px 3px 3px 2vw;
+}
+
+.project__card .project__card__expandmsg {
+  margin: 1.5vh 1vw 3px 3px;
+
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #6fd2ff;
+  text-shadow: 0px 0px 13px #f0fdff;
+
+  opacity: 0;
+  transition: opacity .3s ease-out;
+}
+
+.project__card:hover .project__card__expandmsg {
+  opacity: 1;
+}
+
+.project__card:active .project__card__expandmsg {
+  color: #fff;
 }
 
 h4.project__subheadline {
@@ -339,7 +349,11 @@ h4.project__subheadline:first-child {
   font-size: 1.6rem;
   line-height: 1.8rem;
 
-  color: #666;
+  color: #777;
+}
+
+.project__card:hover .project__description {
+  color: #aaa;
 }
 
 .text--projectinfo {
@@ -364,17 +378,65 @@ h4.project__subheadline:first-child {
   background-image: linear-gradient(to bottom, #0b97ad47, #00414e54);
 }
 
-.projectspot__back {
+.projectspot__backbtn:link, .projectspot__backbtn:visited {
   display: block;
   grid-column: span 2;
-  margin: auto;
 
+  width: auto;
+  height: auto;
+  border-radius: 9px;
+  margin: 1px 5px 5px 5px;
+  padding-top: 1px;
+
+  text-align: center;
   font-size: 1.4rem;
   text-decoration: none;
   font-weight: bold;
-  color: #1ea0d2;
+  color: #6fd1ffce;
+  background-image: linear-gradient(to Bottom, #00000024, #0000005e);
+
+  transition: color .3s ease-out;
+}
+
+.faicon--projectnav {
+  font-size: 1.3rem;
+}
+
+.projectspot__backbtn .faicon--projectnav {
+  opacity: .3;
+  transition: opacity .3s ease-out;
+}
+
+.projectspot__backbtn:hover {
+  color: #66dbff;
+  text-shadow: 0px 0px 13px #f0fdff;
+  /* background-image: linear-gradient(to Bottom, #804c0024, #8a6a4a5e); */
+}
+
+.projectspot__backbtn:hover .faicon--projectnav {
+  opacity: 1;
+}
+
+.project__reactivebox:hover {
+  background-image: linear-gradient(to bottom, #0b97ad47, #00414e96);
+}
+
+.projectspot__backbtn:hover .faicon--projectnav, .project__reactivebox:hover .faicon--projectnav {
+  filter:drop-shadow(0px 0px 4px #fff); /* working method to add shadow to fontawesome icons */
+}
+
+.project__card:active {
+  border: solid 1px #fff;
+  border-radius: 3px;
+}
+
+.projectspot__backbtn:active {
+  color: #fff;
+  border: solid 1px #ddd;
 }
 
 .page--projectspot .project__screencap {
+  width: 330px;
+  height: 220px;
   margin: 3px 3px 3px 4.5vw;
 }

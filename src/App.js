@@ -16,7 +16,7 @@ APP MAIN Component | Portfolio Site
     import React from 'react';
     import { Switch, Route, useRouteMatch } from 'react-router-dom';
     import { library } from '@fortawesome/fontawesome-svg-core';
-    import { faPaperPlane, faList, faFilePdf, faPenSquare } from '@fortawesome/free-solid-svg-icons';
+    import { faFilePdf, faPenSquare, faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
     import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
     import './App.css';
@@ -31,13 +31,12 @@ APP MAIN Component | Portfolio Site
     import SiteInfoPage from './pages/SiteInfoPage';
 
     // instantiate Fontawesome sitewide icon library
-    library.add(faPaperPlane, faList, faFilePdf, faPenSquare, faGithubSquare, faLinkedin);
+    library.add(faFilePdf, faPenSquare, faAngleDown, faAngleUp, faGithubSquare, faLinkedin);
 
 
 /* COMPONENT & EXPORT */
 const App = () => {
   const atProjectsPage = useRouteMatch('/projects');
-
 
   return (
     <div className="App">
