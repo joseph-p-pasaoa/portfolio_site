@@ -29,7 +29,7 @@ const ProjectSpotPage = (props) => {
         className="project__reactivebox projectspot__backbtn"
       >
         <FontAwesomeIcon icon={["fas", "angle-up"]} className="faicon--projectnav" /><br />
-        back
+        back to projects
       </Link>
       <div className="flex-columm projectspot__leftcol">
         <img
