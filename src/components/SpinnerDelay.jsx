@@ -7,7 +7,7 @@ SpinnerDelay Component | Portfolio Site
 /* IMPORTS */
 import React, { useState, useEffect } from 'react';
 import LoadingOverlay from 'react-loading-overlay';
-import { OrbitSpinner } from 'react-epic-spinners';
+import { FingerprintSpinner } from 'react-epic-spinners';
 
 
 /* MAIN */
@@ -41,7 +41,7 @@ const SpinnerDelay = ({ children, delayTime, delayColor, delayMsg }) => {
           })
         }}
         text={delayMsg}
-        spinner={<OrbitSpinner color="#dd9648" size={300} />}
+        spinner={<FingerprintSpinner color="#dd9648" size={300} />}
       >
         {children}
       </LoadingOverlay>

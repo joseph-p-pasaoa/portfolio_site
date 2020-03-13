@@ -10,7 +10,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // import './IconsBar.css';
-import { joeysResume } from '../helpers/importsRef.js';
+const { joeysResume } = require('../helpers/importsRef.js');
 
 
 /* MAIN */
