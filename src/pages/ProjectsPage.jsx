@@ -7,6 +7,7 @@ ProjectsPage Component | Portfolio Site
 /* IMPORTS */
 import React, { useEffect } from 'react';
 
+import SpinnerDelay from '../components/SpinnerDelay';
 import ProjectCard from '../components/ProjectCard';
 
 import projectsData from '../data/projectsData';
@@ -48,10 +49,12 @@ const ProjectsPage = ({ history, location }) => {
   }
 
   return (
-    <div className="page page--projects flex-column">
-      <h3 className="page__name">Joseph's Projects</h3>
-      {listProjects}
-    </div>
+    <SpinnerDelay delayTime={1400} delayColor="#262629" delayMsg="loading projects">
+      <div className="page page--projects flex-column">
+        <h3 className="page__name">Joseph's Projects</h3>
+        {listProjects}
+      </div>
+    </SpinnerDelay>
   );
 }
 

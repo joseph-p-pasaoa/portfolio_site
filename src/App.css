@@ -209,6 +209,7 @@ a.navlist__link.active {
 
 .page {
   position: relative;
+  min-height: 100vh;
   padding: 113px 43px 43px 3px;
 }
 
@@ -439,4 +440,14 @@ h4.project__subheadline:first-child {
   width: 330px;
   height: 220px;
   margin: 3px 3px 3px 4.5vw;
+}
+
+/* SPINNER */
+._loading_overlay_wrapper {
+  height: auto;
+  min-height: 100vh;
+}
+
+.orbit-spinner {
+  margin-bottom: 1.5vh;
 }
