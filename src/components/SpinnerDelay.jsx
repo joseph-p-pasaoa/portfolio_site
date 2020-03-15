@@ -41,7 +41,7 @@ const SpinnerDelay = ({ children, delayTime, delayColor, delayMsg }) => {
           })
         }}
         text={delayMsg}
-        spinner={<FingerprintSpinner color="#dd9648" size={300} />}
+        spinner={<FingerprintSpinner color="#dd9648" size={211} />}
       >
         {children}
       </LoadingOverlay>
