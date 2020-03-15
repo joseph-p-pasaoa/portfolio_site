@@ -8,13 +8,10 @@ export const projectsData = [
   {
     index: 0,
     name: "Greenlist Registry",
-    shortDesc: `Greenlist Registry was created to be an official registry, directory, and forum for fashion designers
-      and brands to find providers and suppliers of green materials, as well as serve as a networking community for
-      material reclaim.`,
-    description: `Designers, especially independent and small designers, lack a centralized resource to find,
-      research, and even discover eco-friendly sustainable materials they can use. \n\n Greenlist Registry aims to 
-      be an official registry, directory, and forum for designers and brands to find providers and suppliers 
-      of green materials. As well as serve as a networking vessel for material reclaim.`,
+    shortDesc: `Greenlist was created to become an official registry, directory, and forum for fashion designers and brands wanting to help the fashion sustainability movement find providers and suppliers of green materials, as well as serve as a networking community for material reclaim. `,
+    description: `Greenlist is an app created to be an official registry, directory, and forum for designers and brands to find providers and suppliers of greener materials, as well as to serve as a networking vessel for material reclaim.
+
+    Designers, especially independent and small designers, who want to be more eco-conscious lack a centralized resource to find, research, and discover pro-sustainable textiles. Greenlist intends to fill in a large gap found in their workflows.`,
     screencapUrl: "screencap_welcome_thumb.png",
     urlLive: "",
     urlRepo: "https://github.com/joseph-p-pasaoa/greenlistRegistry_back__Web",
@@ -28,10 +25,10 @@ export const projectsData = [
       "Pg-promise 10.4.4",
       "Axios 0.19.2",
       "Bootstrap 4.4.1",
-      "React Bootstrap Carousel 4.0.3",
+      "Bootstrap Carousel 4.0.3",
       "Multer 1.4.2",
       "Node.js 13.8.0",
-      "JavaScript 2019 / ECMAScript 10",
+      "JavaScript 2019",
       "HTML5",
       "CSS3",
       "Git / Github"
