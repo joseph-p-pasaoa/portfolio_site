@@ -297,10 +297,14 @@ h3.page__name {
 }
 
 .project__screencap {
-  border-radius: 11px;
+  /* border-radius: 11px; */
   border: solid 1px #fff;
   box-shadow: 0px 6px 11px #000;
   object-fit: cover;
+}
+
+.project__screencap[alt="SuitApp screencap"], .project__screencap[alt="Middleware Demo screencap"] {
+  object-position: left top;
 }
 
 .page--projects .project__screencap {
@@ -371,7 +375,7 @@ h4.project__subheadline:first-child {
 .page--fullproject {
   display: grid;
   grid-template-rows: 44px 50px min-content auto;
-  grid-template-columns: 400px 1fr;
+  grid-template-columns: 250px 150px 1fr;
 
   height: 100%;
   padding: 3px;
@@ -383,7 +387,7 @@ h4.project__subheadline:first-child {
 
 .fullproject__backbtn:link, .fullproject__backbtn:visited {
   display: block;
-  grid-column: span 2;
+  grid-column: span 3;
 
   width: auto;
   height: auto;
@@ -395,7 +399,7 @@ h4.project__subheadline:first-child {
   font-size: 1.4rem;
   text-decoration: none;
   font-weight: bold;
-  color: #6fd1ffce;
+  color: #a56b50;
   background-image: linear-gradient(to Bottom, #00000024, #0000005e);
 
   transition: color .3s ease-out;
@@ -450,7 +454,7 @@ h4.project__subheadline:first-child {
 /* END SPINNER */
 
 .page--fullproject .project__name {
-  grid-column: span 2;
+  grid-column: span 3;
   padding: 11px 3px;
 
   text-align: center;
@@ -458,6 +462,8 @@ h4.project__subheadline:first-child {
 }
 
 .page--fullproject .project__screencap {
+  grid-column: span 2;
+
   width: 330px;
   height: 220px;
   margin: 3px 3px 3px 4.5vw;
@@ -494,14 +500,68 @@ h4.project__subheadline:first-child {
   /* left: -4px; */
 }
 
-
 .fullproject__header {
   font-family: 'Indie Flower', serif;
   font-size: 2.2rem;
-  color: #5fb2d8;
+  color: #1ab7ff;
   padding-bottom: 6px;
 }
 
+.fullproject__btncol {
+  padding: 0px 6px;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullproject__button:link, .fullproject__button:visited {
+  position: relative;
+
+  padding: 6px 1.5vw 11px 1.5vw;
+  border: 1px outset #ccc;
+  border-radius: 50%;
+  height: 85px;
+  width: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 11px;
+  background-image: linear-gradient(to Bottom, #213237, #151d1f);
+
+  color: #a56c51;
+  text-decoration: none;
+  font-weight: bold;
+  
+  transition: color .3s ease-out;
+}
+
+.fullproject__button:hover, .fullproject__button:active {
+  color: #6fd1ffce;
+  background-image: linear-gradient(to bottom, #15444d, #0a2e35);
+}
+
+.fullproject__desc__hr {
+  width: 100%;
+  height: 2px;
+  background-color: red;
+}
+
 .fullproject__description {
-  padding: 0px 1.5vw 1vh 1.5vw;
+  padding: 1vh 1.5vw 1vh 3px;
+}
+
+.fullproject__rightcol {
+  grid-column: span 2;
+
+  padding: 16px;
+}
+
+.fullproject__text {
+  padding-bottom: 26px;
+}
+
+.fullproject__features {
+  list-style: square;
+  line-height: 2rem;
+  position: relative;
+  left: 16px;
 }

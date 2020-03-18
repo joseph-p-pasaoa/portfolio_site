@@ -22,6 +22,7 @@ const ProjectCard = ({ handleClick, id, name, screencapUrl, shortDesc, shortTech
           src={process.env.PUBLIC_URL + "/images/projects/" + screencapUrl}
           alt={`${name} screencap`}
           className="project__screencap"
+          id={id}
         />
       </div>
       <div className="flex-column project__card__rightcol">
@@ -37,11 +38,11 @@ const ProjectCard = ({ handleClick, id, name, screencapUrl, shortDesc, shortTech
           My Role
         </h4>
         <p className="text--projectinfo">
-          {myRole}
+          {myRole ? myRole : "Creator & Sole Developer"}
         </p>
 
         <h4 className="project__subheadline">
-          Most Notable Features
+          Notable Features
         </h4>
         <p className="text--projectinfo">
           {features.join(' • ')}
