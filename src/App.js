@@ -30,7 +30,7 @@ APP MAIN Component | Portfolio Site
     import PhotographyPage from './pages/PhotographyPage';
     import SiteInfoPage from './pages/SiteInfoPage';
 
-    // instantiate Fontawesome sitewide icon library
+    // instantiate FontAwesome sitewide icon library
     library.add(faFilePdf, faPenSquare, faAngleDown, faAngleUp, faGithubSquare, faLinkedin);
 
 

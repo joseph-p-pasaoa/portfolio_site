@@ -10,10 +10,9 @@ import React from 'react';
 import NameBox from './NameBox';
 import IconsBar from  './IconsBar';
 import NavList from './NavList';
-import './Sidebar.css';
 
 
-/* COMPONENT & EXPORT */
+/* MAIN */
 const Sidebar = () => {
 
   return (

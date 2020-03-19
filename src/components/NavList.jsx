@@ -8,7 +8,6 @@ NavList Component | Portfolio Site
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-// import './NavList.css';
 import { joeysResume } from '../helpers/importsRef.js';
 
 

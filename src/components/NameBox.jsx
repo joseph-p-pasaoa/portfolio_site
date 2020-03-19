@@ -8,8 +8,6 @@ NameBox Component | Portfolio Site
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import './NameBox.css';
-
 
 /* MAIN */
 const NameBox = () => {
