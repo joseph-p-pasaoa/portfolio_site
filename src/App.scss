@@ -1,0 +1,26 @@
+/*
+JOSEPH P. PASAOA
+APP MAIN SCSS | Portfolio Site
+*/
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, .root, .App, #grid-base {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5rem;
+  color: #fcfcfc;
+}

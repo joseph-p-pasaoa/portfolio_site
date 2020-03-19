@@ -1,6 +1,6 @@
 /*
 JOSEPH P. PASAOA
-APP MAIN CSS | Portfolio Site
+APP MAIN SCSS | Portfolio Site
 */
 
 
@@ -607,7 +607,7 @@ h2.namebox__subname {
 
 /* SIDEBAR */
 .App {
-  background-image: url(../assets/images/bgs/contemp-comp-dered.jpg);
+  background-image: url(./assets/images/bgs/contemp-comp-dered.jpg);
   background-size: cover;
   background-color: #fff;
   background-position: left center;
@@ -626,3 +626,45 @@ h2.namebox__subname {
 
   border-right: solid 1px #8e6666;
 }
+
+
+
+
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */

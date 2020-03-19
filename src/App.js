@@ -19,7 +19,7 @@ APP MAIN Component | Portfolio Site
     import { faFilePdf, faPenSquare, faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
     import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-    import './App.css';
+    import './App.scss';
     import Sidebar from './components/Sidebar';
     import HomeAboutPage from './pages/HomeAboutPage';
     import ProjectsPage from './pages/ProjectsPage';
