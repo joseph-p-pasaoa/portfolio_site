@@ -4,23 +4,105 @@ APP MAIN SCSS | Portfolio Site
 */
 
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body, .root, .App, #grid-base {
-  height: 100%;
-  width: 100%;
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  font-size: 10px;
+    font-size: 10px;
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
-  font-size: 1.5rem;
-  color: #fcfcfc;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    color: #fcfcfc;
+}
+
+
+// VARIABLES
+$color-shade-l: #fcfcfc;  // alabaster
+$color-accent-l: #1ea0d2; // curious blue
+$color-primary: #ffac10;  // sun
+$color-accent-d: #64332e; // buccaneer
+$color-shade-d: #0e1b3d;  // blue zodiac
+
+$default-pad: 3px;
+$pageleft-pad: 1.5vw;
+
+
+@mixin flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+// APP
+html, body, .root, .App, #grid-base {
+    height: 100%;
+    width: 100%;
+}
+
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+
+    color: #fff;
+    text-shadow: 0px 2px 2px #111;
+
+    &.namebox__name {
+        margin-bottom: 1vh;
+    }
+}
+
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: lowercase;
+
+    color: #000;
+}
+
+
+.App {
+    background-image: url(./assets/images/bgs/contemp-comp-dered.jpg);
+    background-size: cover;
+    background-color: #fff;
+    background-position: left center;
+}
+
+#grid-base {
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-template-rows: 1fr;
+}
+
+
+.sidebar {
+    height: 100%;
+    background-image: linear-gradient(to bottom, #e69129b3, #5a070785);
+    /* background-image: linear-gradient(to bottom, #4bc5ffb0, #011d46); */
+    /* background-image: linear-gradient(to bottom, #b99556b0, #271a0287); */
+    /* background-image: linear-gradient(to bottom, #4bc5ffb0, #011d46), url(../assets/images/bgs/contemp-comp.jpg); */
+    /* background-image: linear-gradient(to bottom, #A38383b0, #5C3828), url(../assets/images/bgs/contemp-comp.jpg); */
+    /* background-image: linear-gradient(to bottom, #4bc5ffb0, #0d2c5a), url(../assets/images/bgs/contemp-comp.jpg); */
+    // background-size: cover;
+    // background-position: 27% center;
+    border-right: solid 1px #8e6666;
+}
+
+.namebox {
+    position: absolute;
+    top: 7vh;
+
+    margin: $default-pad $pageleft-pad;
 }

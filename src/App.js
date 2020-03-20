@@ -34,7 +34,7 @@ APP MAIN Component | Portfolio Site
     library.add(faFilePdf, faPenSquare, faAngleDown, faAngleUp, faGithubSquare, faLinkedin);
 
 
-/* COMPONENT & EXPORT */
+/* MAIN */
 const App = () => {
   const atProjectsPage = useRouteMatch('/projects');
 

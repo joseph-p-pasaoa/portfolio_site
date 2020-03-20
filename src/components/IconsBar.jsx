@@ -6,7 +6,6 @@ IconsBar Component | Portfolio Site
 
 /* EXTERNALS - LOCALS */
 import React, { useState } from 'react';
-// import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const { joeysResume } = require('../helpers/importsRef.js');

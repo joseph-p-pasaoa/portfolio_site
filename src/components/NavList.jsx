@@ -18,7 +18,7 @@ const NavList = () => {
     <ul className="navlist flex-column">
       <li className="navlist__item">
         <NavLink exact to={`/`} className="navlist__link">
-          Home ● About Me
+          About Me
         </NavLink>
       </li>
       <li className="navlist__item">

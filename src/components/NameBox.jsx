@@ -20,8 +20,7 @@ const NameBox = () => {
       <Switch>
         <Route exact path="/">
           <h2 className="namebox__subname">
-            Welcome to my<br />
-            portfolio site!
+            Welcome!
           </h2>
         </Route>
         <Route>
