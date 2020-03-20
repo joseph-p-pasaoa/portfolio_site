@@ -15,44 +15,44 @@ import { joeysResume } from '../helpers/importsRef.js';
 const NavList = () => {
 
   return (
-    <ul className="navlist flex-column">
-      <li className="navlist__item">
-        <NavLink exact to={`/`} className="navlist__link">
+    <ul className="navlist">
+      <li>
+        <NavLink exact to={`/`} className="link-navlist">
           About Me
         </NavLink>
       </li>
-      <li className="navlist__item">
-        <NavLink to={`/projects`} className="navlist__link">
+      <li>
+        <NavLink to={`/projects`} className="link-navlist">
           Projects
         </NavLink>
       </li>
-      <li className="navlist__item">
-        <NavLink to={`/skills`} className="navlist__link">
+      <li>
+        <NavLink to={`/skills`} className="link-navlist">
           Skills
         </NavLink>
       </li>
-      <li className="navlist__item">
-        <NavLink to={`/blog`} className="navlist__link">
+      <li>
+        <NavLink to={`/blog`} className="link-navlist">
           Blog
         </NavLink>
       </li>
-      <li className="navlist__item">
-        <a href={joeysResume} target="_blank" rel="noopener noreferrer" className="navlist__link">
+      <li>
+        <a href={joeysResume} target="_blank" rel="noopener noreferrer" className="link-navlist">
           Resume
         </a>
       </li>
-      <li className="navlist__item">
-        <NavLink to={`/contactme`} className="navlist__link">
+      <li>
+        <NavLink to={`/contactme`} className="link-navlist">
           Contact Me
         </NavLink>
       </li>
-      <li className="navlist__item">
-        <NavLink to={`/photography`} className="navlist__link">
+      <li>
+        <NavLink to={`/photography`} className="link-navlist">
           Photography
         </NavLink>
       </li>
-      <li className="navlist__item">
-        <NavLink to={`/siteinfo`} className="navlist__link">
+      <li>
+        <NavLink to={`/siteinfo`} className="link-navlist">
           About This Site
         </NavLink>
       </li>

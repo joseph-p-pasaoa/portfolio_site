@@ -34,16 +34,24 @@ $default-pad: 3px;
 $pageleft-pad: 1.5vw;
 
 
-@mixin flex($direction) {
+@mixin flex-line($direction, $col-justify: "flex-start", $col-align: "flex-start") {
     display: flex;
     flex-direction: $direction;
     flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: $col-justify;
+    align-items: $col-align;
+}
+
+@mixin flex-center($col-justify: "flex-start", $col-align: "center") {
+    display: flex;
+    flex-direction: column;
+    justify-content: $col-justify;
+    align-items: $col-align;
 }
 
 
-// APP
+// BASE & SIDEBAR
+
 html, body, .root, .App, #grid-base {
     height: 100%;
     width: 100%;
@@ -59,7 +67,7 @@ h1 {
     text-shadow: 0px 2px 2px #111;
 
     &.namebox__name {
-        margin-bottom: 1vh;
+        margin-bottom: 0.5rem;
     }
 }
 
@@ -102,7 +110,84 @@ h2 {
 
 .namebox {
     position: absolute;
-    top: 7vh;
+    top: 5.5rem;
 
     margin: $default-pad $pageleft-pad;
 }
+
+.iconsbar {
+    @include flex-line(column);
+
+    width: 100%;
+    margin-top: 15rem;
+    padding: $default-pad $pageleft-pad;
+
+    .link-faicon {
+        &:link, &:visited {
+            width: 100%;
+            // @include flex-center(flex-start, center);
+            margin: $default-pad 0 8px 0;
+            padding-left: 1.5rem;
+        
+            font-size: 2.8rem;
+            color: #fff;
+            opacity: .7;
+
+            transition: color .4s ease-out, opacity .2s ease-out;
+        }
+        &.link-faicon--resume:link, &.link-faicon--resume:visited {
+            margin-left: 2px; // for centering resume icon if list is left-justified
+            margin-top: 4px;
+
+            font-size: 2.6rem;
+        }
+        &:hover, &:active {
+            color: #1ea0d2;
+            opacity: 1;
+        }
+    }
+}
+
+.navlist {
+    @include flex-line(column);
+
+    padding: 42px $pageleft-pad $default-pad $pageleft-pad;
+    width: 100%;
+
+    li {
+        margin-bottom: 11px;
+
+        .link-navlist {
+            &:link, &:visited {
+                font-family: 'Raleway', sans-serif;
+                font-size: 1.5rem;
+                letter-spacing: 1px;
+                font-weight: bold;
+                text-decoration: none;
+                text-transform: lowercase;
+
+                color: #fff;
+                text-shadow: 0px 2px 2px #000;
+
+                transition: color .1s ease-in, text-shadow .2s ease-in;
+            }
+            &:hover {
+                color: #1ea0d2;
+            }
+            &.active {
+                color: #ffac10;
+                text-shadow: 0px 1px 1px #000;
+            }
+        }
+    }
+}
+
+
+// STAGES
+
+.stage {
+    overflow-y: auto;
+    background-image: linear-gradient(180deg, rgba(53, 27, 27, 0.89) 56%, #1d100adb 100%);
+    /* background-image: linear-gradient(180deg, rgba(53, 27, 27, 0.58) 56%, #1d100ad1 100%); */
+    /* background-image: linear-gradient(180deg, rgba(255,255,255,0.500437675070028) 56%, rgba(146,163,171,0.5032387955182073) 100%); */
+  }
