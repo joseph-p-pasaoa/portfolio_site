@@ -16,7 +16,7 @@ import NavList from './NavList';
 const Sidebar = () => {
 
   return (
-    <div className="sidebar flex-column">
+    <div className="sidebar">
       <NameBox />
       <IconsBar />
       <NavList />

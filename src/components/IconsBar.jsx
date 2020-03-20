@@ -19,6 +19,7 @@ const IconsBar = () => {
       <a
         href="https://github.com/joseph-p-pasaoa"
         className="link-faicon"
+        data-name="Github"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -27,6 +28,7 @@ const IconsBar = () => {
       <a
         href="https://www.linkedin.com/in/josephpasaoa/"
         className="link-faicon"
+        data-name="LinkedIn"
         target="_blank"
         rel="noopener noreferrer"
         >
@@ -35,6 +37,7 @@ const IconsBar = () => {
       <a
         href="https://www.linkedin.com/in/josephpasaoa/"
         className="link-faicon"
+        data-name="Contact Me"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -43,6 +46,7 @@ const IconsBar = () => {
       <a
         href={joeysResume}
         className="link-faicon link-faicon--resume"
+        data-name="Resume"
         target="_blank"
         rel="noopener noreferrer"
       >

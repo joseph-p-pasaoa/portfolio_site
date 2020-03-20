@@ -22,6 +22,11 @@ body {
     color: #fcfcfc;
 }
 
+html, body, .root, .App, #grid-base {
+    height: 100%;
+    width: 100%;
+}
+
 
 // VARIABLES
 $color-shade-l: #fcfcfc;  // alabaster
@@ -33,8 +38,10 @@ $color-shade-d: #0e1b3d;  // blue zodiac
 $default-pad: 3px;
 $pageleft-pad: 1.5vw;
 
+$name-transition: opacity .9s ease-out;
 
-@mixin flex-line($direction, $col-justify: "flex-start", $col-align: "flex-start") {
+
+@mixin flex-line($direction, $col-justify: flex-start, $col-align: flex-start) {
     display: flex;
     flex-direction: $direction;
     flex-wrap: nowrap;
@@ -42,32 +49,51 @@ $pageleft-pad: 1.5vw;
     align-items: $col-align;
 }
 
-@mixin flex-center($col-justify: "flex-start", $col-align: "center") {
+@mixin flex-center($col-justify: flex-start, $col-align: center) {
     display: flex;
     flex-direction: column;
     justify-content: $col-justify;
     align-items: $col-align;
 }
 
+@mixin nav-in-base() {
+    transform-origin: left bottom;
+    animation: nav-in .2s ease-out 0s 1 both;
+}
 
-// BASE & SIDEBAR
-
-html, body, .root, .App, #grid-base {
-    height: 100%;
-    width: 100%;
+@keyframes nav-out {
+    from { transform: translate(0, 0) scale(1); }
+    to { transform: translate(.5rem, .3rem) scale(1.4); }
+}
+@keyframes nav-in {
+    from { transform: translate(.5rem, .3rem) scale(1.4); }
+    to { transform: translate(0, 0) scale(1); }
 }
 
 
+// HEADERS
 h1 {
     font-family: 'Raleway', sans-serif;
-    font-size: 2.5rem;
+    font-size: 2.65rem;
     text-transform: uppercase;
 
     color: #fff;
     text-shadow: 0px 2px 2px #111;
 
     &.namebox__name {
+        position: absolute;
         margin-bottom: 0.5rem;
+
+        white-space: nowrap;
+
+        transition: $name-transition;
+
+        &.namebox__name--brand {
+            top: -.5rem;
+            left: -.15rem;
+
+            font-size: 3.5rem;
+        }
     }
 }
 
@@ -78,9 +104,19 @@ h2 {
     text-transform: lowercase;
 
     color: #000;
+
+    &.namebox__subname {
+        position: absolute;
+        top: 3rem;
+
+        white-space: nowrap;
+
+        transition: $name-transition;
+    }
 }
 
 
+// BASE & SIDEBAR
 .App {
     background-image: url(./assets/images/bgs/contemp-comp-dered.jpg);
     background-size: cover;
@@ -96,16 +132,16 @@ h2 {
 
 
 .sidebar {
+    @include flex-line(column);
     height: 100%;
+    z-index: 1000;
+    border-right: solid 1px #8e6666;
     background-image: linear-gradient(to bottom, #e69129b3, #5a070785);
     /* background-image: linear-gradient(to bottom, #4bc5ffb0, #011d46); */
     /* background-image: linear-gradient(to bottom, #b99556b0, #271a0287); */
-    /* background-image: linear-gradient(to bottom, #4bc5ffb0, #011d46), url(../assets/images/bgs/contemp-comp.jpg); */
-    /* background-image: linear-gradient(to bottom, #A38383b0, #5C3828), url(../assets/images/bgs/contemp-comp.jpg); */
-    /* background-image: linear-gradient(to bottom, #4bc5ffb0, #0d2c5a), url(../assets/images/bgs/contemp-comp.jpg); */
-    // background-size: cover;
-    // background-position: 27% center;
-    border-right: solid 1px #8e6666;
+    /* background-image: linear-gradient(to bottom, #4bc5ffb0, #011d46); */
+    /* background-image: linear-gradient(to bottom, #A38383b0, #5C3828); */
+    /* background-image: linear-gradient(to bottom, #4bc5ffb0, #0d2c5a); */
 }
 
 .namebox {
@@ -124,16 +160,31 @@ h2 {
 
     .link-faicon {
         &:link, &:visited {
-            width: 100%;
-            // @include flex-center(flex-start, center);
+            position: relative;
             margin: $default-pad 0 8px 0;
-            padding-left: 1.5rem;
         
             font-size: 2.8rem;
             color: #fff;
             opacity: .7;
 
-            transition: color .4s ease-out, opacity .2s ease-out;
+            & svg {
+                @include nav-in-base();
+            }
+
+            &::after {
+                content: attr(data-name);
+                position: absolute;
+                top: 0.5rem;
+                left: 4.7rem;
+                white-space: nowrap;
+                font-size: 1.3rem;
+                font-weight: bold;
+                filter: drop-shadow(0px 0px 2px #fff);
+                opacity: 0;
+
+                transition: opacity .1s ease-in;
+            }
+
         }
         &.link-faicon--resume:link, &.link-faicon--resume:visited {
             margin-left: 2px; // for centering resume icon if list is left-justified
@@ -142,8 +193,15 @@ h2 {
             font-size: 2.6rem;
         }
         &:hover, &:active {
-            color: #1ea0d2;
             opacity: 1;
+
+            & svg {
+                animation: nav-out .2s ease-out 0s 1 forwards;
+            }
+
+            &::after {
+                opacity: 1;
+            }
         }
     }
 }
@@ -151,7 +209,7 @@ h2 {
 .navlist {
     @include flex-line(column);
 
-    padding: 42px $pageleft-pad $default-pad $pageleft-pad;
+    padding: 11rem $pageleft-pad 8rem $pageleft-pad;
     width: 100%;
 
     li {
@@ -171,11 +229,11 @@ h2 {
 
                 transition: color .1s ease-in, text-shadow .2s ease-in;
             }
-            &:hover {
-                color: #1ea0d2;
+            &:hover, &:active {
+                color: $color-accent-l;
             }
             &.active {
-                color: #ffac10;
+                color: $color-primary;
                 text-shadow: 0px 1px 1px #000;
             }
         }
@@ -184,10 +242,7 @@ h2 {
 
 
 // STAGES
-
 .stage {
     overflow-y: auto;
-    background-image: linear-gradient(180deg, rgba(53, 27, 27, 0.89) 56%, #1d100adb 100%);
-    /* background-image: linear-gradient(180deg, rgba(53, 27, 27, 0.58) 56%, #1d100ad1 100%); */
-    /* background-image: linear-gradient(180deg, rgba(255,255,255,0.500437675070028) 56%, rgba(146,163,171,0.5032387955182073) 100%); */
+    background-image: linear-gradient(180deg, rgba(53, 27, 27, 0.89) 28%, #1d100adb 100%);
   }
