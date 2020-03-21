@@ -18,42 +18,42 @@ const NavList = () => {
     <ul className="navlist">
       <li>
         <NavLink exact to={`/`} className="link-navlist">
-          About Me
+          <div>About Me</div>
         </NavLink>
       </li>
       <li>
         <NavLink to={`/projects`} className="link-navlist">
-          Projects
+          <div>Projects</div>
         </NavLink>
       </li>
       <li>
         <NavLink to={`/skills`} className="link-navlist">
-          Skills
+          <div>Skills</div>
         </NavLink>
       </li>
       <li>
         <NavLink to={`/blog`} className="link-navlist">
-          Blog
+          <div>Blog</div>
         </NavLink>
       </li>
       <li>
         <a href={joeysResume} target="_blank" rel="noopener noreferrer" className="link-navlist">
-          Resume
+          <div>Resume</div>
         </a>
       </li>
       <li>
         <NavLink to={`/contactme`} className="link-navlist">
-          Contact Me
+          <div>Contact Me</div>
         </NavLink>
       </li>
       <li>
         <NavLink to={`/photography`} className="link-navlist">
-          Photography
+          <div>Photography</div>
         </NavLink>
       </li>
       <li>
         <NavLink to={`/siteinfo`} className="link-navlist">
-          About This Site
+          <div>Site Info</div>
         </NavLink>
       </li>
     </ul>
