@@ -7,39 +7,77 @@ SkillsPage Component | Portfolio Site
 /* IMPORTS */
 import React from 'react';
 
+const iconJs = require('../assets/images/icons/js.svg');
+const iconHtml = require('../assets/images/icons/html5.png');
+const iconCss = require('../assets/images/icons/css3.png');
+const iconScss = require('../assets/images/icons/scss.png');
+const iconPsql = require('../assets/images/icons/postgresql.png');
+
 
 /* MAIN */
 const SkillsPage = () => {
 
   return (
-    <div className="page page--skills flex-column">
-      <p className="fullproject__header" style={{ marginTop: "11px" }}>Development</p>
-      <ul>
-        <li>Javascript (ES6+)</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>PostgreSQL</li>
+    <div className="page page--skills">
+      <ul className="section">
+        <li><h3 className="header-section">Development</h3></li>
+        <li data-skill="Javascript (ES6+)">
+          <img
+            src={iconJs}
+            className="icon-skill"
+            alt="Javascript (ES6+)"
+          />
+        </li>
+        <li data-skill="HTML5">
+          <img
+            src={iconHtml}
+            className="icon-skill"
+            alt="HTML5"
+          />
+        </li>
+        <li data-skill="CSS3">
+          <img
+            src={iconCss}
+            className="icon-skill"
+            alt="CSS3"
+          />
+        </li>
+        <li data-skill="SCSS">
+          <img
+            src={iconScss}
+            className="icon-skill"
+            alt="SCSS"
+          />
+        </li>
+        <li data-skill="PostgreSQL">
+          <img
+            src={iconPsql}
+            className="icon-skill"
+            alt="PostgreSQL"
+          />
+        </li>
       </ul>
-      <p className="fullproject__header" style={{ marginTop: "11px" }}>Libraries, Frameworks, Runtimes</p>
-      <ul>
+      <ul className="section">
+        <li><h3 className="header-section">Libraries, Frameworks, Runtimes</h3></li>
         <li>React</li>
         <li>React / Redux</li>
         <li>Express</li>
         <li>Node</li>
-        <li>PostgreSQL</li>
       </ul>
-      <p className="fullproject__header" style={{ marginTop: "11px" }}>Tools</p>
-      <ul>
+      <ul className="section">
+        <li><h3 className="header-section">Tools</h3></li>
         <li>Git / Github</li>
         <li>Postman</li>
         <li>Chrome DevTools</li>
-        <li>PostgreSQL</li>
       </ul>
-      <p className="fullproject__header" style={{ marginTop: "11px" }}>Design</p>
-      <ul>
+      <ul className="section">
+        <li><h3 className="header-section">Design</h3></li>
         <li>Figma</li>
-        <li>Adobe Photoshop, Bridge, Lightroom</li>
+        <li>Adobe Photoshop</li>
+        <li>Adobe Lightroom</li>
+        <li>Adobe Bridge</li>
         <li>Adobe InDesign</li>
+        <li>Adobe Premiere Pro</li>
         <li>Wireframing</li>
       </ul>
     </div>

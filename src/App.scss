@@ -39,6 +39,7 @@ $default-pad: 3px;
 $pageleft-pad: 1.5vw;
 
 $name-transition: opacity .9s ease-out;
+$pageside-pad: 13rem;
 
 
 @mixin flex-line($direction, $col-justify: flex-start, $col-align: flex-start) {
@@ -115,10 +116,23 @@ h2 {
     }
 }
 
+h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: lowercase;
+    color: #fcfcfc;
+    text-shadow: 11px 4px 2px #000;
+
+    &.header-section {
+        color: $color-primary;
+    }
+}
+
 
 // BASE & SIDEBAR
 .App {
-    background-image: url(./assets/images/bgs/contemp-comp-dered.jpg);
+    background-image: url(./assets/images/bgs/contemp-comp-jedit.jpg);
     background-size: cover;
     background-color: #fff;
     background-position: left center;
@@ -270,7 +284,63 @@ h2 {
 
 
 // STAGES
-.stage {
+.stage { // static viewport containter
     overflow-y: auto;
     background-image: linear-gradient(180deg, rgba(53, 27, 27, 0.89) 28%, #1d100adb 100%);
-  }
+}
+
+.page { // scrolling canvas
+    @include flex-line(column);
+
+    position: relative;
+    min-height: 100vh;
+    padding: 11rem $pageside-pad 6rem $pageside-pad;
+
+    &.page--skills {
+        background-image: linear-gradient(180deg, rgba(7,129,148,.13), rgba(3,41,49,.41));
+    }
+}
+
+.section {
+    @include flex-line(row);
+
+    position: relative;
+    border: solid 15px #222d4a94;
+    border-radius: 4rem;
+    padding: 1.8rem 3rem 2.7rem 4rem;
+    margin-bottom: 4rem;
+
+    & li:first-child {
+        position: absolute;
+        top: -13px;
+        left: -4px;
+    }
+
+    & li {
+        position: relative;
+
+        &::after {
+            content: attr(data-skill);
+
+            position: absolute;
+            bottom: -1.6rem;
+            left: 50%;
+            white-space: nowrap;
+            transform: translateX(-50%);
+
+            // font-family: 'Indie Flower', cursive;
+            font-size: 1.2rem;
+        }
+    }
+
+    & .icon-skill {
+        height: 5.4rem;
+        width: auto;
+        margin: 0 3.1rem;
+        filter: drop-shadow(2px 2px 3px #000);
+    }
+
+    &:last-child {
+        margin-bottom: $default-pad;
+    }
+}
