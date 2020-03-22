@@ -47,9 +47,9 @@ const NavList = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink to={`/photography`} className="link-navlist">
+        <a href="https://www.josephpasaoa.com" target="_blank" rel="noopener noreferrer" className="link-navlist">
           <div>Photography</div>
-        </NavLink>
+        </a>
       </li>
       <li>
         <NavLink to={`/siteinfo`} className="link-navlist">
