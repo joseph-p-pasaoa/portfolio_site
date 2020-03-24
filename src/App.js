@@ -37,9 +37,11 @@ APP MAIN Component | Portfolio Site
 /* MAIN */
 const App = () => {
   const atProjectsPage = useRouteMatch('/projects');
+  const atHome = useRouteMatch({ exact: true, path: "/" });
 
   return (
     <div className="App">
+      <div className="app__fadebg" style={atHome ? {opacity: 0} : null}></div>
 
       <div id="grid-base">
         <Sidebar />
