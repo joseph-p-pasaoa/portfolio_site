@@ -18,7 +18,6 @@ const FullProjectPage = (props) => {
 
   // PRE-RETURN
   const project = projectsData[props.match.params.index];
-  console.log(project);
   const { name, description, urlLive, urlRepo, screencapUrl, techs, myRole, difficulties, wins, features } = project;
 
 
