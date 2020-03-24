@@ -19,7 +19,7 @@ const NameBox = () => {
     const delay = () => {
       setTimeout(() => {
         setDelayFinished(true);
-      }, 1000);
+      }, 1500);
     }
     delay();
   }, []);
@@ -44,7 +44,7 @@ const NameBox = () => {
         <h1 className="namebox__name namebox__name--brand" style={nameStyles.homeName}>
           JP
         </h1>
-        <h2 className="namebox__subname" style={nameStyles.homeSubname}>
+        <h2 className="namebox__subname colored" style={nameStyles.homeSubname}>
           Welcome!
         </h2>
       </Fade>

@@ -20,7 +20,7 @@ const NavList = () => {
     const delay = () => {
       setTimeout(() => {
         setDelayFinished(true);
-      }, 400);
+      }, 600);
     }
     delay();
   }, []);
