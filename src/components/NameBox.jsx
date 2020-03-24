@@ -5,13 +5,24 @@ NameBox Component | Portfolio Site
 
 
 /* IMPORTS */
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouteMatch } from 'react-router-dom';
+import Fade from 'react-reveal/Fade';
 
 
 /* MAIN */
 const NameBox = () => {
   const atHome = useRouteMatch({ exact: true, path: "/" });
+  const [ brandTrigger, setBrandTrigger ] = useState(false);
+
+  useEffect(() => {
+    const startBrand = () => {
+      setTimeout(() => {
+        setBrandTrigger(true);
+      }, 500);
+    }
+    startBrand();
+  }, []);
 
   let nameStyles = {};
   if (atHome) {
@@ -29,19 +40,23 @@ const NameBox = () => {
 
   return (
     <div className="namebox">
-          <h1 className="namebox__name namebox__name--brand" style={nameStyles.homeName}>
-            JP
-          </h1>
-          <h1 className="namebox__name" style={nameStyles.elseName}>
-            Joseph P. Pasaoa
-          </h1>
-          <h2 className="namebox__subname" style={nameStyles.homeSubname}>
-            Welcome!
-          </h2>
-          <h2 className="namebox__subname" style={nameStyles.elseSubname}>
-            software engineer /<br />
-            full-stack developer
-          </h2>
+      <Fade left when={atHome && brandTrigger}>
+        <h1 className="namebox__name namebox__name--brand" style={nameStyles.homeName}>
+          JP
+        </h1>
+        <h2 className="namebox__subname" style={nameStyles.homeSubname}>
+          Welcome!
+        </h2>
+      </Fade>
+      <Fade left when={!atHome}>
+        <h1 className="namebox__name" style={nameStyles.elseName}>
+          Joseph P. Pasaoa
+        </h1>
+        <h2 className="namebox__subname" style={nameStyles.elseSubname}>
+          software engineer /<br />
+          full-stack developer
+        </h2>
+      </Fade>
     </div>
   );
 }
