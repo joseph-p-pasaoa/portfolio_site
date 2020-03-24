@@ -13,16 +13,17 @@ import Fade from 'react-reveal/Fade';
 /* MAIN */
 const NameBox = () => {
   const atHome = useRouteMatch({ exact: true, path: "/" });
-  const [ brandTrigger, setBrandTrigger ] = useState(false);
+  const [ delayFinished, setDelayFinished ] = useState(false);
 
   useEffect(() => {
-    const startBrand = () => {
+    const delay = () => {
       setTimeout(() => {
-        setBrandTrigger(true);
-      }, 500);
+        setDelayFinished(true);
+      }, 1000);
     }
-    startBrand();
+    delay();
   }, []);
+
 
   let nameStyles = {};
   if (atHome) {
@@ -35,12 +36,11 @@ const NameBox = () => {
     nameStyles["elseName"] = { opacity: 1 };
     nameStyles["homeSubname"] = { opacity: 0 };
     nameStyles["elseSubname"] = { opacity: 1 };
-
   }
 
   return (
     <div className="namebox">
-      <Fade left when={atHome && brandTrigger}>
+      <Fade left when={atHome && delayFinished}>
         <h1 className="namebox__name namebox__name--brand" style={nameStyles.homeName}>
           JP
         </h1>
