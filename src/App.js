@@ -19,7 +19,7 @@ APP MAIN Component | Portfolio Site
     import { faFilePdf, faPenSquare, faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
     import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-    import './App.css';
+    import './App.scss';
     import Sidebar from './components/Sidebar';
     import HomeAboutPage from './pages/HomeAboutPage';
     import ProjectsPage from './pages/ProjectsPage';
@@ -34,16 +34,19 @@ APP MAIN Component | Portfolio Site
     library.add(faFilePdf, faPenSquare, faAngleDown, faAngleUp, faGithubSquare, faLinkedin);
 
 
-/* COMPONENT & EXPORT */
+/* MAIN */
 const App = () => {
   const atProjectsPage = useRouteMatch('/projects');
+  const atHome = useRouteMatch({ exact: true, path: "/" });
 
   return (
     <div className="App">
+      <div className="app__fadebg" style={atHome ? {opacity: 0} : null}></div>
 
       <div id="grid-base">
         <Sidebar />
-        <div className={ atProjectsPage && atProjectsPage.isExact ? "stage stage--projects" : "stage"}>
+        <div className="stage">
+        {/* <div className={ atProjectsPage && atProjectsPage.isExact ? "stage stage--projects" : "stage"}> */}
           <Switch>
             <Route path={`/projects/:index`} component={FullProjectPage} />
             <Route path={`/projects`} component={ProjectsPage} />

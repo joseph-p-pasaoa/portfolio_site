@@ -1,10 +1,10 @@
 /*
 JOSEPH P. PASAOA
-APP MAIN CSS | Portfolio Site
+APP MAIN SCSS | Portfolio Site
 */
 
 
-* {
+/* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -45,7 +45,7 @@ body {
   display: grid;
   grid-template-columns: 265px auto;
   grid-template-rows: 1fr;
-}
+} */
 
 .text__card {
   width: 550px;
@@ -81,16 +81,16 @@ body {
   font-size: 4rem;
 }
 
-.network-icons {
+/* .network-icons {
   width: 100%;
   padding: 3px 1vw 3px 1.5vw;
 }
 
 .network-icons img {
   height: 24px;
-}
+} */
 
-a.faicon:link, a.faicon:visited {
+/* a.faicon:link, a.faicon:visited {
   margin: 3px 11px 3px 0px;
 
   color: #ceb180;
@@ -105,11 +105,11 @@ a.faicon__a--resume:link, a.faicon__a--resume:visited {
 a.faicon:hover, a.faicon:active {
   color: #fff;
   opacity: 1;
-}
+} */
 
-.faicon--iconbar {
+/* .faicon--iconbar {
   font-size: 3.3rem;
-}
+} */
 
 .faicon__description {
   position: relative;
@@ -138,20 +138,20 @@ a.faicon:hover, a.faicon:active {
   transition: opacity .2s ease-in;
 }
 
-.navlist {
+/* .navlist {
   align-items: flex-start;
   padding: 42px 1vw 3px 1.5vw;
   width: 100%;
-}
+} */
 
-.navlist li {
+/* .navlist li {
   margin-bottom: 11px;
   letter-spacing: 1px;
   font-size: 1.5rem;
   font-family: 'Raleway', sans-serif;
-}
+} */
 
-a.navlist__link:link, a.navlist__link:visited {
+/* a.link-navlist:link, a.link-navlist:visited {
   text-transform: lowercase;
   text-shadow: 0px 2px 2px #000;
   font-weight: bold;
@@ -160,24 +160,23 @@ a.navlist__link:link, a.navlist__link:visited {
   color: #fff;
 
   transition: color .1s ease-in, text-shadow .2s ease-in;
-}
+} */
 
-a.navlist__link:hover, a.navlist__link:active {
+/* a.link-navlist:hover, a.link-navlist:active {
   color: #1ea0d2;
-  ;
-}
+} */
 
-a.navlist__link.active {
+/* a.link-navlist.active {
   color: #ffac10;
   text-shadow: 0px 1px 1px #000;
-}
+} */
 
-.stage {
+/* .stage {
   overflow-y: auto;
   background-image: linear-gradient(180deg, rgba(53, 27, 27, 0.89) 56%, #1d100adb 100%);
   /* background-image: linear-gradient(180deg, rgba(53, 27, 27, 0.58) 56%, #1d100ad1 100%); */
-  /* background-image: linear-gradient(180deg, rgba(255,255,255,0.500437675070028) 56%, rgba(146,163,171,0.5032387955182073) 100%); */
-}
+  /* background-image: linear-gradient(180deg, rgba(255,255,255,0.500437675070028) 56%, rgba(146,163,171,0.5032387955182073) 100%);
+} */
 
 /* PROJECTS STAGE */
 .stage--projects {
@@ -209,11 +208,11 @@ a.navlist__link.active {
 }
 /* END */
 
-.page {
+/* .page {
   position: relative;
   min-height: 100vh;
   padding: 113px 43px 43px 3px;
-}
+} */
 
 .page__textbock {
   padding: 3px 42px 3px 74px;
@@ -569,7 +568,7 @@ h4.project__subheadline:first-child {
 
 
 /* NAMEBOX */
-h1.namebox__name {
+/* h1.namebox__name {
   margin: 7vh 1vw 0.5vh 1.5vw;
 
   font-family: 'Raleway', sans-serif;
@@ -589,25 +588,25 @@ h2.namebox__subname {
   text-transform: lowercase;
 
   color: #000;
-}
+} */
 
 
 
 /* ICONSBAR */
-.network-icons {
+/* .network-icons {
   margin-left: 2vw;
 }
 
 .network-icons img {
   height: 24px;
   margin-bottom: 6px;
-}
+} */
 
 
 
 /* SIDEBAR */
-.App {
-  background-image: url(../assets/images/bgs/contemp-comp-dered.jpg);
+/* .App {
+  background-image: url(./assets/images/bgs/contemp-comp-dered.jpg);
   background-size: cover;
   background-color: #fff;
   background-position: left center;
@@ -621,8 +620,10 @@ h2.namebox__subname {
   /* background-image: linear-gradient(to bottom, #4bc5ffb0, #011d46), url(../assets/images/bgs/contemp-comp.jpg); */
   /* background-image: linear-gradient(to bottom, #A38383b0, #5C3828), url(../assets/images/bgs/contemp-comp.jpg); */
   /* background-image: linear-gradient(to bottom, #4bc5ffb0, #0d2c5a), url(../assets/images/bgs/contemp-comp.jpg); */
-  background-size: cover;
+  /*background-size: cover;
   background-position: 27% center;
 
   border-right: solid 1px #8e6666;
-}
+} */
+
+

@@ -1,0 +1,445 @@
+/*
+JOSEPH P. PASAOA
+APP MAIN SCSS | Portfolio Site
+*/
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    color: #fcfcfc;
+}
+
+html, body, .root, .App, #grid-base {
+    height: 100%;
+    width: 100%;
+}
+
+.textcopy {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.7rem;
+    color: #fcfcfc;
+    line-height: 2.2rem;
+    white-space: pre-line;
+    margin-bottom: 16px;
+}
+
+
+// VARIABLES
+$color-shade-l: #fcfcfc;  // alabaster
+$color-accent-l: #1ea0d2; // curious blue
+$color-primary: #ffac10;  // sun
+$color-accent-d: #64332e; // buccaneer
+$color-shade-d: #0e1b3d;  // blue zodiac
+
+$default-pad: 3px;
+$pageleft-pad: 1.5vw;
+
+$name-transition: opacity .9s ease-out;
+$pageside-pad: 14rem;
+
+
+@mixin flex-line($direction, $col-justify: flex-start, $col-align: flex-start) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: nowrap;
+    justify-content: $col-justify;
+    align-items: $col-align;
+}
+
+@mixin flex-center($col-justify: flex-start, $col-align: center) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $col-justify;
+    align-items: $col-align;
+}
+
+@mixin nav-faicon-in-base() {
+    transform-origin: left bottom;
+    animation: nav-faicon-in .2s ease-out 0s 1 forwards;
+}
+
+@keyframes nav-faicon-out {
+    from { transform: translate(0, 0) scale(1); }
+    to { transform: translate(.5rem, .3rem) scale(1.4); }
+}
+@keyframes nav-faicon-in {
+    from { transform: translate(.5rem, .3rem) scale(1.4); }
+    to { transform: translate(0, 0) scale(1); }
+}
+
+
+// HEADERS
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.65rem;
+    text-transform: uppercase;
+
+    color: #fff;
+    text-shadow: 0px 2px 2px #111;
+
+    &.namebox__name {
+        position: absolute;
+        margin-bottom: 0.5rem;
+
+        white-space: nowrap;
+
+        transition: $name-transition;
+
+        &.namebox__name--brand {
+            top: -.5rem;
+            left: -.15rem;
+
+            font-size: 3.5rem;
+        }
+    }
+}
+
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: lowercase;
+
+    color: #000;
+
+    &.namebox__subname {
+        position: absolute;
+        top: 3rem;
+
+        white-space: nowrap;
+
+        transition: $name-transition;
+
+        &.colored {
+            color: $color-primary;
+        }
+    }
+}
+
+h3 {
+    &.home__name {
+        margin-bottom: 11px;
+
+        font-family: 'Indie Flower', sans-serif;
+        font-size: 7.7rem;
+        color: #fcfcfc;
+        text-shadow: 2px 2px 15px #000;
+    }
+}
+
+h4 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: lowercase;
+    color: #fcfcfc;
+    text-shadow: 11px 4px 2px #000;
+
+    &.header-section {
+        color: $color-primary;
+    }
+}
+
+h5 {
+    margin-right: 19px;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: lowercase;
+    color: #fcfcfc;
+    text-shadow: 11px 4px 2px #000;
+}
+
+
+// BASE & SIDEBAR
+.App {
+    background-image: url(./assets/images/bgs/contemp-comp-jedit.jpg);
+    background-image: linear-gradient(180deg, #361b1b9e 28%, #1d100ac2 100%), url(/static/media/contemp-comp-jedit.ec3a22fa.jpg);
+    background-size: cover;
+    background-color: #fff;
+    background-position: left center;
+}
+
+.app__fadebg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #080808a6, #0f1213aa);
+    transition: opacity .8s ease-out 1s;
+}
+
+#grid-base {
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-template-rows: 1fr;
+}
+
+
+.sidebar {
+    @include flex-line(column);
+    position: relative;
+    height: 100%;
+    min-width: 14.9rem;
+    z-index: 1000;
+    transition: transform .6s ease-out;
+
+    .sidebar__bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        // border-right: solid 1px #8e6666;
+        background-image: linear-gradient(to bottom, #e69129b3, #5a070785);
+        /* background-image: linear-gradient(to bottom, #4bc5ffb0, #011d46); */
+        /* background-image: linear-gradient(to bottom, #b99556b0, #271a0287); */
+        /* background-image: linear-gradient(to bottom, #4bc5ffb0, #011d46); */
+        /* background-image: linear-gradient(to bottom, #A38383b0, #5C3828); */
+        /* background-image: linear-gradient(to bottom, #4bc5ffb0, #0d2c5a); */
+    }
+}
+
+.namebox {
+    position: absolute;
+    top: 5.5rem;
+
+    margin: $default-pad $pageleft-pad;
+}
+
+.iconsbar {
+    @include flex-line(column);
+
+    width: 100%;
+    margin-top: 15rem;
+    padding: $default-pad $pageleft-pad;
+
+    .link-faicon {
+        &:link, &:visited {
+            position: relative;
+            margin: $default-pad 0 8px 0;
+        
+            font-size: 2.8rem;
+            color: #fff;
+            opacity: .7;
+
+            svg {
+                @include nav-faicon-in-base();
+            }
+
+            &::after {
+                content: attr(data-name);
+                position: absolute;
+                top: 0.5rem;
+                left: 4.7rem;
+                white-space: nowrap;
+                font-size: 1.3rem;
+                font-weight: bold;
+                filter: drop-shadow(0px 0px 2px #fff);
+                opacity: 0;
+
+                transition: opacity .1s ease-in;
+            }
+
+        }
+        &.link-faicon--resume:link, &.link-faicon--resume:visited {
+            margin-left: 2px; // for centering resume icon if list is left-justified
+            margin-top: 4px;
+
+            font-size: 2.6rem;
+        }
+        &:hover, &:active {
+            opacity: 1;
+
+            & svg {
+                animation: nav-faicon-out .2s ease-out 0s 1 forwards;
+            }
+
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.navlist {
+    @include flex-line(column);
+
+    padding: 11rem $pageleft-pad 8rem ($pageleft-pad - .2vw);
+    width: 100%;
+
+    li {
+        margin-bottom: 11px;
+
+        .link-navlist {
+            &:link, &:visited {
+                font-family: 'Raleway', sans-serif;
+                font-size: 1.5rem;
+                letter-spacing: 1px;
+                font-weight: bold;
+                text-decoration: none;
+                text-transform: lowercase;
+
+                color: #fff;
+                text-shadow: 0px 2px 2px #000;
+
+                div {
+                    position: relative;
+                    transition: color .1s ease-in, text-shadow .2s ease-in;
+
+                    &::after {
+                        content: "✧";
+                        position: absolute;
+                        top: .1rem;
+                        right: -1.7rem;
+                        width: min-content;
+                        height: 100%;
+                        color: $color-shade-l;
+                        opacity: 0;
+
+                        transition: opacity .5s ease-out;
+                    }
+                }
+            }
+            &:hover, &:active {
+                color: $color-accent-l;
+
+                div::after {
+                    opacity: 1;
+                }
+            }
+            &.active {
+                color: $color-primary;
+                text-shadow: 0px 1px 1px #000;
+                cursor: default;
+
+                div::after {
+                    content: "✦";
+                    color: $color-primary;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+
+// STAGES
+.stage { // static viewport containter
+    position: relative;
+    overflow-y: auto;
+    // background-image: linear-gradient(180deg, rgba(53, 27, 27, 0.89) 28%, #1d100adb 100%);
+}
+
+.page { // scrolling canvas
+    @include flex-line(column);
+
+    position: relative;
+    min-height: 100vh;
+    padding: 15.6rem 11rem 6rem $pageside-pad;
+
+    // &.page--skills {
+    //     background-image: linear-gradient(180deg, rgba(7,129,148,.13), rgba(3,41,49,.41));
+    // }
+}
+
+.page--home {
+    .home__topline, .home__mynameis {
+        @include flex-line(row);
+    }
+
+    .home__mynameis span {
+        font-family: 'Raleway', sans-serif;
+        font-size: 3.4rem;
+        font-weight: 600;
+        text-transform: lowercase;
+        color: $color-accent-l;
+        text-shadow: 14px 4px 8px #000;
+        position: relative;
+        top: -9px;
+        margin-left: 6px;
+    }
+
+    .textcopy strong {
+        font-weight: 900;
+        text-shadow: 2px 3px 1px #000;
+        color: $color-primary;
+    }
+
+    .valediction {
+        // font-family: 'Indie Flower', sans-serif;
+        font-size: 2.2rem;
+
+    }
+}
+
+.section {
+    @include flex-line(row);
+    flex-wrap: wrap;
+
+    position: relative;
+    border: solid 15px #222d4a94;
+    border-radius: 4rem;
+    padding: 2.8rem 3rem .6rem 7rem;
+    margin-bottom: 4rem;
+    // background-image: linear-gradient(180deg, #0d175af5, #275c8ae3);
+
+    li {
+        position: relative;
+        width: 12rem;
+        margin-bottom: 3rem;
+        @include flex-center(center, center);
+
+        .icon-skill {
+            height: 5.4rem;
+            max-width: 5.4rem;
+            filter: drop-shadow(2px 2px 3px #000);
+
+            &.react {
+                object-fit: cover;
+            }
+            &.github {
+                background-color: #fcfcfc;
+                border-radius: 50%;
+            }
+            &.drawio {
+                border-radius: 1rem;
+            }
+        }
+
+        &:first-child { // styles section headers
+            position: absolute;
+            top: -13px;
+            left: -4px;
+            white-space: nowrap;
+            align-items: flex-start;
+        }
+
+        &::after {
+            content: attr(data-skill);
+
+            position: absolute;
+            bottom: -1.6rem;
+            left: 50%;
+            white-space: nowrap;
+            transform: translateX(-50%);
+
+            font-size: 1.2rem;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: $default-pad;
+    }
+}
