@@ -45,7 +45,8 @@ const App = () => {
 
       <div id="grid-base">
         <Sidebar />
-        <div className={ atProjectsPage && atProjectsPage.isExact ? "stage stage--projects" : "stage"}>
+        <div className="stage">
+        {/* <div className={ atProjectsPage && atProjectsPage.isExact ? "stage stage--projects" : "stage"}> */}
           <Switch>
             <Route path={`/projects/:index`} component={FullProjectPage} />
             <Route path={`/projects`} component={ProjectsPage} />
