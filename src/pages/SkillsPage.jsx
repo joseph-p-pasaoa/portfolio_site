@@ -58,6 +58,7 @@ const SkillsPage = () => {
 
   return (
     <div className="page page--skills">
+      <h3 className="page__header">Skills</h3>
       <Fade bottom cascade when={delayFinished}>
 
         <ul className="section">

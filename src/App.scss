@@ -138,6 +138,18 @@ h3 {
         color: #fcfcfc;
         text-shadow: 2px 2px 15px #000;
     }
+    &.page__header {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        font-weight: bold;
+        color: $color-accent-l;
+        text-transform: lowercase;
+        letter-spacing: 1px;
+        text-shadow: 3px 2px 3px #000;
+        position: fixed;
+        bottom: 21.3rem;
+        right: 13.6rem;
+    }
 }
 
 h4 {
@@ -347,8 +359,11 @@ h5 {
 
     position: relative;
     min-height: 100vh;
-    padding: 15.6rem 11rem 6rem $pageside-pad;
+    padding: 37rem 11rem 6rem $pageside-pad;
 
+    &.page--home {
+        padding-top: 15.6rem;
+    }
     // &.page--skills {
     //     background-image: linear-gradient(180deg, rgba(7,129,148,.13), rgba(3,41,49,.41));
     // }
@@ -393,6 +408,7 @@ h5 {
     border-radius: 4rem;
     padding: 2.8rem 3rem .6rem 7rem;
     margin-bottom: 4rem;
+    width: 76.5rem;
     // background-image: linear-gradient(180deg, #0d175af5, #275c8ae3);
 
     li {
