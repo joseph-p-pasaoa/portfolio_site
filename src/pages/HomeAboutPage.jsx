@@ -36,18 +36,18 @@ const HomeAboutPage = () => {
         <h5 className="home__greet">Hello!</h5>
         <Fade bottom cascade when={toplineDelayFinished}>
           <div className="home__mynameis">
-            <span>My</span>
+            <h3>My</h3>
             <span className="buffer"></span>
-            <span>name</span>
+            <h3>name</h3>
             <span className="buffer"></span>
-            <span>is</span>
+            <h3>is</h3>
           </div>
         </Fade>
       </div>
       <Fade cascade when={nameDelayFinished}>
-        <h3 className="home__name">
+        <div className="home__myname">
           Joseph P. Pasaoa
-        </h3>
+        </div>
       </Fade>
 
       <Fade cascade when={nameDelayFinished}>

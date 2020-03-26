@@ -13,7 +13,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const ProjectCard = ({ handleClick, id, name, screencapUrl, shortDesc, shortTechs, myRole, features }) => {
 
   return (
-    <div className="flex-row project__reactivebox project__card" id={`project${id}`} onClick={handleClick}>
+    <div className="project__reactivebox card--project" id={`project${id}`} onClick={handleClick}>
       <div className="flex-column project__card__leftcol">
         <div className="project__card__expandmsg">click to expand<br />
         <FontAwesomeIcon icon={["fas", "angle-down"]} className="faicon--projectnav" /></div>
@@ -21,7 +21,7 @@ const ProjectCard = ({ handleClick, id, name, screencapUrl, shortDesc, shortTech
         <img
           src={process.env.PUBLIC_URL + "/images/projects/" + screencapUrl}
           alt={`${name} screencap`}
-          className="project__screencap"
+          className="screencap"
           id={id}
         />
       </div>

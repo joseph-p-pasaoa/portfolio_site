@@ -5,9 +5,11 @@ ProjectsPage Component | Portfolio Site
 
 
 /* IMPORTS */
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import Fade from 'react-reveal/Fade';
 
-import SpinnerDelay from '../components/SpinnerDelay';
+// import SpinnerDelay from '../components/SpinnerDelay';
+import PageHeader from '../components/PageHeader';
 import ProjectCard from '../components/ProjectCard';
 
 import projectsData from '../data/projectsData';
@@ -15,16 +17,27 @@ import projectsData from '../data/projectsData';
 
 /* MAIN */
 const ProjectsPage = ({ history, location }) => {
+  const [ delayFinished, setDelayFinished ] = useState(false);
+
   useEffect(() => {
-    const autoscroll = () => {
+    const delay = () => {
+      setTimeout(() => {
+        setDelayFinished(true);
+      }, 2000);
+    }
+    delay();
+  }, []);
+
+  useEffect(() => {
+    const scrollPlacer = () => {
       if (location.state) {
         const target = document.querySelector(`#project${location.state}`);
-        target.scrollIntoView();
+        target.scrollIntoView({ block: "center" });
       } else {
-        document.querySelector('#project0').scrollIntoView();
+        document.querySelector('#top').scrollIntoView();
       }
     }
-    autoscroll();
+    scrollPlacer();
   }, [location.state])
 
 
@@ -47,14 +60,17 @@ const ProjectsPage = ({ history, location }) => {
         );
     })
   }
+  
 
   return (
-    <SpinnerDelay delayTime={1400} delayColor="#262629" delayMsg="loading projects">
-      <div className="page page--projects flex-column">
-        <h3 className="page__name">Joseph's Projects</h3>
-        {listProjects}
+    // <SpinnerDelay delayTime={1400} delayColor="#262629" delayMsg="loading projects">
+      <div id="top" className="page page--listprojects">
+        <PageHeader pagename="Projects" />
+        <Fade delay={1000} bottom cascade>
+          {listProjects}
+        </Fade>
       </div>
-    </SpinnerDelay>
+    // </SpinnerDelay>
   );
 }
 

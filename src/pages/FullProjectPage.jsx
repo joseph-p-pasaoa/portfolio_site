@@ -25,7 +25,7 @@ const FullProjectPage = (props) => {
   return (
     <SpinnerDelay delayTime={800} delayColor="#243237" delayMsg={`loading ${name}`}>
 
-      <div className="page page--fullproject">
+      <div className="page page--projectspot">
         <Link
           to={{ pathname: '/projects', state: props.match.params.index }}
           className="project__reactivebox fullproject__backbtn"

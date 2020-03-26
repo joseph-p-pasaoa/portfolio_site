@@ -8,6 +8,8 @@ SkillsPage Component | Portfolio Site
 import React, { useState, useEffect } from 'react';
 import Fade from 'react-reveal/Fade';
 
+import PageHeader from '../components/PageHeader';
+
 const iconJs = require('../assets/images/icons/js.svg');
 const iconHtml = require('../assets/images/icons/html5.png');
 const iconCss = require('../assets/images/icons/css3.png');
@@ -50,7 +52,7 @@ const SkillsPage = () => {
     const delay = () => {
       setTimeout(() => {
         setDelayFinished(true);
-      }, 1000);
+      }, 2000);
     }
     delay();
   }, []);
@@ -58,7 +60,7 @@ const SkillsPage = () => {
 
   return (
     <div className="page page--skills">
-      <h3 className="page__header">Skills</h3>
+      <PageHeader pagename="Skills" />
       <Fade bottom cascade when={delayFinished}>
 
         <ul className="section">

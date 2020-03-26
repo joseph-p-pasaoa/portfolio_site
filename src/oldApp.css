@@ -111,14 +111,14 @@ a.faicon:hover, a.faicon:active {
   font-size: 3.3rem;
 } */
 
-.faicon__description {
+/* .faicon__description {
   position: relative;
 
   height: 2rem;
   width: 100%;
   margin-top: 36px;
   margin-bottom: 3px;
-  padding-right: 5vw; /* artistic choice to nudge left */
+  padding-right: 5vw; /* artistic choice to nudge left 
   padding-left: 1.5vw;
 
   text-align: left;
@@ -130,13 +130,13 @@ a.faicon:hover, a.faicon:active {
 .faicon__description p {
   position: absolute;
 
-  /* text-shadow: 0px 2px 1px #000; */
+  /* text-shadow: 0px 2px 1px #000; 
 
   color: #00425c;
 
   opacity: 0;
   transition: opacity .2s ease-in;
-}
+} */
 
 /* .navlist {
   align-items: flex-start;
@@ -223,7 +223,7 @@ a.faicon:hover, a.faicon:active {
   padding: 0px;
 }
 
-h4.greet {
+/* h4.greet {
   position: absolute;
   width: fit-content;
 
@@ -234,9 +234,9 @@ h4.greet {
   color: #1ea0d2;
 
   transform: translateY(-19px) translateX(-24px) rotate(-14deg);
-}
+} */
 
-h3.page__name {
+/* h3.page__name {
   position: relative;
   z-index: 10;
   max-width: 63vw;
@@ -246,15 +246,15 @@ h3.page__name {
   font-family: 'Indie Flower', cursive;
 
   color: rgb(226, 200, 156);
-}
+} */
 
-.page--projects h3.page__name {
+/* .page--projects h3.page__name {
   display: none;
   width: 100%;
   height: 80px;
   text-align: center;
   background-image: linear-gradient(to bottom, #e69129b3, #5a070785);
-}
+} */
 
 .project__card {
   position: relative;
