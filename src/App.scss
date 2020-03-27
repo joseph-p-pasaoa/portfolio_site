@@ -18,7 +18,7 @@ html {
 
 body {
     font-family: 'Raleway', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: #fcfcfc;
 }
 
@@ -145,6 +145,11 @@ h3 {
         // top: 52.6rem;
         // left: 101rem;
     }
+
+    &.project-name {
+        font-size: 2.6rem;
+        color: $color-primary;
+    }
 }
 
 h4 {
@@ -156,6 +161,12 @@ h4 {
     text-shadow: 11px 4px 2px #000;
 
     &.header-section {
+        color: $color-primary;
+    }
+    &.project--subheader {
+        margin-top: 1.5rem;
+        margin-bottom: .5rem;
+        font-size: 1.5rem;
         color: $color-primary;
     }
 }
@@ -399,17 +410,73 @@ h5 {
 
 .page--listprojects {
     .card--project {
-        @include flex-line(row);
+        @include flex-line(column);
 
         position: relative;
         width: 100%;
+        margin-bottom: 10rem;
+
+        .project-role {
+            position: absolute;
+            top: .9rem;
+            left: 30rem;
+            font-weight: 900;
+        }
+
+        .top__card--project {
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: auto min-content;
+
+            padding-top: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .intro__card--project {
+            @include flex-line(column);
+
+            padding-right: 2.5rem;
+        }
+
+        .images__card--project {
+            @include flex-line(row);
+
+            max-width: 422px;
+        }
+
+        .bottom__card--project {
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 24rem auto 8rem;
+
+            padding-top: 2rem;
+            padding-left: 1.5rem;
+            width: 100%;
+        }
+
+        .techs__card--project {
+            @include flex-line(column, flex-start, flex-end);
+
+            text-align: right;
+            list-style: none;
+        }
+
+        .details__card--project {
+            @include flex-line(column);
+
+            padding: 0 2.5rem;
+        }
+
+        .references__card--project {
+            @include flex-line(column);
+        }
     }
 
     .screencap {
-        width: 255px;
-        height: 162px;
+        width: 211px;
+        height: 136px;
         object-fit: cover;
-        margin: 3px 3px 3px 2vw;
+        // margin: 3px 3px 3px 2vw;
         border: solid 1px #fff;
         box-shadow: 0px 6px 11px #000;
 

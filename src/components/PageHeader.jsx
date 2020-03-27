@@ -17,7 +17,7 @@ const PageHeader = ({pagename}) => {
     const delay = () => {
       setTimeout(() => {
         setDelayFinished(true);
-      }, 800);
+      }, 700);
     }
     delay();
   }, []);

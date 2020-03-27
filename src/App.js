@@ -21,7 +21,6 @@ APP MAIN Component | Portfolio Site
 
     import './App.scss';
     import Sidebar from './components/Sidebar';
-    import AlwaysPageToTop from './components/AlwaysPageToTop';
     import HomeAboutPage from './pages/HomeAboutPage';
     import ProjectsPage from './pages/ProjectsPage';
     import FullProjectPage from './pages/FullProjectPage';
@@ -40,13 +39,13 @@ const App = () => {
   // const atProjectsPage = useRouteMatch('/projects');
   const atHome = useRouteMatch({ exact: true, path: "/" });
 
-  const renderSkillsPage = () => {
-    return (
-      <AlwaysPageToTop>
-        <SkillsPage />
-      </AlwaysPageToTop>
-    );
-  }
+  // const renderSkillsPage = () => {
+  //   return (
+  //     <AlwaysPageToTop>
+  //       <SkillsPage />
+  //     </AlwaysPageToTop>
+  //   );
+  // }
 
   return (
     <div className="App">
@@ -60,7 +59,7 @@ const App = () => {
             <Route path={`/projects/:index`} component={FullProjectPage} />
             <Route path={`/projects`} component={ProjectsPage} />
             <Route path={`/contactme`} component={ContactMePage} />
-            <Route path={`/skills`} render={renderSkillsPage} />
+            <Route path={`/skills`} component={SkillsPage} />
             <Route path={`/blog`} component={BlogPage} />
             <Route path={`/photography`} component={PhotographyPage} />
             <Route path={`/siteinfo`} component={SiteInfoPage} />
