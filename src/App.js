@@ -4,11 +4,6 @@ APP MAIN Component | Portfolio Site
 */
 
 // blog
-// projects
-  // technologies used
-  // my role
-  // solution
-  // notable features
 // contact
 // mobile friendly
 
@@ -16,6 +11,7 @@ APP MAIN Component | Portfolio Site
     import React from 'react';
     import { Switch, Route, useRouteMatch } from 'react-router-dom';
     import { library } from '@fortawesome/fontawesome-svg-core';
+    import { faFileAlt } from '@fortawesome/free-regular-svg-icons';
     import { faFilePdf, faPenSquare, faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
     import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
@@ -23,7 +19,6 @@ APP MAIN Component | Portfolio Site
     import Sidebar from './components/Sidebar';
     import HomeAboutPage from './pages/HomeAboutPage';
     import ProjectsPage from './pages/ProjectsPage';
-    import FullProjectPage from './pages/FullProjectPage';
     import ContactMePage from './pages/ContactMePage';
     import SkillsPage from './pages/SkillsPage';
     import BlogPage from './pages/BlogPage';
@@ -31,21 +26,13 @@ APP MAIN Component | Portfolio Site
     import SiteInfoPage from './pages/SiteInfoPage';
 
     // instantiate FontAwesome sitewide icon library
-    library.add(faFilePdf, faPenSquare, faAngleDown, faAngleUp, faGithubSquare, faLinkedin);
+    library.add(faFileAlt, faFilePdf, faPenSquare, faAngleDown, faAngleUp, faGithubSquare, faLinkedin);
 
 
 /* MAIN */
 const App = () => {
-  // const atProjectsPage = useRouteMatch('/projects');
   const atHome = useRouteMatch({ exact: true, path: "/" });
 
-  // const renderSkillsPage = () => {
-  //   return (
-  //     <AlwaysPageToTop>
-  //       <SkillsPage />
-  //     </AlwaysPageToTop>
-  //   );
-  // }
 
   return (
     <div className="App">
@@ -54,9 +41,7 @@ const App = () => {
       <div id="grid-base">
         <Sidebar />
         <div className="stage">
-        {/* <div className={ atProjectsPage && atProjectsPage.isExact ? "stage stage--projects" : "stage"}> */}
           <Switch>
-            <Route path={`/projects/:index`} component={FullProjectPage} />
             <Route path={`/projects`} component={ProjectsPage} />
             <Route path={`/contactme`} component={ContactMePage} />
             <Route path={`/skills`} component={SkillsPage} />

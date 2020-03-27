@@ -81,6 +81,35 @@ $pageside-pad: 14rem;
 }
 
 
+.myButton {
+    box-shadow: 0px 7px 6px -6px #000000;
+    background: linear-gradient(to bottom, #2d2d2de3 5%, #0a0607ed 100%);
+    border-radius: 11px;
+    border: 2px solid #fcfcfc;
+    display: inline-block;
+    cursor: pointer;
+    color: #fcfcfc;
+    font-family: Trebuchet MS;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 1px 11px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #333333;
+    width: 10rem;
+
+    transition: border .3s ease-out;
+}
+.myButton:hover {
+    background: linear-gradient(to bottom, #0e1b3de3 5%, #0a060757 100%);
+    border-color: #94fbe8;
+}
+.myButton:active {
+    position: relative;
+    top: 1px;
+}
+
+
 // HEADERS
 h1 {
     font-family: 'Raleway', sans-serif;
@@ -168,6 +197,10 @@ h4 {
         margin-bottom: .5rem;
         font-size: 1.5rem;
         color: $color-primary;
+
+        &:first-child {
+            margin-top: 0;
+        }
     }
 }
 
@@ -417,10 +450,19 @@ h5 {
         margin-bottom: 10rem;
 
         .project-role {
-            position: absolute;
-            top: .9rem;
-            left: 30rem;
+            // position: absolute;
+            // top: .9rem;
+            // left: 30rem;
             font-weight: 900;
+            text-transform: lowercase;
+        }
+
+        .project--features li::before {
+            content: "➢";
+            position: relative;
+            top: 2px;
+            margin-right: .8rem;
+            color: #777;
         }
 
         .top__card--project {
@@ -436,18 +478,55 @@ h5 {
             @include flex-line(column);
 
             padding-right: 2.5rem;
+
+            .project--subheader {
+                font-size: 1.7rem;
+                color: $color-accent-l;
+            }
         }
 
         .images__card--project {
             @include flex-line(row);
 
+            min-width: 422px;
             max-width: 422px;
+        }
+
+        .aws-sld {
+            &--exit {
+                &.aws-sld--moveRight, &.aws-sld--moveLeft {
+                    animation: scaleOut var(--slider-transition-duration) both
+                    var(--transition-bezier);
+                }
+            }
+        }
+          
+        @keyframes scaleOut {
+            to {
+                transform: scale(0.85);
+            }
+        }
+
+        .aws-btn {
+            --slider-height-percentage: 56%;
+            --slider-transition-duration: 1000ms;
+            --organic-arrow-thickness: 8px;
+            --organic-arrow-border-radius: 0px;
+            --organic-arrow-height: 22px;
+            --organic-arrow-color: #1ea0d2;
+            --control-button-width: 5%;
+            --control-button-height: 25%;
+            --control-button-background: transparent;
+            --control-bullet-color: #805608;
+            --control-bullet-active-color: #92630a;
+            --loader-bar-color: #1ea0d2;
+            --loader-bar-height: 1px;
         }
 
         .bottom__card--project {
             display: grid;
             grid-template-rows: 1fr;
-            grid-template-columns: 24rem auto 8rem;
+            grid-template-columns: 23rem auto;
 
             padding-top: 2rem;
             padding-left: 1.5rem;
@@ -464,11 +543,18 @@ h5 {
         .details__card--project {
             @include flex-line(column);
 
-            padding: 0 2.5rem;
+            padding: 0 2.5rem 0 3.5rem;
         }
 
         .references__card--project {
-            @include flex-line(column);
+            @include flex-line(row, flex-end, center);
+
+            width: 100%;
+            margin-bottom: 2rem;
+
+            .myButton:last-child {
+                margin-left: 1rem;
+            }
         }
     }
 

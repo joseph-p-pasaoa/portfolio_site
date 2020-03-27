@@ -63,7 +63,7 @@ const IconsBar = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={["fas", "file-pdf"]} className="faicon--iconbar" />
+          <FontAwesomeIcon icon={["far", "file-alt"]} className="faicon--iconbar" />
         </a>
       </div>
     </Fade>

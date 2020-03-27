@@ -7,7 +7,7 @@ Projects Data | Portfolio Site
 export const projectsData = [
   {
     index: 0,
-    name: "Greenlist Registry",
+    name: "Greenlist",
     description: `Greenlist is a social registry, directory, and community forum for designers and brands who want to be eco-conscious find providers and suppliers of greener materials, while being also a networking peer-to-peer solution for material reclaim.`,
     screencapUrl: "proj-greenlist-screen-login.png",
     urlLive: "",
@@ -29,7 +29,6 @@ export const projectsData = [
       "CSS3",
       "HTML5"
     ],
-    shortTechs: [ "React", "PostgreSQL", "ExpressJS", "NodeJS", "CSS3 90% + Bootstrap 10%", "Javascript", "HTML5" ],
     role: "group role: Tech Lead",
     difficulties: "Our cohort was given the assignment to create an app for the fashion industry which most of us knew hardly anything about. With the help of industry advisors, my group looked into the workflow of small and independent designers and identified a gap that we could address with our skills. Uber engineering advisors also guided us through technical obstacles like some of the more complex query writing and through stages of production and git flow.",
     wins: `WINNER of Pursuit 6.2 Hackathon's Most Impactful Award!
@@ -64,8 +63,7 @@ export const projectsData = [
       "Axios 0.19.0",
       "Pg-promise 10.3.2"
     ],
-    shortTechs: [ "React", "PostgreSQL", "ExpressJS", "NodeJS", "CSS3 80% + Bootstrap 20%", "Javascript", "HTML5" ],
-    role: "Head of UI/UX",
+    role: "group role: Head of UI/UX",
     difficulties: "We had just learned how to implement user authentication using Passport module and bcrypt and it took a few days but we eventually we able to make it work.",
     wins: "We were able to reach Minimal Viable Product by deadline even after losing one group member to flu for most of the sprint.",
     features: [
@@ -98,8 +96,7 @@ export const projectsData = [
       "HTML5",
       "CSS3"
     ],
-    shortTechs: [ "React", "NodeJS", "CSS3", "Javascript", "HTML5" ],
-    role: "",
+    role: "personal project",
     difficulties: "",
     solutions: "",
     features: [
@@ -122,8 +119,7 @@ export const projectsData = [
       "CSS3",
       "HTML5"
     ],
-    shortTechs: [ "ExpressJS", "NodeJS", "CSS3", "Javascript", "HTML5" ],
-    role: "",
+    role: "personal project",
     difficulties: "",
     solutions: "",
     features: [
@@ -140,7 +136,6 @@ export const projectsData = [
   //   techs: [
   //     "",
   //   ],
-  //   shortTechs: [],
   //   role: "",
   //   difficulties: "",
   //   solutions: "",
@@ -159,7 +154,6 @@ export const projectsData = [
       techs: [
         "",
       ],
-      shortTechs: [],
       role: "",
       difficulties: "",
       solutions: "",

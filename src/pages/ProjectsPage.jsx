@@ -33,7 +33,7 @@ const ProjectsPage = ({ history, location }) => {
             difficulties={project.difficulties}
             wins={project.wins}
             features={project.features}
-            handleClick={() => history.push(`/projects/${index}`)}
+            // handleClick={() => history.push(`/projects/${index}`)}
           />
         );
     })

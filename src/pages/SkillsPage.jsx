@@ -60,8 +60,8 @@ const SkillsPage = () => {
 
 
   return (
-    <AlwaysPageToTop>
-      <div className="page page--skills">
+    <div className="page page--skills">
+      <AlwaysPageToTop>
         <PageHeader pagename="Skills" />
         <Fade bottom cascade when={delayFinished}>
 
@@ -302,8 +302,8 @@ const SkillsPage = () => {
           </ul> */}
 
         </Fade>
-      </div>
-    </AlwaysPageToTop>
+      </AlwaysPageToTop>
+    </div>
   );
 }
 

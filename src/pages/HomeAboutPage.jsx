@@ -58,13 +58,11 @@ const HomeAboutPage = () => {
 
           <p className="textcopy">I've had a love for computers my whole life but it wasn't until I was accepted into Pursuit—a selective year-long intensive <strong>full-stack</strong> coding fellowship, that I was able to discover how much I truly enjoy being in the world of software tech.</p>
 
-          {/* My curriculum was primarily the PERN stack (PostgreSQL, ExpressJS, React, NodeJS) and  */}
-
           <p className="textcopy">My experience in the visual arts and political psychology has been a great well to draw from when working on <strong>UI/UX</strong> and front-ends but I'm just as intrigued, if not more, with the <strong>problem solving</strong> and <strong>structural architecturing</strong> of back-end coding.</p>
 
           <p className="textcopy">I'm looking to find an <strong>rich and diverse environment</strong> where I can grow as an engineer and as a <strong>teammate</strong>.</p>
 
-          <p className="valediction">Hello world</p>
+          <p className="textcopy">Thanks for visiting!</p>
         </div>
       </Fade>
 
