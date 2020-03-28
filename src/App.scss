@@ -403,6 +403,10 @@ h5 {
                     color: $color-primary;
                     opacity: 1;
                 }
+
+                .faicon--iconbar {
+                    opacity: 1;
+                }
             }
         }
 
@@ -713,7 +717,7 @@ h5 {
         }
 
         input[name=msgTxt] {
-            width: 90%;
+            width: 63rem;
             margin-top: 4rem;
         }
     }

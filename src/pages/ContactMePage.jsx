@@ -13,7 +13,6 @@ import PageHeader from '../components/PageHeader';
 
 /* MAIN */
 export default class ContactMePage extends Component {
-// const ContactMePage = () => {
   constructor(props) {
     super(props);
     this.submitForm = this.submitForm.bind(this);
@@ -42,8 +41,6 @@ export default class ContactMePage extends Component {
   }
 
 
-  // return (
-  //   <div className="page page--contactme">
   render() {
     const { submitStatus, nameTxt, emailTxt, msgTxt } = this.state;
     const submitted = submitStatus === "SUCCESS" ? true : false;
@@ -66,7 +63,10 @@ export default class ContactMePage extends Component {
                 <input value={msgTxt} type="text" id="msgTxt" name="msgTxt" onChange={this.handleChange} />
                 <label htmlFor="msgTxt">Message</label>
                 <button className="myButton">Submit</button>
-                {submitStatus === "ERROR" && <p>Ooops! There was an error.</p>}
+                {submitStatus === "ERROR" &&
+                  <p>Sorry, there was a submission error.<br />
+                  Please email me instead at <a href="mailto:joseph.p.pasaoa@gmail.com">joseph.p.pasaoa@gmail.com</a>.</p>
+                }
               </form>
             </Fade>
           </div>
@@ -104,6 +104,3 @@ export default class ContactMePage extends Component {
   }
 
 }
-
-
-// export default ContactMePage;
