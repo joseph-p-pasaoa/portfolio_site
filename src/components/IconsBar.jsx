@@ -6,6 +6,7 @@ IconsBar Component | Portfolio Site
 
 /* EXTERNALS - LOCALS */
 import React, { useState, useEffect } from 'react';
+// import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Fade from 'react-reveal/Fade';
 
@@ -47,15 +48,7 @@ const IconsBar = () => {
           >
           <FontAwesomeIcon icon={["fab", "linkedin"]} className="faicon--iconbar" />
         </a>
-        <a
-          href="https://www.linkedin.com/in/josephpasaoa/"
-          className="link-faicon"
-          data-name="Contact Me"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FontAwesomeIcon icon={["fas", "pen-square"]} className="faicon--iconbar" />
-        </a>
+        {/* <div style={{ height: ".7rem" }}></div> */}
         <a
           href={joeysResume}
           className="link-faicon link-faicon--resume"
@@ -65,6 +58,13 @@ const IconsBar = () => {
         >
           <FontAwesomeIcon icon={["far", "file-alt"]} className="faicon--iconbar" />
         </a>
+        {/* <Link
+          to={`/contactme`}
+          className="link-faicon"
+          data-name="Contact Me"
+        >
+          <FontAwesomeIcon icon={["far", "edit"]} className="faicon--iconbar" />
+        </Link> */}
       </div>
     </Fade>
   );

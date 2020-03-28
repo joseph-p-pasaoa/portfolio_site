@@ -8,11 +8,12 @@ APP MAIN Component | Portfolio Site
 // mobile friendly
 
 /* IMPORTS */
-    import React from 'react';
+    import React, { useEffect } from 'react';
+    import axios from 'axios';
     import { Switch, Route, useRouteMatch } from 'react-router-dom';
     import { library } from '@fortawesome/fontawesome-svg-core';
-    import { faFileAlt } from '@fortawesome/free-regular-svg-icons';
-    import { faFilePdf, faPenSquare, faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
+    import { faEdit, faFileAlt } from '@fortawesome/free-regular-svg-icons';
+    // import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
     import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
     import './App.scss';
@@ -26,12 +27,29 @@ APP MAIN Component | Portfolio Site
     import SiteInfoPage from './pages/SiteInfoPage';
 
     // instantiate FontAwesome sitewide icon library
-    library.add(faFileAlt, faFilePdf, faPenSquare, faAngleDown, faAngleUp, faGithubSquare, faLinkedin);
+    library.add(faEdit, faFileAlt, faGithubSquare, faLinkedin);
 
 
 /* MAIN */
 const App = () => {
   const atHome = useRouteMatch({ exact: true, path: "/" });
+
+  useEffect(() => {
+    const serverPings = async () => {
+      const urlsArray = [
+        "https://greenlist-registry.herokuapp.com/static/media/logo_200228.ca07d05d.png"
+      ];
+      const getsArray = urlsArray.map(url => axios.get(url));
+      let responses = null;
+      try {
+        responses = await Promise.all(getsArray);
+      } catch (err) {
+        responses = [ "fail" ];
+      }
+      console.log(responses);
+    }
+    serverPings();
+  }, [])
 
 
   return (

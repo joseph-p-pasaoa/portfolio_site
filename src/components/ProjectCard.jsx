@@ -13,7 +13,19 @@ import Fade from 'react-reveal/Fade';
 
 
 /* MAIN */
-const ProjectCard = ({ handleClick, id, urlRepo, urlLive, name, difficulties, wins, screencapUrl, description, techs, role, features }) => {
+const ProjectCard = ({
+  id,
+  urlRepo,
+  urlLive,
+  name,
+  description,
+  role,
+  screencapUrl,
+  techs,
+  features,
+  difficulties,
+  wins
+}) => {
   const [ delayFinished, setDelayFinished ] = useState(false);
 
   useEffect(() => {

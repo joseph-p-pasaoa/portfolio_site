@@ -8,9 +8,9 @@ export const projectsData = [
   {
     index: 0,
     name: "Greenlist",
-    description: `Greenlist is a social registry, directory, and community forum for designers and brands who want to be eco-conscious find providers and suppliers of greener materials, while being also a networking peer-to-peer solution for material reclaim.`,
-    screencapUrl: "proj-greenlist-screen-login.png",
-    urlLive: "",
+    description: `Greenlist is a go-to registry, directory, and community-building application for eco-conscious designers and brands meant to help them find providers and suppliers of greener materials, while being also a networking peer-to-peer solution for material reclaim.`,
+    screencapUrl: "proj-greenlist-form.png",
+    urlLive: "https://greenlist-registry.herokuapp.com/",
     urlRepo: "https://github.com/joseph-p-pasaoa/greenlist__FSWeb",
     techs: [
       "PostgreSQL 12.1",
@@ -30,7 +30,7 @@ export const projectsData = [
       "HTML5"
     ],
     role: "group role: Tech Lead",
-    difficulties: "Our cohort was given the assignment to create an app for the fashion industry which most of us knew hardly anything about. With the help of industry advisors, my group looked into the workflow of small and independent designers and identified a gap that we could address with our skills. Uber engineering advisors also guided us through technical obstacles like some of the more complex query writing and through stages of production and git flow.",
+    difficulties: "While the hackathon assignment was to create an app that would help the fashion-sustainability movement, my group hardly knew anything about the fashion industry. With the help of industry advisors, we were able to identify a large gap in the workflow of small and independent designers that we could build something for. Uber engineering advisors also guided us through technical obstacles like some of the more complex query writing and through stages of production and git flow.",
     wins: `WINNER of Pursuit 6.2 Hackathon's Most Impactful Award!
     With hard work, we reached Minimal Viable Product status in 6 days time.`,
     features: [
@@ -47,7 +47,7 @@ export const projectsData = [
     name: "SuitApp",
     description: "SuitApp is a social media application founded on the idea of bringing together the most passionate and creative minds in the world of Cosplay and giving them the tools to reach a wide audience of fans who appreciate and celebrate their work.",
     screencapUrl: "proj-suitapp-screen-feed.png",
-    urlLive: "",
+    urlLive: "https://suit-app.herokuapp.com/",
     urlRepo: "https://github.com/joseph-p-pasaoa/suitApp__FullStack",
     techs: [
       "PostgreSQL 12.1",

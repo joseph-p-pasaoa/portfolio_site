@@ -25,14 +25,16 @@ const ProjectsPage = ({ history, location }) => {
           <ProjectCard
             key={index}
             id={index}
+            urlRepo={project.urlRepo}
+            urlLive={project.urlLive}
             name={project.name}
             description={project.description}
+            role={project.role}
             screencapUrl={project.screencapUrl}
             techs={project.techs}
-            role={project.role}
+            features={project.features}
             difficulties={project.difficulties}
             wins={project.wins}
-            features={project.features}
             // handleClick={() => history.push(`/projects/${index}`)}
           />
         );

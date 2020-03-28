@@ -8,8 +8,9 @@ NavList Component | Portfolio Site
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { joeysResume } from '../helpers/importsRef.js';
+// import { joeysResume } from '../helpers/importsRef.js';
 
 
 /* MAIN */
@@ -49,16 +50,11 @@ const NavList = () => {
             <div>Blog</div>
           </NavLink>
         </li>
-        <li>
+        {/* <li>
           <a href={joeysResume} target="_blank" rel="noopener noreferrer" className="link-navlist">
             <div>Resume</div>
           </a>
-        </li>
-        <li>
-          <NavLink to={`/contactme`} className="link-navlist">
-            <div>Contact Me</div>
-          </NavLink>
-        </li>
+        </li> */}
         <li>
           <a href="https://www.josephpasaoa.com" target="_blank" rel="noopener noreferrer" className="link-navlist">
             <div>Photography</div>
@@ -66,7 +62,12 @@ const NavList = () => {
         </li>
         <li>
           <NavLink to={`/siteinfo`} className="link-navlist">
-            <div>Site Info</div>
+            <div>About This Site</div>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to={`/contactme`} className="link-navlist">
+            <div>Contact Me <FontAwesomeIcon icon={["far", "edit"]} className="faicon--iconbar" /></div>
           </NavLink>
         </li>
       </ul>
