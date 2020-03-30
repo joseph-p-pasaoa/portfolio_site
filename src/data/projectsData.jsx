@@ -126,23 +126,43 @@ export const projectsData = [
       ""
     ]
   },
-  // {
-  //   index: 4,
-  //   name: "Middleware App3"
-  //   description: "",
-  //   screencapUrl: "screencap_welcome_thumb.png",
-  //   urlLive: "http://www.test3.com",
-  //   urlRepo: "http://www.github.com/test-c",
-  //   techs: [
-  //     "",
-  //   ],
-  //   role: "",
-  //   difficulties: "",
-  //   solutions: "",
-  //   features: [
-  //     ""
-  //   ]
-  // }
+  {
+    index: 4,
+    name: "Bingebook",
+    description: "Bingebook is a full-stack binge-facilitating social networking app.",
+    screencapUrl: "proj-bingebook-search.png",
+    urlLive: "https://bingebook.herokuapp.com/",
+    urlRepo: "https://github.com/joseph-p-pasaoa/bingebook__FSWeb",
+    techs: [
+      "PostgreSQL 12.1",
+      "Express.js 4.16.1",
+      "React 16.12.0",
+      "React/Redux 7.1.3",
+      "Redux 4.0.5",
+      "React Router Web 5.1.2",
+      "Pg-promise 10.3.2",
+      "Axios 0.19.2",
+      "Node.js 13.8.0",
+      "JavaScript (ES6+)",
+      "CSS3",
+      "HTML5"
+    ],
+    role: "personal project",
+    difficulties: "",
+    solutions: "",
+    features: [
+      "External OMDb API integration",
+      "REST API",
+      "relational database",
+      "multiple cross-reference tables",
+      "back-end error handling w/ specific http response codes",
+      "back-end input validation",
+      "clean ui and navbar",
+      "commenting form and system",
+      "front-end error handling",
+      "front-end input validation"
+    ]
+  }
   /* {
       index: 000000,
       name: "",

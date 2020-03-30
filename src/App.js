@@ -37,7 +37,8 @@ const App = () => {
   useEffect(() => {
     const serverPings = async () => {
       const urlsArray = [
-        "https://greenlist-registry.herokuapp.com/static/media/logo_200228.ca07d05d.png"
+        "https://greenlist-registry.herokuapp.com/static/media/logo_200228.ca07d05d.png",
+        "https://bingebook.herokuapp.com/images/uploaded-avatars/avatar-sporty-her.svg"
       ];
       const getsArray = urlsArray.map(url => axios.get(url));
       let responses = null;
