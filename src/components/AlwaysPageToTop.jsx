@@ -1,22 +1,15 @@
 /*
 JOSEPH P. PASAOA
-AlwaysPageToTOp Component | Portfolio Site
+AlwaysPageToTop Component | Portfolio Site
 */
 
 
-import { PureComponent } from "react";
-import { withRouter } from "react-router-dom";
+import { useEffect } from "react";
 
-class AlwaysPageToTOp extends PureComponent {
-  componentDidMount = () => window.scrollTo(0, 0);
+export default function AlwaysPageToTop() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-  componentDidUpdate = prevProps => {
-    if (this.props.location !== prevProps.location) window.scrollTo(0, 0);
-  };
-
-  render() {
-    return this.props.children;
-  }
+  return null;
 }
-
-export default withRouter(AlwaysPageToTOp);

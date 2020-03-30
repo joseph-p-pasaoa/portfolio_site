@@ -5,7 +5,7 @@ ProjectsPage Component | Portfolio Site
 
 
 /* IMPORTS */
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // import SpinnerDelay from '../components/SpinnerDelay';
 import PageHeader from '../components/PageHeader';
@@ -16,6 +16,19 @@ import projectsData from '../data/projectsData';
 
 /* MAIN */
 const ProjectsPage = ({ history, location }) => {
+  const refStageTop = React.createRef();
+
+  useEffect(() => {
+    const resetToTop = () => {
+      refStageTop.current.scrollIntoView({
+            behaviour: 'auto',
+            block: 'start',
+            inline: 'start',
+      });
+    }
+    resetToTop();
+  }, [refStageTop]);
+
 
   // PRE-RETURN
   let listProjects = null;
@@ -44,7 +57,7 @@ const ProjectsPage = ({ history, location }) => {
 
   return (
     // <SpinnerDelay delayTime={1400} delayColor="#262629" delayMsg="loading projects">
-      <div id="top" className="page page--listprojects">
+      <div id="top" className="page page--listprojects" ref={refStageTop}>
         <PageHeader pagename="Projects" />
         {listProjects}
       </div>
