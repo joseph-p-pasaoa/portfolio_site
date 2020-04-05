@@ -32,7 +32,7 @@ const ProjectCard = ({
     const delay = () => {
       setTimeout(() => {
         setDelayFinished(true);
-      }, 1300);
+      }, 1100);
     }
     delay();
   }, []);

@@ -33,7 +33,7 @@ const HomeAboutPage = () => {
     <div className="page page--home">
 
       <div className="home__topline">
-        <h5 className="home__greet">Hello!</h5>
+        <div className="home__greet">Hello!</div>
         <Fade bottom cascade when={toplineDelayFinished}>
           <div className="home__mynameis">
             <h3>My</h3>

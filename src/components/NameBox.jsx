@@ -29,7 +29,7 @@ const NameBox = () => {
   if (atHome) {
     nameStyles["homeName"] = { opacity: 1 };
     nameStyles["elseName"] = { opacity: 0 };
-    nameStyles["homeSubname"] = { opacity: 1 };
+    nameStyles["homeSubname"] = { opacity: 1, top: "3rem" };
     nameStyles["elseSubname"] = { opacity: 0 };
   } else {
     nameStyles["homeName"] = { opacity: 0 };
@@ -50,7 +50,7 @@ const NameBox = () => {
       </Fade>
       <Fade left when={!atHome}>
         <h1 className="namebox__name" style={nameStyles.elseName}>
-          Joseph P. Pasaoa
+          Joseph P.<br />Pasaoa
         </h1>
         <h2 className="namebox__subname" style={nameStyles.elseSubname}>
           software engineer /<br />

@@ -295,22 +295,22 @@ a.faicon:hover, a.faicon:active {
   font-size: 2.2rem;
 }
 
-.project__screencap {
-  /* border-radius: 11px; */
+/* .project__screencap {
+  /* border-radius: 11px; 
   border: solid 1px #fff;
   box-shadow: 0px 6px 11px #000;
   object-fit: cover;
-}
+} */
 
-.project__screencap[alt="SuitApp screencap"], .project__screencap[alt="Middleware Demo screencap"] {
+/* .project__screencap[alt="SuitApp screencap"], .project__screencap[alt="Middleware Demo screencap"] {
   object-position: left top;
-}
+} */
 
-.page--projects .project__screencap {
+/* .page--projects .project__screencap {
   width: 255px;
   height: 162px;
   margin: 3px 3px 3px 2vw;
-}
+} */
 
 .project__card .project__card__expandmsg {
   margin: 1.5vh 1vw 3px 3px;

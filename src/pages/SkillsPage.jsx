@@ -54,7 +54,7 @@ const SkillsPage = () => {
     const delay = () => {
       setTimeout(() => {
         setDelayFinished(true);
-      }, 1300);
+      }, 1100);
     }
     const resetToTop = () => {
       refStageTop.current.scrollIntoView({

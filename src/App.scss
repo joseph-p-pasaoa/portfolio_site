@@ -12,14 +12,36 @@ APP MAIN SCSS | Portfolio Site
     box-sizing: border-box;
 }
 
-html {
+:root {
     font-size: 10px;
+
+    --ff-body: 'Raleway', sans-serif;
+
+    --fs-body: 1.7rem;
+    --fs-h1: 2.65rem;   /* myname in sidebar */
+    --fs-h2: 1.3rem;    /* my title in sidebar */
+    --fs-h3: 3.4rem;    /* page headers */
+    --fs-h4: 2rem;      /* project subheaders */
+
+    --fw-bold: 800;
+
+    --color-white: #fcfcfc;     // alabaster
+    --color-blue: #1ea0d2;      // curious blue
+    --color-primary: #ffac10;   // sun
+    --color-copper: #64332e;    // buccaneer
+    --color-midnight: #0e1b3d;  // blue zodiac
+
+    --pad-min: 3px;
+    --pad-windowleft: 1.5vw;
+    --pad-pageleft: 3.7rem;
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.7rem;
-    color: #fcfcfc;
+    background-color: #171111; /* to cover viewport completely when screen is dragged  */
+
+    font-family: var(--ff-body);
+    font-size: var(--fs-body);
+    color: var(--color-white);
 }
 
 html, body, .root, .App, #grid-base {
@@ -28,9 +50,9 @@ html, body, .root, .App, #grid-base {
 }
 
 .textcopy {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.7rem;
-    color: #fcfcfc;
+    font-family: var(--ff-body);
+    font-size: var(--fs-body);
+    color: var(--color-white);
     line-height: 2.2rem;
     white-space: pre-line;
     margin-bottom: 16px;
@@ -38,17 +60,17 @@ html, body, .root, .App, #grid-base {
 
 
 // VARIABLES
-$color-shade-l: #fcfcfc;  // alabaster
-$color-accent-l: #1ea0d2; // curious blue
-$color-primary: #ffac10;  // sun
-$color-accent-d: #64332e; // buccaneer
-$color-shade-d: #0e1b3d;  // blue zodiac
-
-$default-pad: 3px;
-$pageleft-pad: 1.5vw;
-
 $name-transition: opacity .9s ease-out;
-$pageside-pad: 14rem;
+
+// $color-shade-l: #fcfcfc;  // alabaster
+// $color-accent-l: #1ea0d2; // curious blue
+// $color-primary: #ffac10;  // sun
+// $color-accent-d: #64332e; // buccaneer
+// $color-shade-d: #0e1b3d;  // blue zodiac
+
+// $default-pad: 3px;
+// $pageleft-pad: 1.5vw;
+// $pageside-pad: 3.7rem;
 
 
 @mixin flex-line($direction, $col-justify: flex-start, $col-align: flex-start) {
@@ -85,13 +107,13 @@ $pageside-pad: 14rem;
     box-shadow: 0px 7px 6px -6px #000000;
     background: linear-gradient(to bottom, #2d2d2de3 5%, #0a0607ed 100%);
     border-radius: 11px;
-    border: 2px solid #fcfcfc;
+    border: 2px solid var(--color-white);
     display: inline-block;
     cursor: pointer;
-    color: #fcfcfc;
+    color: var(--color-white);
     font-family: Trebuchet MS;
-    font-size: 13px;
-    font-weight: bold;
+    font-size: 1.3rem;
+    font-weight: var(--fw-bold);
     padding: 1px 11px;
     text-align: center;
     text-decoration: none;
@@ -112,8 +134,8 @@ $pageside-pad: 14rem;
 
 // HEADERS
 h1 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 2.65rem;
+    font-family: var(--ff-body);
+    font-size: var(--fs-h1);
     text-transform: uppercase;
 
     color: #fff;
@@ -137,33 +159,33 @@ h1 {
 }
 
 h2 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 600;
+    font-family: var(--ff-body);
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-bold);
     text-transform: lowercase;
 
     color: #000;
 
     &.namebox__subname {
         position: absolute;
-        top: 3rem;
+        top: 5.3rem;
 
         white-space: nowrap;
 
         transition: $name-transition;
 
         &.colored {
-            color: $color-primary;
+            color: var(--color-primary);
         }
     }
 }
 
 h3 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 3.4rem;
-    font-weight: 600;
+    font-family: var(--ff-body);
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
     text-transform: lowercase;
-    color: $color-accent-l;
+    color: var(--color-blue);
     text-shadow: 14px 4px 8px #000;
 
     &.page__header {
@@ -177,42 +199,31 @@ h3 {
 
     &.project-name {
         font-size: 2.6rem;
-        color: $color-primary;
+        color: var(--color-primary);
     }
 }
 
 h4 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 2rem;
-    font-weight: 600;
+    font-family: var(--ff-body);
+    font-size: var(--fs-h4);
+    font-weight: var(--fw-bold);
     text-transform: lowercase;
-    color: #fcfcfc;
+    color: var(--color-white);
     text-shadow: 11px 4px 2px #000;
 
     &.header-section {
-        color: $color-primary;
+        color: var(--color-primary);
     }
     &.project--subheader {
         margin-top: 1.5rem;
         margin-bottom: .5rem;
         font-size: 1.5rem;
-        color: $color-primary;
+        color: var(--color-primary);
 
         &:first-child {
             margin-top: 0;
         }
     }
-}
-
-h5 {
-    margin-right: 19px;
-
-    font-family: 'Raleway', sans-serif;
-    font-size: 2rem;
-    font-weight: 600;
-    text-transform: lowercase;
-    color: #fcfcfc;
-    text-shadow: 11px 4px 2px #000;
 }
 
 
@@ -268,7 +279,7 @@ h5 {
     position: absolute;
     top: 5.5rem;
 
-    margin: $default-pad $pageleft-pad;
+    margin: var(--pad-min) var(--pad-windowleft);
 }
 
 .iconsbar {
@@ -276,12 +287,12 @@ h5 {
 
     width: 100%;
     margin-top: 15rem;
-    padding: $default-pad $pageleft-pad;
+    padding: var(--pad-min) var(--pad-windowleft);
 
     .link-faicon {
         &:link, &:visited {
             position: relative;
-            margin: $default-pad 0 8px 0;
+            margin: var(--pad-min) 0 8px 0;
         
             font-size: 2.8rem;
             color: #fff;
@@ -298,7 +309,7 @@ h5 {
                 left: 4.7rem;
                 white-space: nowrap;
                 font-size: 1.3rem;
-                font-weight: bold;
+                font-weight: var(--fw-bold);
                 filter: drop-shadow(0px 0px 2px #fff);
                 opacity: 0;
 
@@ -329,7 +340,7 @@ h5 {
 .navlist {
     @include flex-line(column);
 
-    padding: 15rem $pageleft-pad 8rem ($pageleft-pad - .2vw);
+    padding: 15rem var(--pad-windowleft) 8rem calc(var(--pad-windowleft) - .2vw);
     width: 100%;
 
     li {
@@ -339,16 +350,16 @@ h5 {
             content: "⤙⤚";
             position: relative;
             top: -.6rem;
-            color: #fcfcfc;
+            color: var(--color-white);
             font-size: 2rem;
         }
 
         .link-navlist {
             &:link, &:visited {
-                font-family: 'Raleway', sans-serif;
+    font-family: var(--ff-body);
                 font-size: 1.5rem;
                 letter-spacing: 1px;
-                font-weight: bold;
+                font-weight: var(--fw-bold);
                 text-decoration: none;
                 text-transform: lowercase;
 
@@ -359,7 +370,7 @@ h5 {
                     position: relative;
                     left: 2px;
                     opacity: 0;
-                    color: $color-primary;
+                    color: var(--color-primary);
 
                     transition: opacity .5s ease-out;
                 }
@@ -375,7 +386,7 @@ h5 {
                         right: -1.7rem;
                         width: min-content;
                         height: 100%;
-                        color: $color-shade-l;
+                        color: var(--color-white);
                         opacity: 0;
 
                         transition: opacity .5s ease-out;
@@ -383,7 +394,7 @@ h5 {
                 }
             }
             &:hover, &:active {
-                color: $color-accent-l;
+                color: var(--color-blue);
 
                 div::after {
                     opacity: 1;
@@ -394,13 +405,13 @@ h5 {
                 }
             }
             &.active {
-                color: $color-primary;
+                color: var(--color-primary);
                 text-shadow: 0px 1px 1px #000;
                 cursor: default;
 
                 div::after {
                     content: "✦";
-                    color: $color-primary;
+                    color: var(--color-primary);
                     opacity: 1;
                 }
 
@@ -429,7 +440,7 @@ h5 {
 
     position: relative;
     min-height: 100vh;
-    padding: 22.6rem 11rem 6rem $pageside-pad;
+    padding: 22.6rem 11rem 6rem var(--pad-pageleft);
 
     &.page--home {
         padding-top: 15.6rem;
@@ -441,11 +452,22 @@ h5 {
         @include flex-line(row);
     }
 
+    .home__greet {
+        margin-right: 19px;
+    
+        font-family: var(--ff-body);
+        font-size: var(--fs-h4);
+        font-weight: var(--fw-bold);
+        text-transform: lowercase;
+        color: var(--color-white);
+        text-shadow: 11px 4px 2px #000;
+    }
+
     .home__mynameis h3 {
         margin-left: 6px;
         position: relative;
         top: -9px;
-        font-weight: 900;
+        font-weight: var(--fw-bold);
     }
 
     .home__myname {
@@ -453,14 +475,14 @@ h5 {
 
         font-family: 'Indie Flower', sans-serif;
         font-size: 7.7rem;
-        color: #fcfcfc;
+        color: var(--color-white);
         text-shadow: 2px 2px 15px #000;
     }
 
     .textcopy strong {
-        font-weight: 900;
+        font-weight: var(--fw-bold);
         text-shadow: 2px 3px 1px #000;
-        color: $color-primary;
+        color: var(--color-primary);
     }
 
     .valediction {
@@ -486,7 +508,7 @@ h5 {
             // position: absolute;
             // top: .9rem;
             // left: 30rem;
-            font-weight: 900;
+            font-weight: var(--fw-bold);
             text-transform: lowercase;
         }
 
@@ -514,7 +536,7 @@ h5 {
 
             .project--subheader {
                 font-size: 1.7rem;
-                color: $color-accent-l;
+                color: var(--color-blue);
             }
         }
 
@@ -546,13 +568,13 @@ h5 {
             --organic-arrow-thickness: 8px;
             --organic-arrow-border-radius: 0px;
             --organic-arrow-height: 22px;
-            --organic-arrow-color: #1ea0d2;
+            --organic-arrow-color: var(--color-blue);
             --control-button-width: 5%;
             --control-button-height: 25%;
             --control-button-background: transparent;
             --control-bullet-color: #805608;
             --control-bullet-active-color: #92630a;
-            --loader-bar-color: #1ea0d2;
+            --loader-bar-color: var(--color-blue);
             --loader-bar-height: 1px;
         }
 
@@ -633,7 +655,7 @@ h5 {
                 object-fit: cover;
             }
             &.github {
-                background-color: #fcfcfc;
+                background-color: var(--color-white);
                 border-radius: 50%;
             }
             &.drawio {
@@ -663,7 +685,7 @@ h5 {
     }
 
     &:last-child {
-        margin-bottom: $default-pad;
+        margin-bottom: var(--pad-min);
     }
 }
 
@@ -686,7 +708,7 @@ h5 {
 
             font-size: 4rem;
             font-family: 'Indie Flower', cursive;
-            color: $color-primary;
+            color: var(--color-primary);
         }
     }
 
@@ -699,9 +721,9 @@ h5 {
         label {
             margin-left: .7rem;
             margin-bottom: 1.8rem;
-            color: $color-primary;
+            color: var(--color-primary);
             font-size: 1.4rem;
-            font-weight: 900;
+            font-weight: var(--fw-bold);
             text-transform: lowercase;
         }
 
@@ -720,12 +742,5 @@ h5 {
             width: 63rem;
             margin-top: 4rem;
         }
-    }
-}
-
-
-@media (min-width: 992px) {
-    .page {
-        padding-left: 10rem;
     }
 }
