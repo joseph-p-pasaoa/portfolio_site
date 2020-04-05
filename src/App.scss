@@ -16,14 +16,18 @@ APP MAIN SCSS | Portfolio Site
     font-size: 10px;
 
     --ff-body: 'Raleway', sans-serif;
+    --ff-hand: 'Cabin Sketch', cursive;
 
     --fs-body: 1.7rem;
     --fs-h1: 2.65rem;   /* myname in sidebar */
     --fs-h2: 1.3rem;    /* my title in sidebar */
-    --fs-h3: 3.4rem;    /* page headers */
-    --fs-h4: 2rem;      /* project subheaders */
+    --fs-h3: 3rem;      /* page headers */
+    --fs-h4: 2rem;      /* project skill headers, project roles */
+    --fs-h5: 1.5rem;    /* project subheaders */
 
     --fw-bold: 800;
+
+    --lineheight-body: 2.2rem;
 
     --color-white: #fcfcfc;     // alabaster
     --color-blue: #1ea0d2;      // curious blue
@@ -33,7 +37,13 @@ APP MAIN SCSS | Portfolio Site
 
     --pad-min: 3px;
     --pad-windowleft: 1.5vw;
-    --pad-pageleft: 3.7rem;
+    --pad-pageleft: 5.2rem;
+
+    --space-xs: .5rem;
+    --space-sml: 1.5rem;
+    --space-med: 2.5rem;
+
+    --b-rad: 5px;
 }
 
 body {
@@ -41,6 +51,7 @@ body {
 
     font-family: var(--ff-body);
     font-size: var(--fs-body);
+
     color: var(--color-white);
 }
 
@@ -49,13 +60,16 @@ html, body, .root, .App, #grid-base {
     width: 100%;
 }
 
-.textcopy {
+.text {
     font-family: var(--ff-body);
     font-size: var(--fs-body);
     color: var(--color-white);
-    line-height: 2.2rem;
+    line-height: var(--lineheight-body);
     white-space: pre-line;
-    margin-bottom: 16px;
+
+    &.para {
+        margin-bottom: 16px;
+    }
 }
 
 
@@ -104,21 +118,22 @@ $name-transition: opacity .9s ease-out;
 
 
 .myButton {
-    box-shadow: 0px 7px 6px -6px #000000;
+    @include flex-center(center, center);
+    width: 10rem;
+    height: 2.6rem;
+    padding: 1px 11px 1px 11px;
     background: linear-gradient(to bottom, #2d2d2de3 5%, #0a0607ed 100%);
-    border-radius: 11px;
     border: 2px solid var(--color-white);
-    display: inline-block;
+    box-shadow: 0px 7px 6px -6px #000000;
+    border-radius: var(--b-rad);
     cursor: pointer;
+
     color: var(--color-white);
     font-family: Trebuchet MS;
     font-size: 1.3rem;
     font-weight: var(--fw-bold);
-    padding: 1px 11px;
-    text-align: center;
     text-decoration: none;
     text-shadow: 0px 1px 0px #333333;
-    width: 10rem;
 
     transition: border .3s ease-out;
 }
@@ -189,17 +204,13 @@ h3 {
     text-shadow: 14px 4px 8px #000;
 
     &.page__header {
-        margin-bottom: 5rem;
+        position: relative;
+        left: -2rem;
 
-        font-size: 3rem;
+        margin-bottom: 7rem;
         // position: fixed;
         // top: 52.6rem;
         // left: 101rem;
-    }
-
-    &.project-name {
-        font-size: 2.6rem;
-        color: var(--color-primary);
     }
 }
 
@@ -214,16 +225,21 @@ h4 {
     &.header-section {
         color: var(--color-primary);
     }
-    &.project--subheader {
-        margin-top: 1.5rem;
-        margin-bottom: .5rem;
-        font-size: 1.5rem;
-        color: var(--color-primary);
-
-        &:first-child {
-            margin-top: 0;
-        }
+        
+    &.card--project__role {
+        // margin-top: 1.5rem;
+        // margin-bottom: .5rem;
+        color: var(--color-blue);
     }
+}
+
+h5 {
+    font-family: var(--ff-body);
+    font-size: var(--fs-h5);
+    font-weight: var(--fw-bold);
+    text-transform: lowercase;
+    color: var(--color-white);
+    text-shadow: 11px 4px 2px #000;
 }
 
 
