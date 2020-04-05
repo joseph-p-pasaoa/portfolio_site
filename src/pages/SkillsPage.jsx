@@ -6,6 +6,7 @@ SkillsPage Component | Portfolio Site
 
 /* IMPORTS */
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 
 import PageHeader from '../components/PageHeader';
@@ -66,6 +67,14 @@ const SkillsPage = () => {
     delay();
     resetToTop();
   }, [refStageTop]);
+
+  const handleReturnToTop = () => {
+    refStageTop.current.scrollIntoView({
+          behaviour: 'smooth',
+          block: 'start',
+          inline: 'start',
+      });
+  }
 
 
   return (
@@ -308,6 +317,15 @@ const SkillsPage = () => {
           <li>Whiteboarding</li>
           <li>Wireframing</li>
         </ul> */}
+        <Link
+          to={() => false}
+          className="link--topreturn"
+          onClick={(e) => {
+              handleReturnToTop();
+          }}
+        >
+          Return to top
+        </Link>
 
       </Fade>
     </div>

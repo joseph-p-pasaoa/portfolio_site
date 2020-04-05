@@ -55,6 +55,7 @@ export default class ContactMePage extends Component {
                 action="https://formspree.io/mgezbbzb"
                 method="POST"
                 className="form-contactme"
+                autoComplete="off"
               >
                 <input value={nameTxt} type="text" id="nameTxt" name="nameTxt" onChange={this.handleChange} />
                 <label htmlFor="nameTxt">Name</label>

@@ -68,7 +68,7 @@ const ProjectsPage = ({ history, location }) => {
         {listProjects}
         <Link
           to={() => false}
-          className="regular-copy return-to-top-link"
+          className="link--topreturn"
           onClick={(e) => {
               handleReturnToTop();
           }}

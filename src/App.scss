@@ -242,6 +242,23 @@ h5 {
     text-shadow: 11px 4px 2px #000;
 }
 
+.link--topreturn {
+    font-family: var(--ff-body);
+    font-size: var(--fs-h5);
+    text-shadow: 11px 4px 2px #000;
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+    text-decoration: none;
+
+    &:link, &:visited {
+        color: #fcfcfc;
+    }
+    &:hover, &:active {
+        // text-decoration: underline overline;
+        color: var(--color-blue);
+    }
+}
+
 
 // BASE & SIDEBAR
 .App {
@@ -769,8 +786,9 @@ h5 {
             left: 3rem;
 
             font-size: 4rem;
-            font-family: 'Indie Flower', cursive;
-            color: var(--color-primary);
+            font-family: var(--ff-hand);
+            color: var(--color-white);
+            line-height: 5rem;
         }
     }
 

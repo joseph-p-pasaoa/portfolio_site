@@ -45,11 +45,11 @@ const NavList = () => {
             <div>Skills</div>
           </NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink to={`/blog`} className="link-navlist">
             <div>Blog</div>
           </NavLink>
-        </li>
+        </li> */}
         {/* <li>
           <a href={joeysResume} target="_blank" rel="noopener noreferrer" className="link-navlist">
             <div>Resume</div>
@@ -60,11 +60,11 @@ const NavList = () => {
             <div>Photography</div>
           </a>
         </li>
-        <li>
+        {/* <li>
           <NavLink to={`/siteinfo`} className="link-navlist">
             <div>About This Site</div>
           </NavLink>
-        </li>
+        </li> */}
         <li>
           <NavLink to={`/contactme`} className="link-navlist">
             <div>Contact Me <FontAwesomeIcon icon={["far", "edit"]} className="faicon--iconbar" /></div>
