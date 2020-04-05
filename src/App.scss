@@ -302,7 +302,7 @@ h5 {
     @include flex-line(column);
 
     width: 100%;
-    margin-top: 15rem;
+    margin-top: 17rem;
     padding: var(--pad-min) var(--pad-windowleft);
 
     .link-faicon {
@@ -372,7 +372,7 @@ h5 {
 
         .link-navlist {
             &:link, &:visited {
-    font-family: var(--ff-body);
+                font-family: var(--ff-body);
                 font-size: 1.5rem;
                 letter-spacing: 1px;
                 font-weight: var(--fw-bold);
@@ -456,7 +456,7 @@ h5 {
 
     position: relative;
     min-height: 100vh;
-    padding: 22.6rem 11rem 6rem var(--pad-pageleft);
+    padding: 11rem 11rem 6rem var(--pad-pageleft);
 
     &.page--home {
         padding-top: 15.6rem;
@@ -479,17 +479,24 @@ h5 {
         text-shadow: 11px 4px 2px #000;
     }
 
-    .home__mynameis h3 {
+    .home__mynameis div {
         margin-left: 6px;
         position: relative;
         top: -9px;
+
+        font-family: var(--ff-body);
+        font-size: 3.6rem;
         font-weight: var(--fw-bold);
+        text-transform: lowercase;
+        color: var(--color-blue);
+        text-shadow: 14px 4px 8px #000;
     }
 
     .home__myname {
         margin-bottom: 11px;
 
-        font-family: 'Indie Flower', sans-serif;
+        font-family: var(--ff-hand);
+        // font-family: 'Indie Flower', sans-serif;
         font-size: 7.7rem;
         color: var(--color-white);
         text-shadow: 2px 2px 15px #000;
@@ -514,54 +521,123 @@ h5 {
 
         position: relative;
         width: 100%;
-        margin-bottom: 10rem;
+        max-width: 93rem;
+        margin-bottom: 5.5rem;
 
-        .project-description {
-            color: #ccc;
-        }
+        .cp__toprow {
+            @include flex-line(row, flex-start, baseline);
 
-        .project-role {
-            // position: absolute;
-            // top: .9rem;
-            // left: 30rem;
-            font-weight: var(--fw-bold);
-            text-transform: lowercase;
-        }
+            h3.card--project__title {
+                margin-right: var(--space-med);
 
-        .project--features li::before {
-            content: "➢";
-            position: relative;
-            top: 2px;
-            margin-right: .8rem;
-            color: #777;
-        }
+                color: var(--color-primary);
+            }
 
-        .top__card--project {
-            display: grid;
-            grid-template-rows: 1fr;
-            grid-template-columns: auto min-content;
-
-            padding-top: 1.5rem;
-            padding-left: 1.5rem;
-        }
-
-        .intro__card--project {
-            @include flex-line(column);
-
-            padding-right: 2.5rem;
-
-            .project--subheader {
-                font-size: 1.7rem;
-                color: var(--color-blue);
+            .project-role {
+                font-weight: var(--fw-bold);
+                text-transform: lowercase;
             }
         }
 
-        .images__card--project {
-            @include flex-line(row);
-
-            min-width: 422px;
-            max-width: 422px;
+        .cp__middlerow, .cp__bottomrow {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            width: 100%;
+            margin-top: var(--space-sml);
         }
+
+        .cp__middlerow {
+            .card--project__images {
+                @include flex-line(row);
+    
+                .screencap {
+                    width: 100%;
+                    min-width: 20rem;
+                    max-width: 30rem;
+                    height: auto;
+                    object-fit: cover;
+                    // margin: 3px 3px 3px 2vw;
+                    border-radius: var(--b-rad);
+                    border: solid 1px #fff;
+                    box-shadow: 0px 6px 11px #000;
+            
+                    &[alt="SuitApp screencap"],
+                    &[alt="Middleware Demo screencap"] {
+                        object-position: left top;
+                    }
+                }
+            }
+
+            .cp__midbox {
+                @include flex-line(column, space-around, flex-start);
+
+                margin-left: var(--space-med);
+
+                .card--project__description {
+                    color: #ccc;
+                }
+    
+                .card--project__btns {
+                    @include flex-line(row, flex-start, center);
+        
+                    width: 100%;
+                    margin-top: var(--space-sml);
+        
+                    .myButton:last-child {
+                        margin-left: var(--space-med);
+                    }
+                }
+            }
+        }
+
+        .cp__bottomrow {
+            h5.card--project__subheader {
+                margin-top: var(--space-sml);
+                margin-bottom: var(--space-xs);
+
+                color: var(--color-primary);
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+
+            .card--project__techlist {
+                @include flex-line(column, flex-start, flex-end);
+
+                padding-top: 2px;
+
+                text-align: right;
+                list-style: none;
+                font-family: var(--ff-hand);
+                font-size: var(--fs-h4);
+            }
+
+            .cp__bottomrow__flex {
+                @include flex-line(column);
+
+                margin-left: var(--space-med);
+
+                .project--features li::before {
+                    content: "➢";
+                    position: relative;
+                    top: 2px;
+                    margin-right: .8rem;
+                    color: #777;
+                }
+            }
+        }
+
+        // .intro__card--project {
+        //     @include flex-line(column);
+
+        //     padding-right: 2.5rem;
+
+        //     .project--subheader {
+        //         font-size: 1.7rem;
+        //         color: var(--color-blue);
+        //     }
+        // }
 
         .aws-sld {
             &--exit {
@@ -594,53 +670,23 @@ h5 {
             --loader-bar-height: 1px;
         }
 
-        .bottom__card--project {
-            display: grid;
-            grid-template-rows: 1fr;
-            grid-template-columns: 23rem auto;
+        // .bottom__card--project {
+        //     display: grid;
+        //     grid-template-rows: 1fr;
+        //     grid-template-columns: 23rem auto;
 
-            padding-top: 2rem;
-            padding-left: 1.5rem;
-            width: 100%;
-        }
+        //     padding-top: 2rem;
+        //     padding-left: 1.5rem;
+        //     width: 100%;
+        // }
 
-        .techs__card--project {
-            @include flex-line(column, flex-start, flex-end);
 
-            text-align: right;
-            list-style: none;
-        }
 
-        .details__card--project {
-            @include flex-line(column);
+        // .details__card--project {
+        //     @include flex-line(column);
 
-            padding: 0 2.5rem 0 3.5rem;
-        }
-
-        .references__card--project {
-            @include flex-line(row, flex-end, center);
-
-            width: 100%;
-            margin-bottom: 2rem;
-
-            .myButton:last-child {
-                margin-left: 1rem;
-            }
-        }
-    }
-
-    .screencap {
-        width: 211px;
-        height: 136px;
-        object-fit: cover;
-        // margin: 3px 3px 3px 2vw;
-        border: solid 1px #fff;
-        box-shadow: 0px 6px 11px #000;
-
-        &[alt="SuitApp screencap"],
-        &[alt="Middleware Demo screencap"] {
-            object-position: left top;
-        }
+        //     padding: 0 2.5rem 0 3.5rem;
+        // }
     }
 }
 

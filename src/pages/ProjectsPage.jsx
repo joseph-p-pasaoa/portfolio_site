@@ -6,8 +6,8 @@ ProjectsPage Component | Portfolio Site
 
 /* IMPORTS */
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-// import SpinnerDelay from '../components/SpinnerDelay';
 import PageHeader from '../components/PageHeader';
 import ProjectCard from '../components/ProjectCard';
 
@@ -29,6 +29,14 @@ const ProjectsPage = ({ history, location }) => {
     resetToTop();
   }, [refStageTop]);
 
+  const handleReturnToTop = () => {
+    refStageTop.current.scrollIntoView({
+          behaviour: 'smooth',
+          block: 'start',
+          inline: 'start',
+      });
+  }
+
 
   // PRE-RETURN
   let listProjects = null;
@@ -48,7 +56,6 @@ const ProjectsPage = ({ history, location }) => {
             features={project.features}
             difficulties={project.difficulties}
             wins={project.wins}
-            // handleClick={() => history.push(`/projects/${index}`)}
           />
         );
     })
@@ -56,12 +63,19 @@ const ProjectsPage = ({ history, location }) => {
 
 
   return (
-    // <SpinnerDelay delayTime={1400} delayColor="#262629" delayMsg="loading projects">
       <div id="top" className="page page--listprojects" ref={refStageTop}>
         <PageHeader pagename="Projects" />
         {listProjects}
+        <Link
+          to={() => false}
+          className="regular-copy return-to-top-link"
+          onClick={(e) => {
+              handleReturnToTop();
+          }}
+        >
+          Return to top
+        </Link>
       </div>
-    // </SpinnerDelay>
   );
 }
 
