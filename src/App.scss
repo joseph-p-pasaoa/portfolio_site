@@ -32,8 +32,9 @@ APP MAIN SCSS | Portfolio Site
     --color-white: #fcfcfc;     // alabaster
     --color-blue: #1ea0d2;      // curious blue
     --color-primary: #ffac10;   // sun
-    --color-copper: #64332e;    // buccaneer
+    --color-copper: #311102;    // buccaneer
     --color-midnight: #0e1b3d;  // blue zodiac
+    // --color-midnight: #0e1b3d;  // blue zodiac
 
     --pad-min: 3px;
     --pad-windowleft: 1.5vw;
@@ -75,17 +76,6 @@ html, body, .root, .App, #grid-base {
 
 // VARIABLES
 $name-transition: opacity .9s ease-out;
-
-// $color-shade-l: #fcfcfc;  // alabaster
-// $color-accent-l: #1ea0d2; // curious blue
-// $color-primary: #ffac10;  // sun
-// $color-accent-d: #64332e; // buccaneer
-// $color-shade-d: #0e1b3d;  // blue zodiac
-
-// $default-pad: 3px;
-// $pageleft-pad: 1.5vw;
-// $pageside-pad: 3.7rem;
-
 
 @mixin flex-line($direction, $col-justify: flex-start, $col-align: flex-start) {
     display: flex;
@@ -328,7 +318,8 @@ h5 {
             margin: var(--pad-min) 0 8px 0;
         
             font-size: 2.8rem;
-            color: #fff;
+            color: var(--color-midnight);
+            filter: drop-shadow(0px 0px 4px var(--color-white));
             opacity: .7;
 
             svg {
@@ -343,10 +334,11 @@ h5 {
                 white-space: nowrap;
                 font-size: 1.3rem;
                 font-weight: var(--fw-bold);
-                filter: drop-shadow(0px 0px 2px #fff);
+                filter: drop-shadow(0px 0px 5px var(--color-white));
+                color: transparent;
                 opacity: 0;
 
-                transition: opacity .1s ease-in;
+                transition: color .1s ease-in, opacity .4s ease-in;
             }
 
         }
@@ -359,11 +351,15 @@ h5 {
         &:hover, &:active {
             opacity: 1;
 
+            color: var(--color-white);
+            filter: none;
+
             & svg {
                 animation: nav-faicon-out .2s ease-out 0s 1 forwards;
             }
 
             &::after {
+                color: var(--color-white);
                 opacity: 1;
             }
         }
@@ -396,7 +392,7 @@ h5 {
                 text-decoration: none;
                 text-transform: lowercase;
 
-                color: #fff;
+                color: var(--color-white);
                 text-shadow: 0px 2px 2px #000;
 
                 .faicon--iconbar {
