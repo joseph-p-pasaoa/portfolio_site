@@ -15,8 +15,8 @@ font-family: 'Indie Flower', sans-serif;
   font-style: normal;
 } 
 @font-face {
-  font-family: 'Indie Flower';
-  src: url('./assets/fonts/Indie_Flower/IndieFlower-Regular.ttf') format('truetype');
+  font-family: 'Cabin Sketch';
+  src: url('./assets/fonts/Cabin_Sketch/CabinSketch-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
