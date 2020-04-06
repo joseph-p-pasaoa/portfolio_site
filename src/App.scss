@@ -43,8 +43,37 @@ APP MAIN SCSS | Portfolio Site
     --space-xs: .5rem;
     --space-sml: 1.5rem;
     --space-med: 2.5rem;
+    --space-lrg: 3.5rem;
 
     --b-rad: 5px;
+}
+
+// Medium devices (tablets, 992px and smaller)
+@media (max-width: 992px) {
+    :root {
+        --fs-body: 1.5rem;
+        --fs-h4: 1.5rem;
+        --fs-h5: 1.2rem;
+
+        --lineheight-body: 1.9rem;
+
+        --space-xs: .3rem;
+        --space-sml: 1rem;
+        --space-med: 2rem;
+        --space-lrg: 2.5rem;
+        --pad-pageleft: var(--space-lrg);
+
+    }
+
+    .screencap {
+        min-width: 0;        
+    }
+}
+// Small devices (landscape phones, 768px and smaller)
+@media (max-width: 768px) {
+    :root {
+
+    }
 }
 
 body {
@@ -232,6 +261,22 @@ h5 {
     text-shadow: 11px 4px 2px #000;
 }
 
+.link--homepursuit {
+    text-shadow: 2px 3px 1px #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 900;
+
+    transition: color .4s ease-in;
+
+    &:link, &:visited {
+        color: var(--color-white);
+    }
+    &:hover, &:active {
+        color: #4242ea;
+    }
+}
+
 .link--topreturn {
     font-family: var(--ff-body);
     font-size: var(--fs-h5);
@@ -256,7 +301,7 @@ h5 {
     background-image: linear-gradient(180deg, #361b1b9e 28%, #1d100ac2 100%), url(/static/media/contemp-comp-jedit.ec3a22fa.jpg);
     background-size: cover;
     background-color: #fff;
-    background-position: left center;
+    background-position: left bottom;
 }
 
 .app__fadebg {
@@ -269,7 +314,7 @@ h5 {
 
 #grid-base {
     display: grid;
-    grid-template-columns: max-content auto;
+    grid-template-columns: minmax(16.5rem, 14vw) 1fr;
     grid-template-rows: 1fr;
 }
 
@@ -279,7 +324,6 @@ h5 {
     position: relative;
     height: 100%;
     min-width: 16.5rem;
-    // min-width: 14.9rem;
     z-index: 1000;
     transition: transform .6s ease-out;
 
@@ -294,7 +338,7 @@ h5 {
         /* background-image: linear-gradient(to bottom, #4bc5ffb0, #011d46); */
         /* background-image: linear-gradient(to bottom, #A38383b0, #5C3828); */
         /* background-image: linear-gradient(to bottom, #4bc5ffb0, #0d2c5a); */
-        clip-path: polygon(0px 0px, 14.7rem 0px, 16.5rem 10.4rem, 13.7rem 100%, 0px 100%);
+        clip-path: polygon(0px 0px, 89% 0px, 100% 10.4rem, 83% 100%, 0px 100%);
     }
 }
 
@@ -469,7 +513,7 @@ h5 {
 
     position: relative;
     min-height: 100vh;
-    padding: 11rem 11rem 6rem var(--pad-pageleft);
+    padding: 11rem var(--space-lrg) 6rem var(--pad-pageleft);
 
     &.page--home {
         padding-top: 15.6rem;
@@ -482,7 +526,7 @@ h5 {
     }
 
     .home__greet {
-        margin-right: 19px;
+        margin-right: var(--space-sml);
     
         font-family: var(--ff-body);
         font-size: var(--fs-h4);
@@ -506,13 +550,17 @@ h5 {
     }
 
     .home__myname {
-        margin-bottom: 11px;
+        margin-bottom: var(--space-lrg);
 
         font-family: var(--ff-hand);
         // font-family: 'Indie Flower', sans-serif;
         font-size: 7.7rem;
         color: var(--color-white);
         text-shadow: 2px 2px 15px #000;
+    }
+
+    .text.para {
+        max-width: 87rem;
     }
 
     .text strong {
@@ -631,10 +679,19 @@ h5 {
 
                 margin-left: var(--space-med);
 
+                .project--features li {
+                    margin-left: 2rem;
+
+                    &:first-line {
+                        margin-left: -1.4rem;
+                    }
+                }
+
                 .project--features li::before {
                     content: "➢";
                     position: relative;
-                    top: 2px;
+                    top: 2px;     
+                    left: -6px;
                     margin-right: .8rem;
                     color: #777;
                 }
@@ -801,6 +858,10 @@ h5 {
             font-size: 1.4rem;
             font-weight: var(--fw-bold);
             text-transform: lowercase;
+
+            &:focus {
+                color: var(--color-white);
+            }
         }
 
         input[type=text], input[type=email] {
@@ -808,6 +869,10 @@ h5 {
             border-bottom: solid 2px #777;
             padding: .1rem 2.2rem .2rem 2.2rem;
             font-size: 1.9rem;
+
+            &:focus {
+                border-bottom-color: var(--color-primary);
+            }
         }
 
         input[name=nameTxt], input[name=emailTxt] {
@@ -818,5 +883,47 @@ h5 {
             width: 63rem;
             margin-top: 4rem;
         }
+    }
+}
+
+
+
+// Medium devices (tablets, 992px and lower)
+@media (max-width: 992px) {
+
+    .page.page--home {
+        padding-top: 13rem;
+    }
+    
+    .page--home .home__mynameis div {
+        font-size: 3rem;
+    }
+    
+    .page--home .home__myname {
+        font-size: 5.5rem;
+    }
+    
+    .page--home .text.para {
+        margin-right: 5rem;
+    }
+
+    h3.page__header {
+        left: 0px;
+    }
+
+    .page--listprojects .card--project .cp__middlerow .card--project__images .screencap {
+        min-width: 0;        
+    }
+}
+
+
+// Small devices (landscape phones, 768px and smaller)
+@media (max-width: 768px) {
+    #grid-base {
+        @include flex-line(column);
+    }
+
+    .sidebar {
+        display: none;
     }
 }
