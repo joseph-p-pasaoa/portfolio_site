@@ -8,8 +8,8 @@ export const projectsData = [
   {
     index: 0,
     name: "Greenlist",
-    description: `Greenlist is a go-to registry, directory, and community-building application for eco-conscious designers and brands meant to help them find providers and suppliers of greener materials, while being also a networking peer-to-peer solution for material reclaim.`,
-    screencapUrl: "proj-greenlist-form.png",
+    description: `Greenlist is a scalable full-stack registry, directory, and forum application intent on enabling fashion designers and brands to find suppliers of eco-friendly green materials, and to facilitate networking within the fashion community for material reclaim.`,
+    screencapUrl: "proj-greenlist-profile.png",
     urlLive: "https://greenlist-registry.herokuapp.com/",
     urlRepo: "https://github.com/joseph-p-pasaoa/greenlist__FSWeb",
     techs: [
@@ -19,27 +19,29 @@ export const projectsData = [
       "React/Redux 7.2.0",
       "Redux 4.0.5",
       "React Router DOM 5.1.2",
+      "Node.js 13.8.0",
+      "JavaScript",
+      "CSS3",
+      "HTML5",
       "Pg-promise 10.4.4",
       "Axios 0.19.2",
       "Bootstrap 4.4.1",
       "Bootstrap Carousel 4.0.3",
-      "Multer 1.4.2",
-      "Node.js 13.8.0",
-      "JavaScript",
-      "CSS3",
-      "HTML5"
+      "Multer 1.4.2"
     ],
     role: "group role: Tech Lead",
-    difficulties: "While the hackathon assignment was to create an app that would help the fashion-sustainability movement, my group hardly knew anything about the fashion industry. With the help of industry advisors, we were able to identify a large gap in the workflow of small and independent designers that we could build something for. Uber engineering advisors also guided us through technical obstacles like some of the more complex query writing and through stages of production and git flow.",
-    wins: `WINNER of Pursuit 6.2 Hackathon's Most Impactful Award!
-    With hard work, we reached Minimal Viable Product status in 6 days time.`,
+    difficulties: `The assignment for the Uber-sponsored Hackatahon was to create an app to aid in the fashion-sustainability movement, however most in our group hardly knew anything about the fashion industry. With the help of industry advisors, we were able to identify a large gap in the workflow of small and independent designers that we could build something for. Uber developers guided us through dry and performant database query writing and walked us through professional example stages of production and git flow.`,
+    wins: `WINNER of Pursuit's Uber-sponsored 6.2 Hackathon's Most Impactful App Award!
+    We reached Minimal Viable Product status in 6 days time by focusing on the primary role of our app.`,
     features: [
       "relational database",
       "REST API",
       "server error handling w/ specific http response codes",
-      "front-end input validation",
-      "back-end input validation",
-      "single operation multiple-file upload"
+      "front-end & back-end input validation",
+      "visual user feedback",
+      "images carousel integration",
+      "multiple-file single operation upload",
+      "conceived and developed to address a real-world problem"
     ]
   },
   {

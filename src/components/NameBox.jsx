@@ -50,7 +50,8 @@ const NameBox = () => {
       </Fade>
       <Fade left when={!atHome}>
         <h1 className="namebox__name" style={nameStyles.elseName}>
-          Joseph P.<br />Pasaoa
+          Joseph P.<br />
+          Pasaoa
         </h1>
         <h2 className="namebox__subname" style={nameStyles.elseSubname}>
           software engineer /<br />

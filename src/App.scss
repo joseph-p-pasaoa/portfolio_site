@@ -614,7 +614,7 @@ h5 {
                 .screencap {
                     width: 100%;
                     min-width: 20rem;
-                    max-width: 30rem;
+                    max-width: 32rem;
                     height: auto;
                     object-fit: cover;
                     // margin: 3px 3px 3px 2vw;
@@ -858,10 +858,6 @@ h5 {
             font-size: 1.4rem;
             font-weight: var(--fw-bold);
             text-transform: lowercase;
-
-            &:focus {
-                color: var(--color-white);
-            }
         }
 
         input[type=text], input[type=email] {
