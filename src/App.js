@@ -17,6 +17,7 @@ APP MAIN Component | Portfolio Site
     import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
     import './App.scss';
+    import Topbar from './components/Topbar';
     import Sidebar from './components/Sidebar';
     import HomeAboutPage from './pages/HomeAboutPage';
     import ProjectsPage from './pages/ProjectsPage';
@@ -68,6 +69,7 @@ const App = () => {
       <div className="app__fadebg" style={atHome ? {opacity: 0} : null}></div>
 
       <div id="grid-base">
+        <Topbar />
         <Sidebar />
         <div className="stage">
           <Switch>

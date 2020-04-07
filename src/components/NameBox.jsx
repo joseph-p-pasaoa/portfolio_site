@@ -40,7 +40,7 @@ const NameBox = () => {
 
   return (
     <div className="namebox">
-      <Fade left when={atHome && delayFinished}>
+      <Fade right when={atHome && delayFinished}>
         <h1 className="namebox__name namebox__name--brand" style={nameStyles.homeName}>
           JP
         </h1>
