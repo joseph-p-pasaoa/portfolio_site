@@ -32,13 +32,14 @@ export const projectsData = [
     role: "group role: Tech Lead",
     difficulties: `The assignment for the Uber-sponsored Hackatahon was to create an app to aid in the fashion-sustainability movement, however most in our group hardly knew anything about the fashion industry. With the help of industry advisors, we were able to identify a large gap in the workflow of small and independent designers that we could build something for. Uber developers guided us through dry and performant database query writing and walked us through professional example stages of production and git flow.`,
     wins: `WINNER of Pursuit's Uber-sponsored 6.2 Hackathon's Most Impactful App Award!
-    We reached Minimal Viable Product status in 6 days time by focusing on the primary role of our app.`,
+    We reached Minimal Viable Product status in 6 days time by focusing our efforts on the primary role of our app.`,
     features: [
       "relational database",
       "REST API",
       "server error handling w/ specific http response codes",
       "front-end & back-end input validation",
-      "visual user feedback",
+      "gives user visual feedback",
+      "responsive navbar",
       "images carousel integration",
       "multiple-file single operation upload",
       "conceived and developed to address a real-world problem"
@@ -82,54 +83,6 @@ export const projectsData = [
   },
   {
     index: 2,
-    name: "YouTube Abbreviated",
-    description: "YouTube Abbreviated is a multiple component React app I developed where a user can query YouTube results, watch resulting videos, and comment on them locally and temporarily.",
-    screencapUrl: "proj-ytabbrev-screen-demo.png",
-    urlLive: "",
-    urlRepo: "https://github.com/joseph-p-pasaoa/youtube_abbreviated__React",
-    techs: [
-      "React",
-      "React-Router",
-      "React-YouTube",
-      "YouTube Developer API",
-      "Axios",
-      "Node.js",
-      "JavaScript",
-      "HTML5",
-      "CSS3"
-    ],
-    role: "personal project",
-    difficulties: "",
-    solutions: "",
-    features: [
-      "YouTube API integration",
-      "responsive navbar",
-      "comments system"
-    ]
-  },
-  {
-    index: 3,
-    name: "Middleware Demo",
-    description: "",
-    screencapUrl: "proj-middleware-screen-demo.png",
-    urlLive: "",
-    urlRepo: "https://github.com/joseph-p-pasaoa/Pursuit-Core-Web-Middleware-Lab",
-    techs: [
-      "Express.js 4.16.1",
-      "Node.js 13.8.0",
-      "JavaScript",
-      "CSS3",
-      "HTML5"
-    ],
-    role: "personal project",
-    difficulties: "",
-    solutions: "",
-    features: [
-      ""
-    ]
-  },
-  {
-    index: 4,
     name: "Bingebook",
     description: "Bingebook is a full-stack binge-facilitating social networking app.",
     screencapUrl: "proj-bingebook-search.png",
@@ -142,29 +95,80 @@ export const projectsData = [
       "React/Redux 7.1.3",
       "Redux 4.0.5",
       "React Router Web 5.1.2",
-      "Pg-promise 10.3.2",
-      "Axios 0.19.2",
       "Node.js 13.8.0",
       "JavaScript (ES6+)",
+      "Pg-promise 10.3.2",
+      "Axios 0.19.2",
       "CSS3",
       "HTML5"
     ],
     role: "personal project",
-    difficulties: "",
-    solutions: "",
+    difficulties: "The pathing with React Router got a little tricky especially with multiple junction tables in the database allowing for various general path endpoints. It helped to document out the backend process so that I had a good map of what I had and could hone in on what I wanted to accomplish.",
+    wins: "I borrowed React's rule to keep one source of truth and designed Bingebook to reference OMDb's (IMDb's) unique ids for films and shows as the standard to determine what shows exist and are usable. Keeping my own database and setting Bingebook up to always reference what was found in the OMDb/IMDb added a lot to the complexity of the logic but it was a fun challenge to overcome!",
     features: [
-      "External OMDb API integration",
+      "multiple cross-reference tables",
       "REST API",
       "relational database",
-      "multiple cross-reference tables",
+      "External OMDb API integration",
       "back-end error handling w/ specific http response codes",
       "back-end input validation",
-      "clean ui and navbar",
-      "commenting form and system",
-      "front-end error handling",
-      "front-end input validation"
+      "responsive navbar",
+      "simple and clean",
+      "commenting system",
+      "front-end error handling and input validation"
     ]
-  }
+  },
+  {
+    index: 3,
+    name: "YouTube Abbreviated",
+    description: "YouTube Abbreviated is a straightforward multiple component React app where a user can query and obtain YouTube video results, watch embedded videos, and comment on them locally.",
+    screencapUrl: "proj-ytabbrev-screen-demo.png",
+    urlLive: "https://yt-abbreviated.web.app/",
+    urlRepo: "https://github.com/joseph-p-pasaoa/youtube_abbreviated__React",
+    techs: [
+      "React 16.12.0",
+      "React Router DOM 5.1.2",
+      "React-YouTube 7.9.0",
+      "Node.js 12.1",
+      "JavaScript ES5+",
+      "YouTube Developer API v3",
+      "Axios 0.19.1",
+      "Firebase",
+      "HTML5",
+      "CSS3"
+    ],
+    role: "personal project",
+    difficulties: "Under a few hours deadline, I had to read the YouTube Developer API documentation and figure out the proper methods to implement it. Post-MVP I had to follow up and learn how to prep my develop credentials and package.json for deployment to Firebase.",
+    wins: "Plotting out the control flow and wireframing the app ahead of time saved me a lot of time in actually coding the add and it helped me figure out an optimal React component structure and React Router pathing so that I could get to MVP within the time allotted.",
+    features: [
+      "YouTube Developer API integration",
+      "front-end input validation and error handling",
+      "responsive navbar",
+      "comments system",
+      "simple and clean ui"
+    ]
+  },
+  // {
+  //   index: 3,
+  //   name: "Middleware Demo",
+  //   description: "",
+  //   screencapUrl: "proj-middleware-screen-demo.png",
+  //   urlLive: "",
+  //   urlRepo: "https://github.com/joseph-p-pasaoa/Pursuit-Core-Web-Middleware-Lab",
+  //   techs: [
+  //     "Express.js 4.16.1",
+  //     "Node.js 13.8.0",
+  //     "JavaScript",
+  //     "CSS3",
+  //     "HTML5"
+  //   ],
+  //   role: "personal project",
+  //   difficulties: "",
+  //   solutions: "",
+  //   features: [
+  //     ""
+  //   ]
+  // },
   /* {
       index: 000000,
       name: "",
