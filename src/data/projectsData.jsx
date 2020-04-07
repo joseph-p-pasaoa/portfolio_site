@@ -20,7 +20,7 @@ export const projectsData = [
       "Redux 4.0.5",
       "React Router DOM 5.1.2",
       "Node.js 13.8.0",
-      "JavaScript",
+      "JavaScript ES5+",
       "CSS3",
       "HTML5",
       "Pg-promise 10.4.4",
@@ -58,7 +58,7 @@ export const projectsData = [
       "React 16.12.0",
       "React Router DOM 5.1.2",
       "Node.js 13.8.0",
-      "JavaScript",
+      "JavaScript ES5+",
       "CSS3",
       "HTML5",
       "React Toastify 5.5.0",
@@ -84,7 +84,7 @@ export const projectsData = [
   {
     index: 2,
     name: "Bingebook",
-    description: "Bingebook is a full-stack binge-facilitating social networking app.",
+    description: "Bingebook is a full-stack binge-facilitating social networking app. Users are able to keep track of shows they're currently watching, shows they have finshed watching, and shows to keep on a To Watch list. Each user-to-show relationship is also commentable so Bingebook can be an effective solution for recommendations and discussion.",
     screencapUrl: "proj-bingebook-search.png",
     urlLive: "https://bingebook.herokuapp.com/",
     urlRepo: "https://github.com/joseph-p-pasaoa/bingebook__FSWeb",
@@ -96,7 +96,7 @@ export const projectsData = [
       "Redux 4.0.5",
       "React Router Web 5.1.2",
       "Node.js 13.8.0",
-      "JavaScript (ES6+)",
+      "JavaScript ES5+",
       "Pg-promise 10.3.2",
       "Axios 0.19.2",
       "CSS3",
@@ -148,27 +148,30 @@ export const projectsData = [
       "simple and clean ui"
     ]
   },
-  // {
-  //   index: 3,
-  //   name: "Middleware Demo",
-  //   description: "",
-  //   screencapUrl: "proj-middleware-screen-demo.png",
-  //   urlLive: "",
-  //   urlRepo: "https://github.com/joseph-p-pasaoa/Pursuit-Core-Web-Middleware-Lab",
-  //   techs: [
-  //     "Express.js 4.16.1",
-  //     "Node.js 13.8.0",
-  //     "JavaScript",
-  //     "CSS3",
-  //     "HTML5"
-  //   ],
-  //   role: "personal project",
-  //   difficulties: "",
-  //   solutions: "",
-  //   features: [
-  //     ""
-  //   ]
-  // },
+  {
+    index: 4,
+    name: "Click, Pass the Cent",
+    description: "Click, Pass the Cent is an addictive clicker game built with the React framework. The goal of the game is to try to go over 100 with the highest score and in the fastest time.",
+    screencapUrl: "proj-clickpassthecent-almost.png",
+    urlLive: "https://clickpassthecent.netlify.com/",
+    urlRepo: "https://github.com/joseph-p-pasaoa/click_pass_the_cent__React",
+    techs: [
+      "React 16.12.0",
+      "Node.js 12.13.1",
+      "JavaScript ES5+",
+      "HTML5",
+      "CSS3"
+    ],
+    role: "personal project",
+    difficulties: "There were a lot of lessons to be learned one of the first times bringing React JSX, HTML5, and CSS3 together. Setting a functional setInterval and figuring out how to clear it without using React component lifecycles took some time playing around with the logic. I devised a working solution utilizing the state with class methods.",
+    solutions: "Trying to get a good feel of how to organize React component flow control took researching and breaking down other developers' works. There was also a lot of reading up on quality standards and practices, in conjunction with the React and CSS3 documentations.",
+    features: [
+      "React state controls dynamic CSS",
+      "interactive input with immediate feedback",
+      "simple and responsive ui",
+      "computative use of state manipulation"
+    ]
+  },
   /* {
       index: 000000,
       name: "",

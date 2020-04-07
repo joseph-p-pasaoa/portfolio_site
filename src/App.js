@@ -49,7 +49,9 @@ const App = () => {
     const serverPings = () => {
       const urlsArray = [
         "https://greenlist-registry.herokuapp.com/static/media/logo_200228.ca07d05d.png",
-        "https://bingebook.herokuapp.com/images/uploaded-avatars/avatar-sporty-her.svg"
+        "https://suit-app.herokuapp.com/static/media/suitApp-Logo-Space.8e54c579.png",
+        "https://bingebook.herokuapp.com/images/uploaded-avatars/avatar-sporty-her.svg",
+        // "https://yt-abbreviated.web.app/static/media/logo-circ.0119ece5.png"
       ];
       const getsArray = urlsArray.map(url => axios.get(url));
       Promise.all(getsArray)
