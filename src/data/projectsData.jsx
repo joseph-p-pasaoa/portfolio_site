@@ -164,7 +164,7 @@ export const projectsData = [
     ],
     role: "personal project",
     difficulties: "There were a lot of lessons to be learned one of the first times bringing React JSX, HTML5, and CSS3 together. Setting a functional setInterval and figuring out how to clear it without using React component lifecycles took some time playing around with the logic. I devised a working solution utilizing the state with class methods.",
-    solutions: "Trying to get a good feel of how to organize React component flow control took researching and breaking down other developers' works. There was also a lot of reading up on quality standards and practices, in conjunction with the React and CSS3 documentations.",
+    wins: "Trying to get a good feel of how to organize React component flow control took researching and breaking down other developers' works. There was also a lot of reading up on quality standards and practices, in conjunction with the React and CSS3 documentations.",
     features: [
       "React state controls dynamic CSS",
       "interactive input with immediate feedback",
@@ -185,7 +185,7 @@ export const projectsData = [
       ],
       role: "",
       difficulties: "",
-      solutions: "",
+      wins: "",
       features: [
         ""
       ]
