@@ -43,7 +43,7 @@ const ProjectCard = ({
       <div className="card--project">
 
           <div className="cp__toprow">
-              <h3 className="card--project__title">{name}</h3>
+              <h3 className="card--project__title">{id + 1 + ". "}{name}</h3>
               <h4 className="card--project__role">{role}</h4>
           </div>
 
