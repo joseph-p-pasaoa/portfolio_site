@@ -8,7 +8,7 @@ export const projectsData = [
   {
     index: 0,
     name: "Greenlist",
-    description: `Greenlist is a scalable full-stack registry, directory, and forum application intent on enabling fashion designers and brands to find suppliers of eco-friendly green materials, and to facilitate networking within the fashion community for material reclaim.`,
+    description: `Greenlist is a scalable full-stack registry, directory, and forum application intented to enable fashion designers and brands to find suppliers of eco-friendly green materials, and to facilitate networking within the fashion community for material reclaim.`,
     screencapUrl: "proj-greenlist-profile.png",
     urlLive: "https://greenlist-registry.herokuapp.com/",
     urlRepo: "https://github.com/joseph-p-pasaoa/greenlist__FSWeb",
@@ -31,14 +31,13 @@ export const projectsData = [
     ],
     role: "group role: Tech Lead",
     difficulties: `The assignment for the Uber-sponsored Hackatahon was to create an app to aid in the fashion-sustainability movement, however most in our group hardly knew anything about the fashion industry. With the help of industry advisors, we were able to identify a large gap in the workflow of small and independent designers that we could build something for. Uber developers guided us through dry and performant database query writing and walked us through professional example stages of production and git flow.`,
-    wins: `WINNER of Pursuit's Uber-sponsored 6.2 Hackathon's Most Impactful App Award!
-    We reached Minimal Viable Product status in 6 days time by focusing our efforts on the primary role of our app.`,
+    wins: `WE WON Pursuit's Uber-sponsored 6.2 Hackathon's Most Impactful App Award! We reached Minimal Viable Product status in 6 days time by focusing our efforts on the primary role of our app.`,
     features: [
       "relational database",
       "REST API",
       "server error handling w/ specific http response codes",
       "front-end & back-end input validation",
-      "gives user visual feedback",
+      "intuitive visual feedback",
       "responsive navbar",
       "images carousel integration",
       "multiple-file single operation upload",
@@ -84,7 +83,7 @@ export const projectsData = [
   {
     index: 2,
     name: "Bingebook",
-    description: "Bingebook is a full-stack binge-facilitating social networking app. Users are able to keep track of shows they're currently watching, shows they have finshed watching, and shows to keep on a To Watch list. Each user-to-show relationship is also commentable so Bingebook can be an effective solution for recommendations and discussion.",
+    description: "Bingebook is a full-stack binge-facilitating social networking app. Users are able to keep track of shows they're currently watching, shows they have finshed watching, and shows they keep on a To Watch list. Each user-to-show binge is commentable so Bingebook can be an effective solution for recommendations and discussion.",
     screencapUrl: "proj-bingebook-search.png",
     urlLive: "https://bingebook.herokuapp.com/",
     urlRepo: "https://github.com/joseph-p-pasaoa/bingebook__FSWeb",
@@ -113,8 +112,8 @@ export const projectsData = [
       "back-end error handling w/ specific http response codes",
       "back-end input validation",
       "responsive navbar",
-      "simple and clean",
-      "commenting system",
+      "simple and clean ui",
+      "comments system",
       "front-end error handling and input validation"
     ]
   },
@@ -138,8 +137,8 @@ export const projectsData = [
       "CSS3"
     ],
     role: "personal project",
-    difficulties: "Under a few hours deadline, I had to read the YouTube Developer API documentation and figure out the proper methods to implement it. Post-MVP I had to follow up and learn how to prep my develop credentials and package.json for deployment to Firebase.",
-    wins: "Plotting out the control flow and wireframing the app ahead of time saved me a lot of time in actually coding the add and it helped me figure out an optimal React component structure and React Router pathing so that I could get to MVP within the time allotted.",
+    difficulties: "Under a few hours deadline, I had to read the YouTube Developer API documentation and figure out the standard methods to implement it. Post-MVP I followed up and learned how to prep my developer credentials and project package.json for deployment to Firebase.",
+    wins: "Plotting out the control flow and wireframing the app ahead of time saved me a lot of time in actually coding the app and helped me figure out an optimal React component structure and the pathing with React Router so that I could get to MVP within the time allotted.",
     features: [
       "YouTube Developer API integration",
       "front-end input validation and error handling",
@@ -163,11 +162,11 @@ export const projectsData = [
       "CSS3"
     ],
     role: "personal project",
-    difficulties: "There were a lot of lessons to be learned one of the first times bringing React JSX, HTML5, and CSS3 together. Setting a functional setInterval and figuring out how to clear it without using React component lifecycles took some time playing around with the logic. I devised a working solution utilizing the state with class methods.",
-    wins: "Trying to get a good feel of how to organize React component flow control took researching and breaking down other developers' works. There was also a lot of reading up on quality standards and practices, in conjunction with the React and CSS3 documentations.",
+    difficulties: "There were a lot of lessons to be learned one of the first times bringing React JSX, HTML5, and CSS3 together. Setting a functional setInterval and figuring out how to clear it without using React component lifecycles took some time playing around with the logic but I devised a successful solution manipulating the state with class methods.",
+    wins: "Trying to get a good feel of how to organize React component flow control took hours of research and finding and breaking down other developers' works. I ended up reading a lot on quality standards and practices, as well as the React documentation and CSS3 standards.",
     features: [
       "React state controls dynamic CSS",
-      "interactive input with immediate feedback",
+      "intuitive visual feedback",
       "simple and responsive ui",
       "computative use of state manipulation"
     ]
