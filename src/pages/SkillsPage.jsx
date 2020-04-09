@@ -16,6 +16,9 @@ const iconHtml = require('../assets/images/icons/html5.png');
 const iconCss = require('../assets/images/icons/css3.png');
 const iconScss = require('../assets/images/icons/scss.png');
 const iconPsql = require('../assets/images/icons/postgresql.png');
+const iconHeroku = require('../assets/images/icons/heroku.svg');
+const iconNetlify = require('../assets/images/icons/netlify.png');
+const iconFirebase = require('../assets/images/icons/firebase-logo.svg');
 
 const iconReact = require('../assets/images/icons/react.svg');
 const iconRedux = require('../assets/images/icons/redux.svg');
@@ -41,8 +44,8 @@ const iconXD = require('../assets/images/icons/exp design.svg');
 // const iconBridge = require('../assets/images/icons/bridge.svg');
 // const iconInDesign = require('../assets/images/icons/indesign.svg');
 
-const iconHeroku = require('../assets/images/icons/heroku.svg');
-const iconNetlify = require('../assets/images/icons/netlify.png');
+const iconTrello = require('../assets/images/icons/trello.svg');
+const iconBasecamp = require('../assets/images/icons/basecamp.png');
 
 
 /* MAIN */
@@ -131,6 +134,13 @@ const SkillsPage = () => {
               src={iconNetlify}
               className="icon-skill"
               alt="Netlify"
+            />
+          </li>
+          <li data-skill="Firebase">
+            <img
+              src={iconFirebase}
+              className="icon-skill"
+              alt="Firebase"
             />
           </li>
         </ul>
@@ -292,23 +302,23 @@ const SkillsPage = () => {
           </li>
         </ul> */}
 
-        {/* <ul className="section">
-          <li><h4 className="header-section">Platforms</h4></li>
-          <li data-skill="Heroku">
+        <ul className="section">
+          <li><h4 className="header-section">Productivity</h4></li>
+          <li data-skill="Trello">
             <img
-              src={iconHeroku}
+              src={iconTrello}
               className="icon-skill"
-              alt="Heroku"
+              alt="Trello"
             />
           </li>
-          <li data-skill="Netlify">
+          <li data-skill="Basecamp">
             <img
-              src={iconNetlify}
-              className="icon-skill"
-              alt="Netlify"
+              src={iconBasecamp}
+              className="icon-skill basecamp"
+              alt="Basecamp"
             />
           </li>
-        </ul> */}
+        </ul>
 
         {/* <ul className="section">
           <li><h4 className="header-section">Methods</h4></li>

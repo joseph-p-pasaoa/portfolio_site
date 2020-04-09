@@ -817,6 +817,9 @@ h5 {
             &.drawio {
                 border-radius: 1rem;
             }
+            &.basecamp {
+                max-width: none;
+            }
         }
 
         &:first-child { // styles section headers
