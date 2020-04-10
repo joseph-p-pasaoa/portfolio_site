@@ -48,7 +48,7 @@ export const projectsData = [
     index: 1,
     name: "SuitApp",
     description: "SuitApp is a social media application founded on the idea of bringing together the most passionate and creative minds in the world of Cosplay and giving them the tools to reach a wide audience of fans who appreciate and celebrate their work.",
-    screencapUrl: "proj-suitapp-screen-feed-gtm.png",
+    screencapUrl: "proj-suitapp-screen-feed.png",
     urlLive: "https://suit-app.herokuapp.com/",
     urlRepo: "https://github.com/joseph-p-pasaoa/suitApp__FullStack",
     techs: [
