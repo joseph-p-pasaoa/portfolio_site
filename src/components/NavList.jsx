@@ -61,7 +61,7 @@ const NavList = () => {
       <div {...dropdownToggle}>
         <button className="dropdown-toggle-btn" onClick={handleClick}>{isDropdownOn ? "- navigate" : "+ navigate"}</button>
 
-        <ul className="navlist" style={{ visibility: isDropdownOn ? "inherit" : "hidden" }}>
+        <ul className="navlist" style={{ visibility: isDropdownOn ? "hidden" : "inherit" }}>
           <li>
             <NavLink exact to={`/`} className="link-navlist" onClick={handleClick}>
               <div>About Me</div>

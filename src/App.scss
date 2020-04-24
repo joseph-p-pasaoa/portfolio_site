@@ -301,6 +301,7 @@ h5 {
     background-size: cover;
     background-color: #fff;
     background-position: left bottom;
+    background-attachment: fixed;
 }
 
 .app__fadebg {
@@ -1051,7 +1052,7 @@ h5 {
     }
 
     .page {
-        padding: 1rem;
+        padding: 1rem 2rem;;
     }
 
     .page--home .text.para {
