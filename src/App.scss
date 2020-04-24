@@ -545,6 +545,7 @@ h5 {
 
 .dropdown-converter .dropdown-toggle-btn {
     display: block;
+    outline: none;
 }
 
 .dropdown-converter .navlist {
@@ -1019,6 +1020,7 @@ h5 {
         margin-top: 0.3rem;
         padding: var(--pad-min);
         width: initial;
+        overflow: hidden;
 
         .link-faicon:link, .link-faicon:visited {
             position: relative;
@@ -1122,7 +1124,9 @@ h5 {
     }
 
     .navlist li .link-navlist:link div::after, .navlist li .link-navlist:visited div::after {
-        right: -1.35rem;
+        top: .2rem;
+        right: -1.2rem;
+        font-size: 1.2rem;
     }
 
     .navlist li:last-child::before {

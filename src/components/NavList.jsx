@@ -59,7 +59,6 @@ const NavList = () => {
   return (
     <Fade bottom cascade when={delayFinished}>
       <div {...dropdownToggle}>
-      {console.log("render")}
         <button className="dropdown-toggle-btn" onClick={handleClick}>{isDropdownOn ? "- navigate" : "+ navigate"}</button>
 
         <ul className="navlist" style={{ visibility: isDropdownOn ? "inherit" : "hidden" }}>
