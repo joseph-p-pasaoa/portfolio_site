@@ -525,8 +525,8 @@ h5 {
 
 .dropdown-converter {
     position: absolute;
-    top: 5.8rem;
-    left: 15.8rem;
+    top: 5.3rem;
+    right: 1.5rem;
 }
 
 .dropdown-toggle-btn {
@@ -550,13 +550,14 @@ h5 {
 .dropdown-converter .navlist {
     position: absolute;
     top: 0.5rem;
-    left: -1.7rem;
+    right: -1.5rem;
     z-index: 2;
     background: #62351cf7;
     visibility: hidden;
     height: 17rem;
     margin-top: 2rem;
-    padding: 1.1rem 3rem;
+    padding: 1.1rem 1.4rem 1.1rem 3rem;
+    align-items: flex-end;
     transform: translateX(-40%);
     transition: visibility .15s ease-out;
 }
@@ -1012,7 +1013,7 @@ h5 {
     .iconsbar {
         position: absolute;
         top: .1rem;
-        left: 16rem;
+        right: 0rem;
         flex-direction: row-reverse;
         white-space: nowrap;
         margin-top: 0.3rem;
@@ -1118,5 +1119,17 @@ h5 {
 
     .page--contactme .form-contactme input[name=msgTxt] {
         width: 85%;
+    }
+
+    .navlist li .link-navlist:link div::after, .navlist li .link-navlist:visited div::after {
+        right: -1.35rem;
+    }
+
+    .navlist li:last-child::before {
+        right: -6.3rem;
+    }
+
+    .navlist li .link-navlist:link, .navlist li .link-navlist:visited {
+        text-align: right;
     }
 }
