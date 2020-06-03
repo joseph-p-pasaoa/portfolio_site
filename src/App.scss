@@ -122,17 +122,17 @@ $name-transition: opacity .9s ease-out;
 }
 
 @mixin nav-faicon-in-base() {
-    transform-origin: left bottom;
+    transform-origin: left center;
     animation: nav-faicon-in .2s ease-out 0s 1 forwards;
 }
 
 @keyframes nav-faicon-out {
-    from { transform: translate(0, 0) scale(1); }
-    to { transform: translate(.5rem, .3rem) scale(1.4); }
+    from { transform: scale(1); }
+    to { transform: scale(1.4); }
 }
 @keyframes nav-faicon-in {
-    from { transform: translate(.5rem, .3rem) scale(1.4); }
-    to { transform: translate(0, 0) scale(1); }
+    from { transform: scale(1.4); }
+    to { transform: scale(1); }
 }
 
 
