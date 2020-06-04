@@ -87,11 +87,11 @@ const SkillsPage = () => {
 
         <ul className="section">
           <li><h4 className="header-section">Development</h4></li>
-          <li data-skill="Javascript (ES6+)">
+          <li data-skill="Javascript (ES5+)">
             <img
               src={iconJs}
               className="icon-skill"
-              alt="Javascript (ES6+)"
+              alt="Javascript (ES5+)"
             />
           </li>
           <li data-skill="HTML5">
