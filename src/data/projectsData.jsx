@@ -10,7 +10,7 @@ export const projectsData = [
     name: "Greenlist",
     description: `Greenlist is a scalable full-stack registry, directory, and forum application intented to enable fashion designers and brands to find suppliers of eco-friendly green materials, and to facilitate networking within the fashion community for material reclaim.`,
     screencapUrl: "proj-greenlist-profile.png",
-    urlLive: "https://greenlist-registry.herokuapp.com/",
+    urlLive: "https://greenlist-pursuit.herokuapp.com/",
     urlRepo: "https://github.com/joseph-p-pasaoa/greenlist__FSWeb",
     techs: [
       "PostgreSQL 12.1",
