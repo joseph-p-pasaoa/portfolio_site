@@ -7,8 +7,8 @@ Projects Data | Portfolio Site
 export const projectsData = [
   {
     name: "Endeavor",
-    description: `Greenlist is a scalable full-stack registry, directory, and forum application intented to enable fashion designers and brands to find suppliers of eco-friendly green materials, and to facilitate networking within the fashion community for material reclaim.`,
-    screencapUrl: "proj-greenlist-profile.png",
+    description: `Endeavor is a software platform empowering organizations to manage their volunteer workforce amid events seamlessly.`,
+    screencapUrl: "proj-endeavor-admin-dash.jpg",
     urlLive: "https://endeavor-app.herokuapp.com/",
     urlRepo: "https://github.com/joseph-p-pasaoa/Endeavor",
     techs: [
@@ -37,12 +37,20 @@ export const projectsData = [
       "CSS3",
       "HTML5"
     ],
-    role: "team project",
-    difficulties: `The assignment for the Uber-sponsored Hackatahon was to create an app to aid in the fashion-sustainability movement, however most in our group hardly knew anything about the fashion industry. With the help of industry advisors, we were able to identify a large gap in the workflow of small and independent designers that we could build something for. Uber developers guided us through dry and performant database query writing and walked us through professional example stages of production and git flow.`,
-    wins: `WE WON Pursuit's Uber-sponsored 6.2 Hackathon's Most Impactful App Award! We reached Minimal Viable Product status in 6 days time by focusing our efforts on the primary role of our app.`,
+    role: "team build",
+    difficulties: `From beginning to end, the three of us struggled to get a sense of how to be productive developers in the new COVID-19 lockdown era. We had to wrestle between adding more features and focusing on core functionality, wanting to learn new techs and avoiding adding too much complexity onto our plates. We had to figure out how to deal with not only our ambitiousness but secondly work/life balances stressed from being locked-down at home for months.`,
+    wins: `We dedicated months to a great team effort, in addition to creating this project entirely remotely. We succeeded in implementing SendGrid, AWS, ChartJS, and MomentJS into our Minimal Viable Product. We developed a robust RESTful API with elaborate PSQL database protected behind user auth checks and input validations on all non-GET API requests. To top it off, we learned so much about software development under our mentors Dion Ridley, an Engineering Leader at Netflix, and Ben Sussman, an Engineer at Spell, including discussions on GraphQL, Apollo, Redis, among other techs.`,
     features: [
-      "relational database",
-      "REST API",
+      "four distinct user roles: staff, admin (elevated staff), volunteer, student",
+      "user authentication",
+      "AWS-S3 + Multer for file storage",
+      "SendGrid API integration for realtime notification via email",
+      "Google Calendar utilization for productivity flow",
+      "PostgreSQL database with indexing, 4 join tables, and soft delete",
+      "ChartJS integration for statistical visualizations",
+      "MomentJS integration for time handling",
+      "list <--> grid visual data mode toggle",
+      "RESTful API with CRUD",
       "server error handling w/ specific http response codes",
       "front-end & back-end input validation",
       "intuitive visual feedback",
@@ -52,7 +60,6 @@ export const projectsData = [
       "conceived and developed to address a real-world problem"
     ]
   },
-  //
   {
     name: "Greenlist",
     description: `Greenlist is a scalable full-stack registry, directory, and forum application intented to enable fashion designers and brands to find suppliers of eco-friendly green materials, and to facilitate networking within the fashion community for material reclaim.`,
