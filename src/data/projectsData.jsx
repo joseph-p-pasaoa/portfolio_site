@@ -83,7 +83,7 @@ export const projectsData = [
       "Bootstrap Carousel 4.0.3",
       "Multer 1.4.2"
     ],
-    role: "group role: Tech Lead",
+    role: "team role: Tech Lead",
     difficulties: `The assignment for the Uber-sponsored Hackatahon was to create an app to aid in the fashion-sustainability movement, however most in our group hardly knew anything about the fashion industry. With the help of industry advisors, we were able to identify a large gap in the workflow of small and independent designers that we could build something for. Uber developers guided us through dry and performant database query writing and walked us through professional example stages of production and git flow.`,
     wins: `WE WON Pursuit's Uber-sponsored 6.2 Hackathon's Most Impactful App Award! We reached Minimal Viable Product status in 6 days time by focusing our efforts on the primary role of our app.`,
     features: [
@@ -118,7 +118,7 @@ export const projectsData = [
       "Axios 0.19.0",
       "Pg-promise 10.3.2"
     ],
-    role: "group role: Head of UI/UX",
+    role: "team role: Head of UI/UX",
     difficulties: "This project came at a time when we were all juggling life priorities but we took charge of the time we had, coded to our strengths in React, Express, and PostgreSQL, and came up with a robust app full of ui character.",
     wins: "We developed effective, successful algorithms for parsing user-commented hashtags, saving them in our database, searching them using unique queries, and then displaying the sorted search results.",
     features: [
@@ -153,7 +153,7 @@ export const projectsData = [
       "CSS3",
       "HTML5"
     ],
-    role: "personal project",
+    role: "personal build",
     difficulties: "The pathing with React Router got a little tricky especially with multiple junction tables in the database allowing for various general path endpoints. It helped to document out the backend process so that I had a good map of what I had and could hone in on what I wanted to accomplish.",
     wins: "I borrowed React's rule to keep one source of truth and designed Bingebook to reference OMDb's (IMDb's) unique ids for films and shows as the standard to determine what shows exist and are usable. Keeping my own database and setting Bingebook up to always reference what was found in the OMDb/IMDb added a lot to the complexity of the logic but it was a fun challenge to overcome!",
     features: [
@@ -187,7 +187,7 @@ export const projectsData = [
       "HTML5",
       "CSS3"
     ],
-    role: "personal project",
+    role: "personal build",
     difficulties: "Under a few hours deadline, I had to read the YouTube Developer API documentation and figure out the standard methods to implement it. Post-MVP I followed up and learned how to prep my developer credentials and project package.json for deployment to Firebase.",
     wins: "Plotting out the control flow and wireframing the app ahead of time saved me a lot of time in actually coding the app and helped me figure out an optimal React component structure and the pathing with React Router so that I could get to MVP within the time allotted.",
     features: [
@@ -211,7 +211,7 @@ export const projectsData = [
       "HTML5",
       "CSS3"
     ],
-    role: "personal project",
+    role: "personal build",
     difficulties: "There were a lot of lessons to be learned one of the first times bringing React JSX, HTML5, and CSS3 together. Setting a functional setInterval and figuring out how to clear it without using React component lifecycles took some time playing around with the logic but I devised a successful solution manipulating the state with class methods.",
     wins: "Trying to get a good feel of how to organize React component flow control took hours of research and finding and breaking down other developers' works. I ended up reading a lot on quality standards and practices, as well as the React documentation and CSS3 standards.",
     features: [
