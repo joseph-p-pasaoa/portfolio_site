@@ -54,10 +54,38 @@ export const projectsData = [
       "server error handling w/ specific http response codes",
       "front-end & back-end input validation",
       "intuitive visual feedback",
-      "responsive navbar",
-      "images carousel integration",
-      "multiple-file single operation upload",
-      "conceived and developed to address a real-world problem"
+      "screen media responsive",
+      "carousel integration",
+      "conceived and developed to address a real-life problem"
+    ]
+  },
+  {
+    name: "Conway's Game of Life: A Tribute",
+    description: `A personal implementation of Conway's Game of Life, under current development, using Typescript and React, looking towards statistics collection and data presentation.`,
+    screencapUrl: "proj-conways-main.png",
+    urlLive: "https://tribute-to-conway.netlify.app/",
+    urlRepo: "https://github.com/joseph-p-pasaoa/conways-game-of-life--react-ts",
+    techs: [
+      "React 16.13.1",
+      "Typescript 3.9.5",
+      "Javascript ES5+",
+      "Node.js 12.5.0",
+      "SCSS (Node-Sass 4.14.1)",
+      "Material-UI 4.10.2",
+      "CSS3",
+      "HTML5"
+    ],
+    role: "personal build",
+    difficulties: `Trying to figure out a system of visually building the matrix board with CSS3 but also with performance in mind has been an unexpected challenge. For one thing, discovered that using vmin for individual cells width and height can slow down responsiveness slightly. Falling back to only responsively sizing the matrix and then sizing the cells to match is a current point.`,
+    wins: `I feel this is one of my cleanest builds to date with components separated by logic and/or design-function. Hard typing with Typescript has been a fun constant challenge, especially typing non-primitives and shaping interfaces. So far, I find the app is already fun to interact with, notably with its realtime responsiveness in its controls.`,
+    features: [
+      "object-oriented programming: class-contained business logic",
+      "hard-typed via Typescript compiler",
+      "fully screen media responsive leveraging SCSS and responsive practices",
+      "can run selectively between 3s and 1/20s between generations",
+      "speed range input with marked detentes using HTML5 and JS",
+      "interactive through control panel and direct clicking, while running or halted",
+      "clean and responsive user interface"
     ]
   },
   {
