@@ -27,11 +27,12 @@ const iconExpress = require('../assets/images/icons/express-original.svg');
 const iconNode = require('../assets/images/icons/nodejs color.svg');
 const iconGatsby = require('../assets/images/icons/gatsbyjs.svg');
 
-const iconVSCode = require('../assets/images/icons/vscode.svg');
 const iconGit = require('../assets/images/icons/git.png');
 const iconGithub = require('../assets/images/icons/github.svg');
+const iconJest = require('../assets/images/icons/jestjs.svg');
 const iconChromeDT = require('../assets/images/icons/chrome devtools.png');
 const iconFFDeveloper = require('../assets/images/icons/firefox developer.png');
+const iconVSCode = require('../assets/images/icons/vscode.svg');
 const iconNpm = require('../assets/images/icons/npm.svg');
 const iconPostman = require('../assets/images/icons/postman.svg');
 
@@ -194,11 +195,11 @@ const SkillsPage = () => {
 
         <ul className="section">
           <li><h4 className="header-section">Tools</h4></li>
-          <li data-skill="VS Code">
+          <li data-skill="Git">
             <img
-              src={iconVSCode}
+              src={iconGit}
               className="icon-skill"
-              alt="VS Code"
+              alt="Git"
             />
           </li>
           <li data-skill="Github">
@@ -208,18 +209,11 @@ const SkillsPage = () => {
               alt="Github"
             />
           </li>
-          <li data-skill="Firefox Developer">
+          <li data-skill="Jest">
             <img
-              src={iconFFDeveloper}
+              src={iconJest}
               className="icon-skill"
-              alt="Firefox Developer"
-            />
-          </li>
-          <li data-skill="Git">
-            <img
-              src={iconGit}
-              className="icon-skill"
-              alt="Git"
+              alt="Jest"
             />
           </li>
           <li data-skill="Chrome DevTools">
@@ -227,6 +221,20 @@ const SkillsPage = () => {
               src={iconChromeDT}
               className="icon-skill"
               alt="Chrome DevTools"
+            />
+          </li>
+          <li data-skill="Firefox Developer">
+            <img
+              src={iconFFDeveloper}
+              className="icon-skill"
+              alt="Firefox Developer"
+            />
+          </li>
+          <li data-skill="VS Code">
+            <img
+              src={iconVSCode}
+              className="icon-skill"
+              alt="VS Code"
             />
           </li>
           <li data-skill="Npm">
