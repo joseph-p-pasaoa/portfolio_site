@@ -45,7 +45,6 @@ export const projectsData = [
     ]
   },
   {
-    index: 1,
     name: "SuitApp",
     description: "SuitApp is a social media application founded on the idea of bringing together the most passionate and creative minds in the world of Cosplay and giving them the tools to reach a wide audience of fans who appreciate and celebrate their work.",
     screencapUrl: "proj-suitapp-screen-feed.png",
@@ -81,7 +80,6 @@ export const projectsData = [
     ]
   },
   {
-    index: 2,
     name: "Bingebook",
     description: "Bingebook is a full-stack binge-facilitating social networking app. Users are able to keep track of shows they're currently watching, shows they have finshed watching, and shows they keep on a To Watch list. Each user-to-show binge is commentable so Bingebook can be an effective solution for recommendations and discussion.",
     screencapUrl: "proj-bingebook-search.png",
@@ -118,7 +116,6 @@ export const projectsData = [
     ]
   },
   {
-    index: 3,
     name: "YouTube Abbreviated",
     description: "YouTube Abbreviated is a straightforward multiple component React app where a user can query and obtain YouTube video results, watch embedded videos, and comment on them locally.",
     screencapUrl: "proj-ytabbrev-screen-demo.png",
@@ -148,7 +145,6 @@ export const projectsData = [
     ]
   },
   {
-    index: 4,
     name: "Click, Pass the Cent",
     description: "Click, Pass the Cent is an addictive clicker game built with the React framework. The goal of the game is to try to go over 100 with the highest score and in the fastest time.",
     screencapUrl: "proj-clickpassthecent-almost.png",
@@ -172,7 +168,6 @@ export const projectsData = [
     ]
   },
   /* {
-      index: 000000,
       name: "",
 
       description: "",
