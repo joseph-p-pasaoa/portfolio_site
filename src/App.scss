@@ -630,7 +630,12 @@ h5 {
     }
 
     .text.para {
-        max-width: 87rem;
+        line-height: 1.8;
+    }
+
+    .home__aboutme {
+        margin-top: 1rem;
+        max-width: 52rem;
     }
 
     .text strong {
@@ -855,6 +860,10 @@ h5 {
 
             &.react {
                 object-fit: cover;
+            }
+            &.expressjs {
+                border-radius: .7rem;
+                background-color: #e5e5e5;
             }
             &.github {
                 background-color: var(--color-white);
