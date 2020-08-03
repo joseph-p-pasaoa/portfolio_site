@@ -861,6 +861,10 @@ h5 {
             &.react {
                 object-fit: cover;
             }
+            &.expressjs {
+                border-radius: .7rem;
+                background-color: #e5e5e5;
+            }
             &.github {
                 background-color: var(--color-white);
                 border-radius: 50%;

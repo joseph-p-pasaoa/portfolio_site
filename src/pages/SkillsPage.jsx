@@ -25,6 +25,7 @@ const iconRedux = require('../assets/images/icons/redux.svg');
 const iconRouter = require('../assets/images/icons/react router.png');
 const iconExpress = require('../assets/images/icons/express-original.svg');
 const iconNode = require('../assets/images/icons/nodejs color.svg');
+const iconGatsby = require('../assets/images/icons/gatsbyjs.svg');
 
 const iconVSCode = require('../assets/images/icons/vscode.svg');
 const iconGit = require('../assets/images/icons/git.png');
@@ -143,6 +144,13 @@ const SkillsPage = () => {
               alt="Firebase"
             />
           </li>
+          <li data-skill="Gatsby">
+            <img
+              src={iconGatsby}
+              className="icon-skill"
+              alt="GatsbyJS"
+            />
+          </li>
         </ul>
 
         <ul className="section">
@@ -171,7 +179,7 @@ const SkillsPage = () => {
           <li data-skill="ExpressJS">
             <img
               src={iconExpress}
-              className="icon-skill"
+              className="icon-skill expressjs"
               alt="ExpressJS"
             />
           </li>
