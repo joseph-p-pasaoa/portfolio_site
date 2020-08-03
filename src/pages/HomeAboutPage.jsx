@@ -51,18 +51,18 @@ const HomeAboutPage = () => {
       </Fade>
 
       <Fade cascade when={nameDelayFinished}>
-        <div>
-          <p className="text para">I studied International Relations and Comparative Politics in college.</p>
+        <div className="home__aboutme">
+          <p className="text para">I learned BASIC when I was small but I studied International Relations and Comparative Politics in college.</p>
 
-          <p className="text para">I've been a dance, fashion, and portrait photographer, plus First Assistant to a New York City high-fashion photographer.</p>
+          <p className="text para">I've been a First Assistant to a high-fashion photographer in NYC. I've also been a professional dance, fashion, and portrait photographer, myself.</p>
 
-          <p className="text para">I've had a love for computers my whole life but it wasn't until I was chosen into <a href="https://www.pursuit.org/" target="_blank" rel="noopener noreferrer" className="link--homepursuit">Pursuit</a> —a selective yearlong intensive <strong>full-stack web</strong> coding fellowship, that I was able to discover how much I truly enjoy being in the world of software tech.</p>
+          <p className="text para">Yet it wasn't until I was selected into <a href="https://www.pursuit.org/" target="_blank" rel="noopener noreferrer" className="link--homepursuit">Pursuit</a> —a competitive intensive <strong>full-stack</strong> coding fellowship, that I was able to discover how much I truly enjoy working in software tech.</p>
 
-          <p className="text para">My experiences in the visual arts and political psychology have been a great well to draw from when working on <strong>UI/UX</strong> and front-ends however I'm just as intrigued, if not more, with the <strong>problem solving</strong>, <strong>optimization work</strong>, and <strong>structural architecturing</strong> found in both ends.</p>
+          <p className="text para">My experiences in the visual arts and political psychology have been a great well to draw from when working on <strong>UI/UX</strong> and front-ends but I'm just as fascinated with the <strong>problem solving</strong>, <strong>optimizing</strong>, and <strong>design process</strong> found across the stack.</p>
 
-          <p className="text para">I'm looking to find an <strong>rich and diverse environment</strong> where I can grow as an engineer and as a <strong>teammate</strong>.</p>
+          <p className="text para">I'm looking to find an <strong>rich and diverse environment</strong> where I can grow doubly as an engineer and as a <strong>teammate</strong>.</p>
 
-          <p className="text para">Thanks for finding out more about me.</p>
+          <p className="text para">Thank you for visiting. Have a good look around!</p>
         </div>
       </Fade>
 
