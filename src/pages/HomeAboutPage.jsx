@@ -52,7 +52,7 @@ const HomeAboutPage = () => {
 
       <Fade cascade when={nameDelayFinished}>
         <div className="home__aboutme">
-          <p className="text para">I learned BASIC on my own when I was small. In college, I studied International Relations and Comparative Politics.</p>
+          <p className="text para">I learned <strong>BASIC</strong> on my own when I was small. In college, I studied International Relations and Comparative Politics.</p>
 
           <p className="text para">I've worked hard as a First Assistant to a high-fashion photographer in NYC for a number of years. I've also been a professional dance, fashion, and portrait photographer, myself.</p>
 
