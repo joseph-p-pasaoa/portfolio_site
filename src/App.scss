@@ -657,8 +657,12 @@ h5 {
 
         position: relative;
         width: 100%;
-        max-width: 50rem;
+        max-width: 93rem;
         margin-bottom: 5.5rem;
+
+        @media (max-width: 768px) {
+            max-width: 50rem;
+        }
 
         .cp__toprow {
             @include flex-line(row, flex-start, baseline);
