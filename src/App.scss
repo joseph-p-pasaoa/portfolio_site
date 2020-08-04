@@ -586,7 +586,7 @@ h5 {
     padding: 11rem var(--space-lrg) 6rem var(--pad-pageleft);
 
     &.page--home {
-        padding-top: 15.6rem;
+        padding-top: 11.6rem;
     }
 }
 
@@ -657,7 +657,7 @@ h5 {
 
         position: relative;
         width: 100%;
-        max-width: 93rem;
+        max-width: 50rem;
         margin-bottom: 5.5rem;
 
         .cp__toprow {
@@ -1084,7 +1084,7 @@ h5 {
     }
     
     h4.card--project__role {
-        align-self: flex-end;
+        align-self: flex-start;
     }
     
     .page--listprojects .card--project .cp__middlerow,
