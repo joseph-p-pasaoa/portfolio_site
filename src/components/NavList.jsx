@@ -88,7 +88,7 @@ const NavList = () => {
             </a>
           </li> */}
           <li>
-            <a href="https://www.josephpasaoa.com" target="_blank" rel="noopener noreferrer" className="link-navlist" onClick={handleClick}>
+            <a href="https://www.joeypasaoa.com" target="_blank" rel="noopener noreferrer" className="link-navlist" onClick={handleClick}>
               <div>Photography</div>
             </a>
           </li>
